@@ -1,0 +1,37 @@
+task,desc,dev,qa
+OW-2802,PH > IT > 9 sub category headings,1,
+OW-2809,PH > finance > roles list,1,
+OW-2943,Why outsourced > Outsourced University,0.25,
+OW-2964,PH - Form dropdown/input text is vertically cutoff,0.5,
+OW-2992,PH - locations (broken images),1,
+OW-2993,PH - Mobile header background color is inconsistent on navigation menu,0.5,
+OW-2999,OW Forms Platform & Technology Audit (.CO & .PH),,
+OW-3000,Update Malaysian Terms Page Leave Entitlement Table Under Section 4.1,0.17,
+PLS-1098,Report » Growth by recruiter » incorrectly shows inactive recruiters,,1
+PLS-1620,BE - Sendbird profile sync bypasses chat sync-disabled toggle (name / nickname),,2
+PLS-1624,BE – Undertime ERD,8,
+PLS-1644,BE - Apply new sending limits for CS users,4,2
+PLS-1645,FE - changes for shoutout limits,4,2
+PLS-1650,"BE - Sync ""HS Company ID""",4,2.5
+PLS-1680,"BE - Staff Margin Report, sorting returns incorrect results for some columns",6,2
+PLS-1696,FE - Apply new filter name include in report admin reports existing-client-growth,2,
+PLS-1699,FE - Existing client growth: zero-staff indicator & exit reason,4,
+PLS-1716,"BE - Sendbird, test accounts should not be searchable",6,1
+PLS-1726,Sprout API password rotation 2026-05-19,1,
+PLS-1733,"BE — Configure Laravel S3 disk, migration, model, and ChatAttachmentService",8,
+PLS-1737,FE - Override Sendbird UIKit file upload to route through Pulse API,12,
+PLS-1738,FE - Handle chat file download through Pulse endpoint,4,
+PLS-1741,FE -  Handle file attachment soft-delete on message deletion,4,
+PLS-1744,BE - myAttendanceReport companion metadata queries,,2
+PLS-1747,FE - Put back the file attachment default by sendbird and apply pulse permission,2,1
+PLS-1748,BE - Implement send attachment permission acl resources,1,1
+PLS-1749,BE - limit target to delivery staff,4,1.5
+PLS-1750,BE - Sprout Payroll Integration - Return Summarized data aligned with the Columns displayed in Sprout,6.5,
+PLS-1751,BE - Sprout Payroll Integration - Adjust Available Fields query to show columns based on Sprout layout,6,
+PLS-1753,v3.1.13 rollout,,
+PLS-1756,Charge-out  data import,1,
+PLS-1761,FE - Chat » File preview for videos issue,4,2
+PLS-1762,FE - Chat » console errors,4,
+PLS-1766,HR support: work schedule sync,1,
+PLS-1767,HR Support: new Hubspot ticket type/subtype,0.25,
+PUL-1109,UAT-2 - Prepration for UAT Second Run,,
