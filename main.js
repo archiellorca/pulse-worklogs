@@ -1,0 +1,264 @@
+    console.log("ticket-progress.js loaded");
+    const taskDetails = window.taskDetails;
+    console.log("taskDetails loaded:", taskDetails.length, "tasks");
+
+    //const taskDetails = [{"task":"OW-2802","desc":"PH > IT > 9 sub category headings","dev":"1.0","qa":""},{"task":"OW-2809","desc":"PH > finance > roles list","dev":"1.0","qa":""},{"task":"OW-2943","desc":"Why outsourced > Outsourced University","dev":"0.25","qa":""},{"task":"OW-2964","desc":"PH - Form dropdown/input text is vertically cutoff","dev":"0.5","qa":""},{"task":"OW-2992","desc":"PH - locations (broken images)","dev":"1.0","qa":""},{"task":"OW-2993","desc":"PH - Mobile header background color is inconsistent on navigation menu","dev":"0.5","qa":""},{"task":"OW-2999","desc":"OW Forms Platform & Technology Audit (.CO & .PH)","dev":"","qa":""},{"task":"OW-3000","desc":"Update Malaysian Terms Page Leave Entitlement Table Under Section 4.1","dev":"0.17","qa":""},{"task":"PLS-1098","desc":"Report » Growth by recruiter » incorrectly shows inactive recruiters","dev":"","qa":"1"},{"task":"PLS-1620","desc":"BE - Sendbird profile sync bypasses chat sync-disabled toggle (name / nickname)","dev":"","qa":"2"},{"task":"PLS-1624","desc":"BE – Undertime ERD","dev":"8.0","qa":""},{"task":"PLS-1644","desc":"BE - Apply new sending limits for CS users","dev":"4.0","qa":"2"},{"task":"PLS-1645","desc":"FE - changes for shoutout limits","dev":"4.0","qa":"2"},{"task":"PLS-1650","desc":"BE - Sync \"HS Company ID\"","dev":"4.0","qa":"2.5"},{"task":"PLS-1680","desc":"BE - Staff Margin Report, sorting returns incorrect results for some columns","dev":"6.0","qa":"2"},{"task":"PLS-1696","desc":"FE - Apply new filter name include in report admin reports existing-client-growth","dev":"2.0","qa":"2"},{"task":"PLS-1699","desc":"FE - Existing client growth: zero-staff indicator & exit reason","dev":"4.0","qa":""},{"task":"PLS-1716","desc":"BE - Sendbird, test accounts should not be searchable","dev":"6.0","qa":"1"},{"task":"PLS-1726","desc":"Sprout API password rotation 2026-05-19","dev":"1.0","qa":""},{"task":"PLS-1733","desc":"BE — Configure Laravel S3 disk, migration, model, and ChatAttachmentService","dev":"8.0","qa":"3"},{"task":"PLS-1737","desc":"FE - Override Sendbird UIKit file upload to route through Pulse API","dev":"12.0","qa":""},{"task":"PLS-1738","desc":"FE - Handle chat file download through Pulse endpoint","dev":"4.0","qa":""},{"task":"PLS-1741","desc":"FE -  Handle file attachment soft-delete on message deletion","dev":"4.0","qa":""},{"task":"PLS-1744","desc":"BE - myAttendanceReport companion metadata queries","dev":"","qa":"2"},{"task":"PLS-1747","desc":"FE - Put back the file attachment default by sendbird and apply pulse permission","dev":"2.0","qa":"1"},{"task":"PLS-1748","desc":"BE - Implement send attachment permission acl resources","dev":"1.0","qa":"1"},{"task":"PLS-1749","desc":"BE - limit target to delivery staff","dev":"4.0","qa":"1.5"},{"task":"PLS-1750","desc":"BE - Sprout Payroll Integration - Return Summarized data aligned with the Columns displayed in Sprout","dev":"6.5","qa":""},{"task":"PLS-1751","desc":"BE - Sprout Payroll Integration - Adjust Available Fields query to show columns based on Sprout layout","dev":"6.0","qa":""},{"task":"PLS-1753","desc":"v3.1.13 rollout","dev":"","qa":""},{"task":"PLS-1756","desc":"Charge-out  data import","dev":"1.0","qa":""},{"task":"PLS-1761","desc":"FE - Chat » File preview for videos issue","dev":"4.0","qa":"2"},{"task":"PLS-1762","desc":"FE - Chat » console errors","dev":"4.0","qa":"1"},{"task":"PLS-1766","desc":"HR support: work schedule sync","dev":"1.0","qa":""},{"task":"PLS-1767","desc":"HR Support: new Hubspot ticket type/subtype","dev":"0.25","qa":""},{"task":"PUL-1109","desc":"UAT-2 - Prepration for UAT Second Run","dev":"","qa":""},{"task":"OW-2627","desc":"Global > Roles > India > Accounts Payable/Receivable Specialists [new template]","dev":"1.0","qa":""},{"task":"OW-2925","desc":"PH> Services> Schema Markup Implementation","dev":"4.0","qa":""},{"task":"OW-3001","desc":"PH - No options displayed on Client Requirement Form when client navigates through the page","dev":"1.0","qa":""},{"task":"OW-3020","desc":"PH - Missing form on Referral Program Page","dev":"2.0","qa":""},{"task":"PLS-1529","desc":"FE - Sprout Integration - My Payroll Summary","dev":"8.0","qa":""},{"task":"PLS-1554","desc":"BE - Sprout Payroll Integration - ERD & Database Schema","dev":"8.0","qa":"2"},{"task":"PLS-1555","desc":"BE - Sprout Payroll Integration - API Client & Sync Service","dev":"24.0","qa":"7"},{"task":"PLS-1556","desc":"BE - Sprout Payroll Integration - GraphQL Endpoint","dev":"8.0","qa":""},{"task":"PLS-1558","desc":"BE - Error Logs - Employee Contact Information Push to Sprout error","dev":"4.0","qa":"2"},{"task":"PLS-1695","desc":"BE - additional filters","dev":"6.0","qa":"2.5"},{"task":"PLS-1701","desc":"BE - extend Existing Client Growth response with zero-staff clients","dev":"8.0","qa":""},{"task":"PLS-1728","desc":"DevOps — Extend IAM policies for pulse-app-storage and deploy env vars","dev":"2.0","qa":""},{"task":"PLS-1729","desc":"BE - graphql query to get existing client growth inclusion options","dev":"2.0","qa":"2"},{"task":"PLS-1732","desc":"BE - Sprout Payroll Integration - Allow Payslip retrieval for test accounts on non-production environment","dev":"5.0","qa":""},{"task":"PLS-1734","desc":"BE — Create chatFileUpload GraphQL mutation with ACL permission","dev":"8.0","qa":""},{"task":"PLS-1735","desc":"BE — Create chat file download endpoint with channel membership verification","dev":"6.0","qa":"3"},{"task":"PLS-1740","desc":"BE — Create chatFileDelete GraphQL mutation (soft-delete)","dev":"6.0","qa":"3"},{"task":"PLS-1743","desc":"BE - myAttendanceReport main read query","dev":"12.0","qa":"3"},{"task":"PLS-1745","desc":"BE - Legacy time-entry mutation integration for attendance report","dev":"4.0","qa":"3"},{"task":"PLS-1760","desc":"FE - Chat » hide ID in hashtags","dev":"4.0","qa":"1"},{"task":"PLS-1769","desc":"FE - Chat Widget overlapping UI elements","dev":"2.0","qa":"1"},{"task":"PLS-1778","desc":"Deel sync criteria - include \"Ready to Start\" & \"Onboarding\"","dev":"2.0","qa":"2"},{"task":"PLS-1783","desc":"FE - Pulse Data Correction – Unable to Save Client Update for Staff OQAS_3055","dev":"2.0","qa":""},{"task":"PLS-1785","desc":"BE - Sendbird error Logs from Production","dev":"4.0","qa":""},{"task":"PLS-1789","desc":"v3.1.13.1 delivery rollout","dev":"","qa":""},{"task":"PUL-1107","desc":"Regression Test","dev":"","qa":""},{"task":"PLS-748","desc":"When filtering locations on 'Clients' using 'EMEA', the Philippines and Australia are displayed.","dev":4.0,"qa":2},{"task":"PLS-1559","desc":"BE - Error Logs - X leave type not found","dev":1.0,"qa":1},{"task":"PLS-1568","desc":"FE - My Attendance Report Basic Grid","dev":24.0,"qa":""},{"task":"PLS-1604","desc":"FE - 4 - Clock In/Out management","dev":24.0,"qa":""},{"task":"PLS-1720","desc":"BE - Newsfeed — fast path for single-post `posts(id: $id)` query","dev":16.0,"qa":""},{"task":"PLS-1754","desc":"BE - weekly email digest, change text content","dev":6.5,"qa":4},{"task":"PLS-1768","desc":"FE - Change newsfeed data entry labels","dev":4.0,"qa":2},{"task":"PLS-1791","desc":"FE - Sendbird - limit username suggestion to maximum of 20 entries","dev":2.0,"qa":1},{"task":"PLS-1798","desc":"BE - Allow inactive recruiters when saving/editing employees","dev":6.5,"qa":""},{"task":"PLS-1800","desc":"Reports » Staff Margin: margin value different in staff view","dev":4.0,"qa":1},{"task":"PLS-1801","desc":"update charge out cost","dev":1.0,"qa":""},{"task":"PLS-1809","desc":"v3.1.13.2 rollout","dev":"","qa":""},{"task":"PLS-1811","desc":"charge out fx current same currency issue","dev":1.0,"qa":1}];
+    
+    const taskDetailMap = Object.fromEntries(taskDetails.map(t => [t.task, t]));
+
+    const raw = [{"name":"Kate","date":"05/25/2026","task":"PLS-1645","hours":1},{"name":"Kate","date":"05/25/2026","task":"PLS-1645","hours":1},{"name":"Kate","date":"05/26/2026","task":"PLS-1644","hours":2},{"name":"Kate","date":"05/26/2026","task":"PLS-1716","hours":1},{"name":"Kate","date":"05/26/2026","task":"PLS-1749","hours":1.5},{"name":"Kate","date":"05/28/2026","task":"PLS-1743","hours":1},{"name":"Kate","date":"05/28/2026","task":"PLS-1744","hours":2},{"name":"Kate","date":"05/28/2026","task":"PLS-1753","hours":2},{"name":"Kate","date":"05/29/2026","task":"PLS-1696","hours":0.5},{"name":"Kate","date":"05/29/2026","task":"PLS-1729","hours":1.5},{"name":"Kate","date":"05/29/2026","task":"PLS-1743","hours":2},{"name":"Kate","date":"06/01/2026","task":"PLS-1696","hours":1},{"name":"Kate","date":"06/01/2026","task":"PLS-1743","hours":2},{"name":"Kate","date":"06/01/2026","task":"PLS-1769","hours":1},{"name":"Kate","date":"06/01/2026","task":"PLS-1789","hours":0.5},{"name":"Kate","date":"06/02/2026","task":"PLS-1743","hours":0.5},{"name":"Kate","date":"06/02/2026","task":"PLS-1745","hours":2},{"name":"Kate","date":"06/02/2026","task":"PLS-1762","hours":1},{"name":"Kate","date":"06/03/2026","task":"PLS-1559","hours":0.58},{"name":"Kate","date":"06/03/2026","task":"PLS-1791","hours":0.25},{"name":"Kate","date":"06/03/2026","task":"PLS-1800","hours":1.5},{"name":"Kate","date":"06/04/2026","task":"PLS-1737","hours":1.5},{"name":"Kate","date":"06/04/2026","task":"PLS-1768","hours":2},{"name":"Kate","date":"06/04/2026","task":"PLS-1791","hours":0.25},{"name":"Kate","date":"06/04/2026","task":"PLS-748","hours":0.5},{"name":"Kate","date":"06/05/2026","task":"PLS-1677","hours":1},{"name":"Kate","date":"06/05/2026","task":"PLS-1699","hours":1},{"name":"Kate","date":"06/05/2026","task":"PLS-1700","hours":1.5},{"name":"Kate","date":"06/08/2026","task":"PLS-1529","hours":1},{"name":"Kate","date":"06/08/2026","task":"PLS-1606","hours":1},{"name":"Kate","date":"06/08/2026","task":"PLS-1626","hours":1.5},{"name":"Kate","date":"06/08/2026","task":"PLS-1626","hours":0.17},{"name":"Kate","date":"06/08/2026","task":"PLS-1720","hours":1},{"name":"Kate","date":"06/08/2026","task":"PLS-1750","hours":1.5},{"name":"Kate","date":"06/09/2026","task":"PLS-1529","hours":1},{"name":"Kate","date":"06/09/2026","task":"PLS-1624","hours":2},{"name":"Kate","date":"06/09/2026","task":"PLS-1689","hours":1},{"name":"Kate","date":"06/09/2026","task":"PLS-1701","hours":1.5},{"name":"Kate","date":"06/09/2026","task":"PLS-1831","hours":0.5},{"name":"Kate","date":"06/10/2026","task":"PLS-1529","hours":0.5},{"name":"Kate","date":"06/10/2026","task":"PLS-1694","hours":1},{"name":"Kate","date":"06/10/2026","task":"PLS-1844","hours":4},{"name":"Kate","date":"06/11/2026","task":"PLS-1529","hours":1},{"name":"Kate","date":"06/11/2026","task":"PLS-1592","hours":1.5},{"name":"Kate","date":"06/11/2026","task":"PLS-1625","hours":1},{"name":"Kate","date":"06/11/2026","task":"PLS-1626","hours":0.75},{"name":"Kate","date":"06/11/2026","task":"PLS-1743","hours":0.5},{"name":"Kate","date":"06/11/2026","task":"PLS-1840","hours":0.5},{"name":"Kate","date":"06/15/2026","task":"PLS-1625","hours":2},{"name":"Kate","date":"06/15/2026","task":"PUL-1120","hours":1},{"name":"Kate","date":"06/15/2026","task":"PUL-1121","hours":1},{"name":"Kate","date":"06/15/2026","task":"PUL-1122","hours":1},{"name":"Kate","date":"06/16/2026","task":"PLS-1793","hours":1},{"name":"Kate","date":"06/16/2026","task":"PLS-1861","hours":1.5},{"name":"Kate","date":"06/17/2026","task":"PLS-1625","hours":2},{"name":"Kate","date":"06/17/2026","task":"PLS-1793","hours":1},{"name":"Kate","date":"06/17/2026","task":"PLS-1871","hours":2},{"name":"Kate","date":"06/17/2026","task":"PLS-1878","hours":1}];
+
+    const PERSON_COLORS = [
+      { bg: "#e8f0fe", text: "#1a56db" },
+      { bg: "#fce8f3", text: "#bf125d" },
+      { bg: "#e3fcec", text: "#057a55" },
+      { bg: "#fdf6e3", text: "#8a5e00" },
+      { bg: "#f0f4ff", text: "#5145cd" },
+      { bg: "#fff0f0", text: "#c81e1e" },
+      { bg: "#e8faf4", text: "#046c4e" },
+      { bg: "#fef3c7", text: "#92400e" },
+    ];
+
+    function toISO(dateStr) {
+      const [m, d, y] = dateStr.split("/");
+      return `${y}-${m}-${d}`;
+    }
+
+    function fmtDisplay(iso) {
+      const d = new Date(iso + "T00:00:00");
+      return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    }
+
+    function sortTickets(a, b) {
+      const [pa, na] = a.split("-");
+      const [pb, nb] = b.split("-");
+      if (pa !== pb) return pa.localeCompare(pb);
+      return parseInt(na, 10) - parseInt(nb, 10);
+    }
+
+    function fmtHours(h) {
+      return Number.isInteger(h) ? h + "h" : Number(h) + "h";
+    }
+
+    const allDates = [...new Set(raw.map(r => toISO(r.date)))].sort();
+    const allNames = [...new Set(raw.map(r => r.name))].sort();
+    const nameColorMap = Object.fromEntries(
+      allNames.map((n, i) => [n, PERSON_COLORS[i % PERSON_COLORS.length]])
+    );
+
+    // Populate dev dropdown
+    const devFilter = document.getElementById("devFilter");
+    allNames.forEach(n => {
+      const opt = document.createElement("option");
+      opt.value = n;
+      opt.textContent = n;
+      devFilter.appendChild(opt);
+    });
+
+    // Populate legend
+    const legend = document.getElementById("legend");
+    allNames.forEach(n => {
+      const c = nameColorMap[n];
+      const span = document.createElement("span");
+      span.className = "legend-badge";
+      span.style.background = c.bg;
+      span.style.color = c.text;
+      span.textContent = n;
+      legend.appendChild(span);
+    });
+
+    // Set default date range
+    const fromInput = document.getElementById("from");
+    const toInput = document.getElementById("to");
+    const ticketFilter = document.getElementById("ticketFilter");
+    fromInput.value = allDates[0];
+    toInput.value = allDates[allDates.length - 1];
+
+    function render() {
+      const from = fromInput.value;
+      const to = toInput.value;
+      const selectedName = devFilter.value;
+      const ticketSearch = ticketFilter.value.trim().toLowerCase();
+      const container = document.getElementById("tableContainer");
+
+      const dates = allDates.filter(d => d >= from && d <= to);
+
+      const filtered = raw.filter(r => {
+        const iso = toISO(r.date);
+        return iso >= from && iso <= to && (selectedName === "all" || r.name === selectedName);
+      });
+
+      const tickets = [...new Set(filtered.map(r => r.task))]
+        .filter(t => t.toLowerCase().includes(ticketSearch))
+        .sort(sortTickets);
+
+      // Build matrix: task -> iso -> name -> total hours
+      const matrix = {};
+      filtered.forEach(r => {
+        const iso = toISO(r.date);
+        if (!matrix[r.task]) matrix[r.task] = {};
+        if (!matrix[r.task][iso]) matrix[r.task][iso] = {};
+        if (!matrix[r.task][iso][r.name]) matrix[r.task][iso][r.name] = 0;
+        matrix[r.task][iso][r.name] += r.hours;
+      });
+
+      document.getElementById("stats").textContent =
+        `${tickets.length} ticket${tickets.length !== 1 ? "s" : ""} · ${dates.length} date${dates.length !== 1 ? "s" : ""}`;
+
+      if (tickets.length === 0) {
+        container.innerHTML = '<p class="no-data">No data for selected range.</p>';
+        return;
+      }
+
+      const table = document.createElement("table");
+
+      // thead
+      const thead = table.createTHead();
+      const headRow = thead.insertRow();
+      const thTicket = document.createElement("th");
+      thTicket.className = "sticky";
+      thTicket.textContent = "Ticket";
+      headRow.appendChild(thTicket);
+      dates.forEach(iso => {
+        const th = document.createElement("th");
+        th.textContent = fmtDisplay(iso);
+        headRow.appendChild(th);
+      });
+
+      // tbody
+      const tbody = table.createTBody();
+      const no_desc_tickets = [];
+      tickets.forEach((ticket, i) => {
+        const row = tbody.insertRow();
+        row.style.background = i % 2 === 0 ? "#ffffff" : "#fafafa";
+
+        const tdKey = row.insertCell();
+        tdKey.className = "sticky";
+        const detail = taskDetailMap[ticket];
+
+        const keySpan = document.createElement("span");
+        keySpan.className = "ticket-key";
+        keySpan.textContent = ticket;
+        tdKey.appendChild(keySpan);
+
+        if (detail) {
+          const desc = document.createElement("div");
+          desc.className = "ticket-desc";
+          desc.textContent = detail.desc;
+          tdKey.appendChild(desc);
+
+          const meta = document.createElement("div");
+          meta.className = "ticket-meta";
+          meta.textContent = `dev: ${detail.dev} · qa: ${detail.qa}`;
+          tdKey.appendChild(meta);
+        } else {
+          no_desc_tickets.push(ticket);           
+        }
+
+        dates.forEach(iso => {
+          const td = row.insertCell();
+          const nameHours = matrix[ticket] && matrix[ticket][iso]
+            ? Object.entries(matrix[ticket][iso])
+            : [];
+
+          if (nameHours.length > 0) {
+            const wrap = document.createElement("div");
+            wrap.className = "cell-names";
+            nameHours.forEach(([name, hours]) => {
+              const c = nameColorMap[name];
+              const badge = document.createElement("span");
+              badge.className = "name-badge";
+              badge.style.background = c.bg;
+              badge.style.color = c.text;
+
+              const nameNode = document.createTextNode(name);
+              badge.appendChild(nameNode);
+
+              const pill = document.createElement("span");
+              pill.className = "hours-pill";
+              pill.textContent = fmtHours(hours);
+              badge.appendChild(pill);
+
+              wrap.appendChild(badge);
+            });
+            td.appendChild(wrap);
+          } else {
+            const dash = document.createElement("span");
+            dash.className = "empty-cell";
+            dash.textContent = "—";
+            td.appendChild(dash);
+          }
+        });
+      });
+
+      // TOTALS row: per-date, per-person hour totals across all displayed tickets
+      const totalsRow = tbody.insertRow();
+      totalsRow.className = "totals-row";
+
+      const tdTotalsLabel = totalsRow.insertCell();
+      tdTotalsLabel.className = "sticky";
+      const totalsLabel = document.createElement("span");
+      totalsLabel.className = "totals-label";
+      totalsLabel.textContent = "TOTALS";
+      tdTotalsLabel.appendChild(totalsLabel);
+
+      dates.forEach(iso => {
+        const td = totalsRow.insertCell();
+
+        // Sum hours per person for this date across every displayed ticket
+        const perPerson = {};
+        tickets.forEach(ticket => {
+          const cell = matrix[ticket] && matrix[ticket][iso];
+          if (!cell) return;
+          Object.entries(cell).forEach(([name, hours]) => {
+            perPerson[name] = (perPerson[name] || 0) + hours;
+          });
+        });
+
+        const entries = Object.entries(perPerson).sort((a, b) => a[0].localeCompare(b[0]));
+        const dailyTotal = entries.reduce((sum, [, h]) => sum + h, 0);
+
+        // Daily grand total line
+        const daily = document.createElement("div");
+        daily.className = "totals-daily" + (dailyTotal === 0 ? " zero" : "");
+        daily.textContent = "Σ " + fmtHours(dailyTotal);
+        td.appendChild(daily);
+
+        // Per-person breakdown
+        if (entries.length > 0) {
+          const wrap = document.createElement("div");
+          wrap.className = "cell-names";
+          entries.forEach(([name, hours]) => {
+            const c = nameColorMap[name];
+            const badge = document.createElement("span");
+            badge.className = "name-badge";
+            badge.style.background = c.bg;
+            badge.style.color = c.text;
+            badge.appendChild(document.createTextNode(name));
+
+            const pill = document.createElement("span");
+            pill.className = "hours-pill";
+            pill.textContent = fmtHours(hours);
+            badge.appendChild(pill);
+
+            wrap.appendChild(badge);
+          });
+          td.appendChild(wrap);
+        }
+      });
+
+      const wrap = document.createElement("div");
+      wrap.className = "table-wrap";
+      wrap.appendChild(table);
+      container.innerHTML = "";
+      container.appendChild(wrap);
+
+      console.log(no_desc_tickets);
+    }
+
+    fromInput.addEventListener("change", render);
+    toInput.addEventListener("change", render);
+    devFilter.addEventListener("change", render);
+    ticketFilter.addEventListener("input", render);
+
+    render();
