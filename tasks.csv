@@ -9,29 +9,173 @@ OW-2999,OW Forms Platform & Technology Audit (.CO & .PH),,
 OW-3000,Update Malaysian Terms Page Leave Entitlement Table Under Section 4.1,0.17,
 PLS-1098,Report » Growth by recruiter » incorrectly shows inactive recruiters,,1
 PLS-1620,BE - Sendbird profile sync bypasses chat sync-disabled toggle (name / nickname),,2
-PLS-1624,BE – Undertime ERD,8,
+PLS-1624,BE – Undertime ERD,8,2.00
 PLS-1644,BE - Apply new sending limits for CS users,4,2
 PLS-1645,FE - changes for shoutout limits,4,2
 PLS-1650,"BE - Sync ""HS Company ID""",4,2.5
 PLS-1680,"BE - Staff Margin Report, sorting returns incorrect results for some columns",6,2
-PLS-1696,FE - Apply new filter name include in report admin reports existing-client-growth,2,
-PLS-1699,FE - Existing client growth: zero-staff indicator & exit reason,4,
+PLS-1696,FE - Apply new filter name include in report admin reports existing-client-growth,2,2.00
+PLS-1699,FE - Existing client growth: zero-staff indicator & exit reason,4,1.00
 PLS-1716,"BE - Sendbird, test accounts should not be searchable",6,1
 PLS-1726,Sprout API password rotation 2026-05-19,1,
-PLS-1733,"BE — Configure Laravel S3 disk, migration, model, and ChatAttachmentService",8,
-PLS-1737,FE - Override Sendbird UIKit file upload to route through Pulse API,12,
-PLS-1738,FE - Handle chat file download through Pulse endpoint,4,
-PLS-1741,FE -  Handle file attachment soft-delete on message deletion,4,
+PLS-1733,"BE — Configure Laravel S3 disk, migration, model, and ChatAttachmentService",8,3.00
+PLS-1737,FE - Override Sendbird UIKit file upload to route through Pulse API,12,2.00
+PLS-1738,FE - Handle chat file download through Pulse endpoint,4,2.00
+PLS-1741,FE -  Handle file attachment soft-delete on message deletion,4,2.00
 PLS-1744,BE - myAttendanceReport companion metadata queries,,2
 PLS-1747,FE - Put back the file attachment default by sendbird and apply pulse permission,2,1
 PLS-1748,BE - Implement send attachment permission acl resources,1,1
 PLS-1749,BE - limit target to delivery staff,4,1.5
-PLS-1750,BE - Sprout Payroll Integration - Return Summarized data aligned with the Columns displayed in Sprout,6.5,
-PLS-1751,BE - Sprout Payroll Integration - Adjust Available Fields query to show columns based on Sprout layout,6,
+PLS-1750,BE - Sprout Payroll Integration - Return Summarized data aligned with the Columns displayed in Sprout,6.5,2.00
+PLS-1751,BE - Sprout Payroll Integration - Adjust Available Fields query to show columns based on Sprout layout,6,3.00
 PLS-1753,v3.1.13 rollout,,
 PLS-1756,Charge-out  data import,1,
 PLS-1761,FE - Chat » File preview for videos issue,4,2
-PLS-1762,FE - Chat » console errors,4,
+PLS-1762,FE - Chat » console errors,4,1.00
 PLS-1766,HR support: work schedule sync,1,
 PLS-1767,HR Support: new Hubspot ticket type/subtype,0.25,
 PUL-1109,UAT-2 - Prepration for UAT Second Run,,
+OW-3185,Global > Pulse,4.00,
+OW-3178,Fix Missing Meta Description to Hardcoded page,3.00,
+OW-3177,CO - Trusted by 400+ testimonials issue,2.00,
+OW-3176,CO - Smoke test issues/ investigation,1.50,
+OW-3166,SEO Implementation | AI-Augmented Staff Page (PH & CO),,
+OW-3154,Global > Comparison Guide,4.00,
+OW-3153, reCAPTCHA phase 2,8.00,
+OW-3151,Wordpress updates review,6.00,
+OW-3150,"Resolve Breadcrumbs Missing field ""item"" ",3.00,
+OW-3146,Global > Outsourced University,0.50,
+OW-3145,Meet the team,0.17,
+OW-3142,Role pages - “Build your dedicated offshore team”,1.50,
+OW-3141,Favicon update,0.17,
+OW-3140,CO - Workforce Migration ,0.50,
+OW-3108,PH & CO - Jobs Page ,0.50,
+OW-3092,Global > How it works > Nav update,0.50,
+OW-3077,QA Validation for PHP Upgrade – PH Website,2.00,
+OW-3066,Update Social Events Video Thumbnails in YouTube/Vimeo,,
+OW-3055,OW - Add Provincial Holidays to PH Public Holidays Page,0.25,
+OW-3016,CO - Form dropdown/input text is vertically cutoff,0.50,
+OW-2984,Global > ai staffing lightbox,0.50,
+OW-2983,Video image update,1.00,
+OW-2962,Great place to work > image update,1.25,
+OW-2944,Global > Move your team,4.00,
+OW-2930,Global > Client Success Stories,2.00,
+OW-2823,Implement New Page: AI-Augmented Staff (Why Outsourced),12.00,
+OW-2815,Implement updated lightbox content embeds – Batch 2,6.00,
+OW-2814,Implement updated lightbox content embeds – Batch 1,4.00,
+IL-17,NS - Implement - Autodebit button,2.00,
+IL-11,Leadership,,
+IL-10,Learning & Development,,
+IL-7,Dev: Subsequent invoice – collection against existing consent,4.00,
+IL-6,Dev: First invoice – consent capture + autodebit processing,8.00,
+PLS-1885,"BE - Reports > Existing Client Growth, include uncategorized staff count",,
+PLS-1884,"BE - Reports > Growth by Industry, include uncategorized staff count",,4.00
+PLS-1883,Investigate Timesheet email notification logs,6.00,
+PLS-1882,BE - add remarks as availableFields in the staff margin report,12.00,3.00
+PLS-1881,Key update vs Growth by industry mismatch,6.00,
+PLS-1876,"FE - Staff Margin Report - ""The selected country is invalid"" error when changing country filter",1.00,1.00
+PLS-1870,BE - export as CSV - permission adjustments,1.00,
+PLS-1869,FE - export as CSV,6.00,
+PLS-1868,BE - Overtime GraphQL queries,12.00,5.00
+PLS-1867,BE - Undertime GraphQL queries,7.00,
+PLS-1866,BE - Download multiple payslips,6.00,
+PLS-1865,FE - Download multiple payslips,4.00,
+PLS-1864,BE - Quicksearch,2.00,3.00
+PLS-1863,FE - My Payroll Quicksearch,3.00,2.00
+PLS-1862,BE – Revise OT/UT ERD: drop hris_source_tenant_id + collapse hris_sources lookup to enum,12.00,4.00
+PLS-1855,BE - Staff Margin Available Fields to include all fields available in staff list,8.00,3.00
+PLS-1854,FE - Build Staff Margin grid mirroring staff listing grid,8.00,3.00
+PLS-1847,Investigate resource utilization spike in cloudways / new relic,,
+PLS-1846,BE - Review duplicate accounts (leaders),4.00,
+PLS-1840,FE - Render margin amount and percent based on chargeout permission,1.00,1.00
+PLS-1838,BE - add remarks to StaffMarginData to show warning/errors per row,6.00,2.00
+PLS-1837,FE - Display warning indicators for staff with incomplete data in reports,4.00,1.00
+PLS-1836,BE - add search_term to staff margin query parameters,4.00,2.00
+PLS-1835,FE - Add keyword quick search to Staff Margin report,4.00,2.00
+PLS-1833,FE - Render staff names as links to staff detail page in Staff Margin report,3.00,2.00
+PLS-1830,FE - Add record filters to Staff Margin report,4.00,3.00
+PLS-1829,BE - Add filters to staff margin report,4.00,4.00
+PLS-1817,LATAM Staff in Deel Cannot Be Activated in Pulse Due to Missing Staff Records,1.00,
+PLS-1815,BE - Sprout Payroll Integration - Create a separate queue for payroll jobs,8.00,3.00
+PLS-1812,FE - Staff  » People  » edit: tooltips for labels,1.00,
+PLS-1799,FE - Show proper validation errors for recruiter + make recruiters field nullable,3.00,
+PLS-1795,BE – Overtime classification options endpoint + classification lookup sync,8.00,3.00
+PLS-1794,BE – Sprout → Pulse overtime sync job + on-demand resync + weekly reconciliation + CLI,16.00,2.00
+PLS-1793,BE – Overtime ERD,12.00,2.00
+PLS-1742,FE - Internal Server Error on Anonymous Feedback Page When Sorting Columns Without Filter/Search Permissions,3.00,
+PLS-1731,BE - Optimization - Switch Lighthouse query cache to OPcache mode,3.00,
+PLS-1723,FE - Add options to Work days and Work schedule dropdowns (like Department),4.00,2.00
+PLS-1714,BE - Payroll Documentation,0.50,2.00
+PLS-1700,BE - add staff's employment status in graphql,2.00,2.00
+PLS-1690,FE - use currencies endpoint instead of staff_editable_fields_autocomplete for the Staff Margin Report,3.00,1.00
+PLS-1689,BE - Add filter to currencies endpoint,4.00,1.50
+PLS-1677,"Reports » Key updates, wrong counts",6.00,2.00
+PLS-1640,BE — Wire OT data into myAttendanceReport,6.00,
+PLS-1639,BE — Wire UT data into myAttendanceReport,8.00,
+PLS-1603,FE - 3 - Undertime Management,24.00,
+PLS-1602,FE - 2 - Overtime Management,24.00,
+PLS-1584,BE - Sprout Payroll Integration - Retrieve Payslip,8.00,4.00
+PLS-1557,BE - Sprout Payroll Integration - Non-Production Data Masking,2.00,4.00
+PLS-1532,BE - Technical - Add ON DELETE CASCADE / SET NULL to allow clean employee & user deletion,5.00,
+PLS-1076,FE - Staff » People » Edit: show charge out information  for delivery staff only,3.00,
+PLS-1953,FE - Replace label references of employee,1.00,
+PLS-1951,HR Request » Create dedicated Pulse account for LMS,0.50,
+PLS-1950,"CS Request: update chargeout data (Esteban Kapitan, etc)",0.50,
+PLS-1947,BE - Reduce daily Sprout leave-requests sync volume via employee selection + date-bounded fetch (same API calls),8.00,
+PLS-1945,BE - Optimize Sprout leave-days sync to stop re-fetching the full leave history daily,4.00,
+PLS-1944,BE - Review excessive API calls to/from Sprout,12.00,
+PLS-1943,[BE] Staff Margin Report - Export CSV Permission Control,3.00,0.50
+PLS-1942,FE - Staff Margin Report - Export CSV Permission Control,4.00,1.00
+PLS-1941,"CS Request: update chargeout data (Daiana Rosatto, etc)",1.00,
+PLS-1940,Reports: Exclude future starters,7.00,
+PLS-1938,FE - Staff > People > Edit: Hide charge-out for operations staff,1.00,
+PLS-1936,Pulse > Admin > Staff (Last Increase + Months Since Last Increase) New Markets,7.00,
+PLS-1935,FE - Disable Export CSV feature,1.00,1.00
+PLS-1934,BE » BHC Classification - New console command and cron to update service_type and placement_type options from Hubspot,,
+PLS-1930,BE - Reconcile myAttendanceReport filterable fields to date-range only,,3.00
+PLS-1928,"BE - remove ""Employee category"" filter",2.00,1.00
+PLS-1927,BE - rename Remarks column to Issue,2.00,1.00
+PLS-1926,BE - Job Category missing validation in edit employee mutation,,3.00
+PLS-1924,HR Request: sync email address of OQAS_1986,0.50,
+PLS-1921,BE - fix Employee share and Availment type not persisting correctly on health-benefit save,,3.00
+PLS-1919,BE - Reports » Existing Client Growth: Back-End Rolling Cohort Query Logic,,
+PLS-1918,FE - Reports » Existing Client Growth: Front-End Filter UI Update,4.00,
+PLS-1916,FE - Existing client growth report: implement View toggle component,4.00,
+PLS-1913,BE » BHC Classification — New service_type field on staff record,,
+PLS-1912,FE - BHC Classification — Service Type & Placement Type UI changes,5.00,
+PLS-1910,v3.1.16 Release,,
+PLS-1909,BE - handle fields from staff view edit,,2.00
+PLS-1908,FE - Implement editable fields for NM staff in Staff view,1.00,2.00
+PLS-1905,Sprout API password rotation 2026-06-19,1.00,
+PLS-1904,BE - Include no placement type,,
+PLS-1896,BE - investigate the discrepancy in placement type counts,2.00,
+PLS-1893,"BE - add new column ""Client ID""",8.00,2.00
+PLS-1892,"FE - display new column ""Client ID""",3.00,1.00
+PLS-1890,"FE - Staff Grid, add filter option for job category",1.00,1.50
+PLS-1889,"FE - Reports > Existing Client Growth, include uncategorized staff count",1.00,1.00
+PLS-1888,"FE - Reports > Growth by Industry, include uncategorized staff count",4.00,1.50
+PLS-1886,"BE - Staff Grid, add filter option for job category",,
+PUL-1167,"[BE] Salary Review Report — HubSpot owners local store, team categorization & CS-user linkage",,
+PUL-1165,BE - provide the data required by Client Retention report,16.00,
+PUL-1163,config and documentation adjustment,2.00,
+PUL-1162,FE - Shoutouts (Client): Column fields picker and sortable columns,4.00,
+PUL-1161,"FE - Remove Leave Request ID and Employee ID from the Filter settings, remove from the UI only",3.00,
+PUL-1160,FE - Setup client shoutout page with permission,5.00,
+PUL-1158,FE - Calendar: clickable staff name + Name column sorting,3.00,
+PUL-1157,FE - Shoutouts: Send a Shoutout (Client),4.00,
+PUL-1156,BE - Client Shoutout GraphQL Services,11.00,3.00
+PUL-1153,FE - Shoutouts: Client View,4.00,2.00
+PUL-1148,FE - Calendar UI/UX updates,6.00,
+PUL-1147,[BE] Salary Review Report — Auto-Escalation Job (Contacted → Follow Up),,
+PUL-1146,[BE] Salary Review Report — API Endpoints,,
+PUL-1145,[BE] Salary Review Report — Database Schema & Data Models,,
+PUL-1143,New Report > Salary Review,,
+PUL-1128,BE - Timeoff entitlements not aligned to employee's timeoff policies,4.00,
+PUL-1127,create Enable Switch for HRIS source and employee category,4.00,
+PUL-1120,FE - interpret unlimited leave credits to display proper text,3.00,
+PUL-1105,v3.1.15 release,,
+PUL-1063,FE - Zero state - Approved / Declined,4.00,
+PUL-1062,FE - Zero state - Pending approval,4.00,
+PUL-1052,FE - View pending leave request grid/page,6.00,
+PUL-1042,BE - Query GraphQL services for my team's leave request & schedule,20.00,4.00
+PUL-1038,BE - Deel Leave Credits (Entitlements) API implementation,8.00,

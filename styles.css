@@ -1,0 +1,69 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; font-size: 13px; background: #f9fafb; color: #111; padding: 16px 20px; }
+
+    h1 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+    .subtitle { font-size: 12px; color: #6b7280; margin-bottom: 16px; }
+
+    .filters {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;
+      padding: 10px 14px; margin-bottom: 14px;
+    }
+    .filter-group { display: flex; align-items: center; gap: 8px; }
+    .filter-label { font-size: 12px; color: #6b7280; font-weight: 500; }
+    .filters label { font-size: 12px; color: #6b7280; }
+    .filters input, .filters select {
+      font-size: 12px; padding: 4px 8px;
+      border: 1px solid #d1d5db; border-radius: 6px;
+      color: #111; background: #fff;
+    }
+    .stats { margin-left: auto; font-size: 12px; color: #9ca3af; }
+
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .legend-badge { font-size: 11px; padding: 2px 10px; border-radius: 999px; font-weight: 500; }
+
+    .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid #e5e7eb; background: #fff; }
+    table { border-collapse: collapse; width: max-content; min-width: 100%; }
+    thead tr { background: #f3f4f6; }
+    th {
+      font-size: 11px; font-weight: 600; color: #6b7280; text-align: left;
+      padding: 8px 14px; border-bottom: 1px solid #e5e7eb;
+      white-space: nowrap; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    th.sticky { position: sticky; left: 0; z-index: 2; background: #f3f4f6; }
+    td {
+      padding: 7px 14px; border-bottom: 1px solid #f3f4f6;
+      vertical-align: middle; white-space: nowrap;
+    }
+    td.sticky { position: sticky; left: 0; z-index: 1; background: inherit; }
+    tr:nth-child(even) { background: #fafafa; }
+    tr:nth-child(odd)  { background: #ffffff; }
+
+    .ticket-key { font-weight: 600; font-size: 12px; color: #374151; }
+    .ticket-desc { font-size: 11px; color: #6b7280; margin-top: 2px; white-space: normal; max-width: 200px; line-height: 1.4; }
+    .ticket-meta { font-size: 11px; color: #3b82f6; margin-top: 2px; }
+    .cell-names { display: flex; flex-direction: column; gap: 4px; }
+    .name-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 11px; padding: 2px 8px; border-radius: 999px;
+      font-weight: 500; white-space: nowrap;
+    }
+    .hours-pill {
+      font-size: 10px; font-weight: 600;
+      background: rgba(0,0,0,0.1); color: inherit;
+      padding: 0px 5px; border-radius: 999px;
+    }
+    .empty-cell { color: #d1d5db; }
+    .no-data { text-align: center; padding: 40px; color: #9ca3af; font-size: 13px; }
+
+    /* Totals row */
+    tr.totals-row { background: #f3f4f6 !important; }
+    tr.totals-row td { border-top: 2px solid #d1d5db; vertical-align: top; }
+    tr.totals-row td.sticky { background: #f3f4f6 !important; }
+    .totals-label { font-weight: 700; font-size: 12px; color: #374151; text-transform: uppercase; letter-spacing: 0.05em; }
+    .totals-daily {
+      font-size: 11px; font-weight: 700; color: #111;
+      margin-bottom: 5px; padding-bottom: 4px;
+      border-bottom: 1px dashed #d1d5db;
+    }
+    .totals-daily.zero { color: #9ca3af; font-weight: 600; }
