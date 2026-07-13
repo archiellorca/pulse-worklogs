@@ -65,4 +65,42 @@ window.ticketStatusData = [
     // PLS-1937
     { parent: "PLS-1937", intermediate: "", child: "PLS-1942", status: "Release Ready" },
     { parent: "PLS-1937", intermediate: "", child: "PLS-1943", status: "Release Ready" },
+    // PLS-1005
+    { parent: "PLS-1005", intermediate: "", child: "PLS-1177", status: "Done" },
+    { parent: "PLS-1005", intermediate: "", child: "PLS-1439", status: "QA In-Progress" },
+    { parent: "PLS-1005", intermediate: "", child: "PLS-1440", status: "For QA Review" },
+    // PLS-1590
+    { parent: "PLS-1590", intermediate: "", child: "PLS-1591", status: "Release Ready" },
+    { parent: "PLS-1590", intermediate: "", child: "PLS-1592", status: "To Do" },
+    // PLS-1906
+    { parent: "PLS-1906", intermediate: "", child: "PLS-1904", status: "For QA Review" },
+    // PLS-1903
+    { parent: "PLS-1903", intermediate: "", child: "PLS-1918", status: "For QA Review" },
+    { parent: "PLS-1903", intermediate: "", child: "PLS-1919", status: "For QA Review" },
+    // PLS-1911
+    { parent: "PLS-1911", intermediate: "", child: "PLS-1912", status: "For QA Review" },
+    { parent: "PLS-1911", intermediate: "", child: "PLS-1913", status: "For QA Review" },
+    { parent: "PLS-1911", intermediate: "", child: "PLS-1914", status: "For PM Review" },
+    { parent: "PLS-1911", intermediate: "", child: "PLS-1934", status: "For QA Review" },
+    // PLS-1275 (no children)
+    { parent: "PLS-1275", intermediate: "", child: "PLS-1275", status: "For PM Review" },
+    // PLS-1008
+    { parent: "PLS-1008", intermediate: "", child: "PLS-1699", status: "Release Ready" },
+    { parent: "PLS-1008", intermediate: "", child: "PLS-1700", status: "Release Ready" },
+    { parent: "PLS-1008", intermediate: "", child: "PLS-1701", status: "QA In-Progress" },
+    // PLS-1076
+    { parent: "PLS-1076", intermediate: "", child: "PLS-1975", status: "To Do" },
+    { parent: "PLS-1076", intermediate: "", child: "PLS-1976", status: "For PM Review" },
+    { parent: "PLS-1076", intermediate: "", child: "PLS-1977", status: "Release Ready" },
+    // PLS-1678 (no children)
+    { parent: "PLS-1678", intermediate: "", child: "PLS-1678", status: "For QA Review" },
+    // PLS-1782
+    { parent: "PLS-1782", intermediate: "", child: "PLS-1806", status: "For QA Review" },
+    { parent: "PLS-1782", intermediate: "", child: "PLS-1807", status: "For QA Review" },
+    // PLS-1940 (no children)
+    { parent: "PLS-1940", intermediate: "", child: "PLS-1940", status: "QA In-Progress" },
+    // PLS-1929
+    { parent: "PLS-1929", intermediate: "", child: "PLS-1939", status: "To Do" },
+    { parent: "PLS-1929", intermediate: "", child: "PLS-1978", status: "For Grooming" },
+    { parent: "PLS-1929", intermediate: "", child: "PLS-1979", status: "For Grooming" },
   ];

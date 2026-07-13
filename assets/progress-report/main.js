@@ -115,15 +115,21 @@
   }
 
   const EFFORT_FIELDS = [
+    { key: "points", label: "Points" },
     { key: "dev_est", label: "Dev Est." },
-    { key: "dev_time", label: "Dev Time" },
+    /*{ key: "dev_time", label: "Dev Time" },
     { key: "qa_est", label: "QA Est." },
-    { key: "qa_time", label: "QA Time" }
+    { key: "qa_time", label: "QA Time" }*/
   ];
 
-  function formatEffort(n) {
+  function formatEffort(label, n) {
     const num = Number(n);
-    return Number.isFinite(num) ? num.toFixed(2) : "—";
+    if (Number.isFinite(num)) {
+      if (label === "Points") return n;
+      return num.toFixed(2);
+     } else {
+      return "—";
+     }
   }
 
   // Groups parents into per-release buckets, in order of first appearance.
@@ -188,7 +194,7 @@
       const effortBlock = el("div", { class: "parent-stats" },
         EFFORT_FIELDS.map(f => el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: f.label }),
-          el("span", { class: "parent-stat-value", text: formatEffort(effortRecord && effortRecord[f.key]) })
+          el("span", { class: "parent-stat-value", text: formatEffort(f.label, effortRecord && effortRecord[f.key]) })
         ]))
       );
       parentCellChildren.push(effortBlock);
@@ -235,7 +241,7 @@
 
   function renderReport(rows, descriptions, efforts) {
     const descMap = buildDescriptionMap(descriptions);
-    const effortMap = buildEffortMap(efforts);
+    const effortMap = buildEffortMap(descriptions);
     const parents = buildParents(rows);
     const releaseGroups = buildReleaseGroups(parents, descMap);
 
