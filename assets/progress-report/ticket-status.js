@@ -29,5 +29,9 @@ window.ticketStatusData = [
     { parent: "PLS-1780", intermediate: "", child: "PLS-1862", status: "Release Ready" },
     { parent: "PLS-1781", intermediate: "", child: "PLS-1572", status: "Monitor only" },
     { parent: "PLS-1781", intermediate: "", child: "PLS-1603", status: "For QA Review" },
-    { parent: "PLS-1781", intermediate: "", child: "PLS-1639", status: "For QA Review" },
+    { parent: "PLS-1781", intermediate: "", child: "PLS-1639", status: "QA In-Progress" },
+    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1624", status: "Release Ready" },
+    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1625", status: "QA In-Progress" },
+    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1626", status: "QA In-Progress" },
+    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1867", status: "For QA Review" },
   ];
