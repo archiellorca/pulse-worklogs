@@ -222,14 +222,21 @@
       const parentCell = el("th", { class: "col-parent" }, parentCellChildren);
       const row = el("tr", {}, [parentCell]);
 
-      const summaryValues = [
-        String(stats.total),
-        String(stats.devDone),
-        String(stats.qaDone),
-        formatEffort("points", effortRecord && effortRecord.points),
-        formatEffort("dev_est", effortRecord && effortRecord.dev_est)
-      ];
-      summaryValues.forEach(v => row.appendChild(el("td", { class: "summary-cell", text: v })));
+      const isDevDone = stats.total > 0 && stats.devDone === stats.total;
+      const isQaDone = stats.total > 0 && stats.qaDone === stats.total;
+
+      function summaryCell(value, highlight) {
+        if (highlight) {
+          return el("td", { class: "summary-cell" }, [el("span", { class: "summary-badge", text: value })]);
+        }
+        return el("td", { class: "summary-cell", text: value });
+      }
+
+      row.appendChild(summaryCell(String(stats.total), false));
+      row.appendChild(summaryCell(String(stats.devDone), isDevDone));
+      row.appendChild(summaryCell(String(stats.qaDone), isQaDone));
+      row.appendChild(summaryCell(formatEffort("points", effortRecord && effortRecord.points), false));
+      row.appendChild(summaryCell(formatEffort("dev_est", effortRecord && effortRecord.dev_est), false));
 
       columns.forEach(status => {
         const matches = parentRows.filter(r => r.status === status);

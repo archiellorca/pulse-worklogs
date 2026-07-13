@@ -311,6 +311,16 @@
     display: table-cell;
   }
 
+  .summary-badge {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: 0.15em 0.5em;
+    border-radius: 6px;
+    background: var(--status-done-bg);
+    color: var(--status-done);
+    font-weight: 600;
+  }
+
   #report-root.columns-collapsed .parent-stats {
     display: none;
   }
