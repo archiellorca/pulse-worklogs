@@ -311,15 +311,21 @@
     font-weight: 600;
     font-size: 0.95rem;
     font-variant-numeric: tabular-nums;
+    text-align: left;
   }
 
-  .parent-desc {
+  .parent-summary, .parent-desc {
     margin-top: 0.35rem;
     font-size: 0.76rem;
     font-weight: 400;
     color: var(--text-muted);
     line-height: 1.35;
     white-space: normal;
+    text-align: left;
+  }
+
+  .parent-summary {
+    font-weight: 700;
   }
 
   .parent-stats {

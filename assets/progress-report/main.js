@@ -1,54 +1,12 @@
 // Flat records — one per CSV row: parent, intermediate, child, status.
-  const ORIGINAL_DATA = [
-    { parent: "PLS-1960", intermediate: "", child: "PLS-1529", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "", child: "PLS-1530", status: "Monitor only" },
-    { parent: "PLS-1960", intermediate: "", child: "PLS-1863", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "", child: "PLS-1864", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "", child: "PLS-1871", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1554", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1555", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1556", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1557", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1584", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1714", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1732", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1750", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1751", status: "Release Ready" },
-    { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1815", status: "Release Ready" },
-    { parent: "PLS-1523", intermediate: "", child: "PLS-1568", status: "QA In-Progress" },
-    { parent: "PLS-1523", intermediate: "", child: "PLS-1569", status: "Monitor only" },
-    { parent: "PLS-1523", intermediate: "", child: "PLS-1604", status: "QA In-Progress" },
-    { parent: "PLS-1523", intermediate: "", child: "PLS-1637", status: "Done" },
-    { parent: "PLS-1780", intermediate: "", child: "PLS-1571", status: "Monitor only" },
-    { parent: "PLS-1780", intermediate: "PLS-1571", child: "PLS-1793", status: "Release Ready" },
-    { parent: "PLS-1780", intermediate: "PLS-1571", child: "PLS-1794", status: "Release Ready" },
-    { parent: "PLS-1780", intermediate: "PLS-1571", child: "PLS-1795", status: "Release Ready" },
-    { parent: "PLS-1780", intermediate: "PLS-1571", child: "PLS-1796", status: "For Code Review" },
-    { parent: "PLS-1780", intermediate: "PLS-1571", child: "PLS-1868", status: "Release Ready" },
-    { parent: "PLS-1780", intermediate: "", child: "PLS-1602", status: "QA In-Progress" },
-    { parent: "PLS-1780", intermediate: "", child: "PLS-1640", status: "QA In-Progress" },
-    { parent: "PLS-1780", intermediate: "", child: "PLS-1862", status: "Release Ready" },
-    { parent: "PLS-1781", intermediate: "", child: "PLS-1572", status: "Monitor only" },
-    { parent: "PLS-1781", intermediate: "", child: "PLS-1603", status: "For QA Review" },
-    { parent: "PLS-1781", intermediate: "", child: "PLS-1639", status: "For QA Review" }
-  ];
+  const ORIGINAL_DATA = window.ticketStatusData;
 
   // Parent key → release + description lookup, kept as its own JSON source.
   // "release" groups parents into their own table, in order of first appearance.
-  const ORIGINAL_DESCRIPTIONS = [
-    { release: "v3.1.1", parent: "PLS-1960", desc: "this is desc of parent" },
-    { release: "rc.50", parent: "PLS-1523", desc: "this is desc of parent" },
-    { release: "v3.1.1", parent: "PLS-1780", desc: "this is desc of parent" },
-    { release: "rc.50", parent: "PLS-1781", desc: "this is desc of parent" }
-  ];
+  const ORIGINAL_DESCRIPTIONS = window.ticketsData; 
 
   // Parent key → dev/QA effort lookup, kept as its own JSON source.
-  const ORIGINAL_EFFORTS = [
-    { parent: "PLS-1960", dev_est: 3, dev_time: 2, qa_est: 2, qa_time: 2 },
-    { parent: "PLS-1523", dev_est: 0, dev_time: 0, qa_est: 0, qa_time: 0 },
-    { parent: "PLS-1780", dev_est: 0, dev_time: 0, qa_est: 0, qa_time: 0 },
-    { parent: "PLS-1781", dev_est: 0, dev_time: 0, qa_est: 0, qa_time: 0 }
-  ];
+  const ORIGINAL_EFFORTS = window.ticketEffortsData;
 
   const KNOWN_STATUS_VARS = {
     "monitor-only": "monitor",
@@ -200,7 +158,10 @@
 
       const parentCellChildren = [el("div", { class: "parent-id", text: parent.id })];
       const descRecord = descMap[parent.id];
-      if (descRecord && descRecord.desc) parentCellChildren.push(el("div", { class: "parent-desc", text: descRecord.desc }));
+      if (descRecord && descRecord.desc) {
+        parentCellChildren.push(el("div", { class: "parent-summary", text: descRecord.summary }));
+        parentCellChildren.push(el("div", { class: "parent-desc", text: descRecord.desc }));
+      }
 
       const stats = computeParentStats(parentRows);
       const statsBlock = el("div", { class: "parent-stats" }, [

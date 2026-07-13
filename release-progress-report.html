@@ -4,25 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Release Progress — PLS Program</title>
+  <title>Pulse Progress Report</title>
   <link rel="stylesheet" href="assets/progress-report/styles.css" />
 </head>
 
 <body>
 
   <header class="page-head">
-    <p class="eyebrow">PLS Program · Release Tracker</p>
-    <h1>Release progress by parent</h1>
-    <p class="subtitle">Child tickets grouped by release, then by parent epic, and mapped to their current status.
-      Tickets reached through an intermediate ticket are marked "via". Each release below is its own table, driven by
-      the JSON in the editor panels — edit and apply to update it.</p>
+    <p class="eyebrow">Pulse Project</p>
+    <h1>Progress Report</h1>
+    <p class="subtitle">description here</p>
   </header>
 
   <div class="controls-row">
     <p class="controls-hint">Applies to every release table below.</p>
     <label class="toggle-control">
       <input type="checkbox" id="toggle-monitor">
-      <span>Show Monitor only column</span>
+      <span>Show [Monitor only] column</span>
     </label>
   </div>
 
@@ -30,6 +28,7 @@
 
   <footer id="report-footer"></footer>
 
+  <div style="display:none">
   <details class="editor-panel" id="editor-panel">
     <summary>Edit data (JSON)</summary>
     <div class="editor-body">
@@ -86,7 +85,11 @@
       </div>
     </div>
   </details>
+  </div>
 
+  <script src="assets/progress-report/tickets.js"></script>
+  <script src="assets/progress-report/ticket-efforts.js"></script>
+  <script src="assets/progress-report/ticket-status.js"></script>
   <script src="assets/progress-report/main.js"></script>
 
 </body>
