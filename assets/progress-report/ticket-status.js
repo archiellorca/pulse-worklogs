@@ -103,4 +103,13 @@ window.ticketStatusData = [
     { parent: "PLS-1929", intermediate: "", child: "PLS-1939", status: "To Do" },
     { parent: "PLS-1929", intermediate: "", child: "PLS-1978", status: "For Grooming" },
     { parent: "PLS-1929", intermediate: "", child: "PLS-1979", status: "For Grooming" },
+    // PUL-1164
+    { parent: "PUL-1164", intermediate: "", child: "PUL-1165", status: "For Grooming" },
+    { parent: "PUL-1164", intermediate: "", child: "PUL-1166", status: "For Grooming" },
+    // PUL-1143
+    { parent: "PUL-1143", intermediate: "", child: "PUL-1144", status: "For PM Review" },
+    { parent: "PUL-1143", intermediate: "", child: "PUL-1145", status: "For QA Review" },
+    { parent: "PUL-1143", intermediate: "", child: "PUL-1146", status: "For QA Review" },
+    { parent: "PUL-1143", intermediate: "", child: "PUL-1147", status: "For QA Review" },
+    { parent: "PUL-1143", intermediate: "", child: "PUL-1167", status: "For QA Review" },
   ];

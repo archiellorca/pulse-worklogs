@@ -224,19 +224,21 @@
 
       const isDevDone = stats.total > 0 && stats.devDone === stats.total;
       const isQaDone = stats.total > 0 && stats.qaDone === stats.total;
+      const isDevZero = stats.total > 0 && stats.devDone === 0;
+      const isQaZero = stats.total > 0 && stats.qaDone === 0;
 
-      function summaryCell(value, highlight) {
-        if (highlight) {
-          return el("td", { class: "summary-cell" }, [el("span", { class: "summary-badge", text: value })]);
+      function summaryCell(value, badgeVariant) {
+        if (badgeVariant) {
+          return el("td", { class: "summary-cell" }, [el("span", { class: `summary-badge summary-badge-${badgeVariant}`, text: value })]);
         }
         return el("td", { class: "summary-cell", text: value });
       }
 
-      row.appendChild(summaryCell(String(stats.total), false));
-      row.appendChild(summaryCell(String(stats.devDone), isDevDone));
-      row.appendChild(summaryCell(String(stats.qaDone), isQaDone));
-      row.appendChild(summaryCell(formatEffort("points", effortRecord && effortRecord.points), false));
-      row.appendChild(summaryCell(formatEffort("dev_est", effortRecord && effortRecord.dev_est), false));
+      row.appendChild(summaryCell(String(stats.total), null));
+      row.appendChild(summaryCell(String(stats.devDone), isDevDone ? "green" : isDevZero ? "red" : null));
+      row.appendChild(summaryCell(String(stats.qaDone), isQaDone ? "green" : isQaZero ? "red" : null));
+      row.appendChild(summaryCell(formatEffort("points", effortRecord && effortRecord.points), null));
+      row.appendChild(summaryCell(formatEffort("dev_est", effortRecord && effortRecord.dev_est), null));
 
       columns.forEach(status => {
         const matches = parentRows.filter(r => r.status === status);

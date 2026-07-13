@@ -16,6 +16,7 @@
     --status-code-review: #3159C4;  --status-code-review-bg: #E7ECFB;
     --status-release-ready: #237A47;--status-release-ready-bg: #E4F4E9;
     --status-done: #0E6B5C;         --status-done-bg: #DDF1EC;
+    --status-danger: #B3261E;       --status-danger-bg: #FBE4E2;
     --status-fallback-1: #B4562F;   --status-fallback-1-bg: #FBE9E0;
     --status-fallback-2: #2E8FA6;   --status-fallback-2-bg: #E1F1F5;
     --status-fallback-3: #9A6B1C;   --status-fallback-3-bg: #F7EDD9;
@@ -35,6 +36,7 @@
       --status-code-review: #7C9BF2;  --status-code-review-bg: #1C2740;
       --status-release-ready: #5BC583;--status-release-ready-bg: #16301F;
       --status-done: #4FD3B8;         --status-done-bg: #10312A;
+      --status-danger: #E5726E;       --status-danger-bg: #34201F;
       --status-fallback-1: #E08A5C;   --status-fallback-1-bg: #34211A;
       --status-fallback-2: #6FC3D8;   --status-fallback-2-bg: #142A2E;
       --status-fallback-3: #D9B15C;   --status-fallback-3-bg: #322A15;
@@ -53,6 +55,7 @@
     --status-code-review: #7C9BF2;  --status-code-review-bg: #1C2740;
     --status-release-ready: #5BC583;--status-release-ready-bg: #16301F;
     --status-done: #4FD3B8;         --status-done-bg: #10312A;
+    --status-danger: #E5726E;       --status-danger-bg: #34201F;
     --status-fallback-1: #E08A5C;   --status-fallback-1-bg: #34211A;
     --status-fallback-2: #6FC3D8;   --status-fallback-2-bg: #142A2E;
     --status-fallback-3: #D9B15C;   --status-fallback-3-bg: #322A15;
@@ -70,6 +73,7 @@
     --status-code-review: #3159C4;  --status-code-review-bg: #E7ECFB;
     --status-release-ready: #237A47;--status-release-ready-bg: #E4F4E9;
     --status-done: #0E6B5C;         --status-done-bg: #DDF1EC;
+    --status-danger: #B3261E;       --status-danger-bg: #FBE4E2;
     --status-fallback-1: #B4562F;   --status-fallback-1-bg: #FBE9E0;
     --status-fallback-2: #2E8FA6;   --status-fallback-2-bg: #E1F1F5;
     --status-fallback-3: #9A6B1C;   --status-fallback-3-bg: #F7EDD9;
@@ -316,9 +320,17 @@
     min-width: 1.6em;
     padding: 0.15em 0.5em;
     border-radius: 6px;
+    font-weight: 600;
+  }
+
+  .summary-badge-green {
     background: var(--status-done-bg);
     color: var(--status-done);
-    font-weight: 600;
+  }
+
+  .summary-badge-red {
+    background: var(--status-danger-bg);
+    color: var(--status-danger);
   }
 
   #report-root.columns-collapsed .parent-stats {
