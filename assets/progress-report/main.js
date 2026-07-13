@@ -172,8 +172,14 @@
     const legend = el("div", { class: "legend" });
     renderLegend(legend, columns, colorMap);
 
+    const SUMMARY_COLUMNS = ["Total", "Dev-done", "QA-done", "Points", "Dev Est."];
+
     const thead = el("thead", {}, [
-      el("tr", {}, [el("th", { class: "col-parent", text: "Work Item" }), ...columns.map(status => el("th", { text: status }))])
+      el("tr", {}, [
+        el("th", { class: "col-parent", text: "Work Item" }),
+        ...SUMMARY_COLUMNS.map(label => el("th", { class: "summary-col", text: label })),
+        ...columns.map(status => el("th", { text: status }))
+      ])
     ]);
     const tbody = el("tbody");
 
@@ -215,6 +221,15 @@
 
       const parentCell = el("th", { class: "col-parent" }, parentCellChildren);
       const row = el("tr", {}, [parentCell]);
+
+      const summaryValues = [
+        String(stats.total),
+        String(stats.devDone),
+        String(stats.qaDone),
+        formatEffort("points", effortRecord && effortRecord.points),
+        formatEffort("dev_est", effortRecord && effortRecord.dev_est)
+      ];
+      summaryValues.forEach(v => row.appendChild(el("td", { class: "summary-cell", text: v })));
 
       columns.forEach(status => {
         const matches = parentRows.filter(r => r.status === status);

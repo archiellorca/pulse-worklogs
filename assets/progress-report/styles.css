@@ -296,8 +296,22 @@
     border-bottom: none;
   }
 
-  #report-root.columns-collapsed thead th:not(.col-parent),
-  #report-root.columns-collapsed tbody td:not(.col-parent) {
+  th.summary-col,
+  td.summary-cell {
+    display: none;
+  }
+
+  #report-root.columns-collapsed thead th:not(.col-parent):not(.summary-col),
+  #report-root.columns-collapsed tbody td:not(.col-parent):not(.summary-cell) {
+    display: none;
+  }
+
+  #report-root.columns-collapsed th.summary-col,
+  #report-root.columns-collapsed td.summary-cell {
+    display: table-cell;
+  }
+
+  #report-root.columns-collapsed .parent-stats {
     display: none;
   }
 
