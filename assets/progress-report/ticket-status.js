@@ -34,4 +34,7 @@ window.ticketStatusData = [
     { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1625", status: "QA In-Progress" },
     { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1626", status: "QA In-Progress" },
     { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1867", status: "For QA Review" },
+    { parent: "PLS-1907", intermediate: "", child: "PLS-1908", status: "Release Ready" },
+    { parent: "PLS-1907", intermediate: "", child: "PLS-1909", status: "Release Ready" },
+    { parent: "PLS-1907", intermediate: "", child: "PLS-1921", status: "Release Ready" },
   ];
