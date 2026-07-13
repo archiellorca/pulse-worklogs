@@ -86,7 +86,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
-    max-width: 1180px;
+    max-width: 95%;
     margin: 0 auto;
     --font-head: -apple-system, "Segoe UI Semibold", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     --font-body: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -296,13 +296,18 @@
     border-bottom: none;
   }
 
+  #report-root.columns-collapsed thead th:not(.col-parent),
+  #report-root.columns-collapsed tbody td:not(.col-parent) {
+    display: none;
+  }
+
   .col-parent {
     position: sticky;
     left: 0;
     background: var(--surface);
     z-index: 1;
     min-width: 220px;
-    max-width: 260px;
+    max-width: 400px;
     border-right: 1px solid var(--border-strong);
   }
 

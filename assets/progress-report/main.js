@@ -122,10 +122,24 @@
     { key: "qa_time", label: "QA Time" }*/
   ];
 
-  function formatEffort(label, n) {
+  function formatEffort(key, n) {
     const num = Number(n);
     if (Number.isFinite(num)) {
-      if (label === "Points") return n;
+      if (key === "points") return n;
+      if (key === "dev_est") {
+        const MINUTES_PER_HOUR = 60;
+        const HOURS_PER_DAY = 8;
+        const MINUTES_PER_DAY = MINUTES_PER_HOUR * HOURS_PER_DAY;
+        const totalMinutes = Math.round(num);
+        const days = Math.floor(totalMinutes / MINUTES_PER_DAY);
+        const hours = Math.floor((totalMinutes % MINUTES_PER_DAY) / MINUTES_PER_HOUR);
+        const minutes = totalMinutes % MINUTES_PER_HOUR;
+        const parts = [];
+        if (days > 0) parts.push(`${days}d`);
+        if (hours > 0) parts.push(`${hours}h`);
+        if (minutes > 0 || parts.length === 0) parts.push(`${minutes}m`);
+        return parts.join(" ");
+      }
       return num.toFixed(2);
      } else {
       return "—";
@@ -194,7 +208,7 @@
       const effortBlock = el("div", { class: "parent-stats" },
         EFFORT_FIELDS.map(f => el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: f.label }),
-          el("span", { class: "parent-stat-value", text: formatEffort(f.label, effortRecord && effortRecord[f.key]) })
+          el("span", { class: "parent-stat-value", text: formatEffort(f.key, effortRecord && effortRecord[f.key]) })
         ]))
       );
       parentCellChildren.push(effortBlock);
@@ -264,6 +278,10 @@
   document.getElementById("toggle-monitor").addEventListener("change", e => {
     showMonitorOnly = e.target.checked;
     rerender();
+  });
+
+  document.getElementById("toggle-columns").addEventListener("change", e => {
+    document.getElementById("report-root").classList.toggle("columns-collapsed", e.target.checked);
   });
 
   function wireEditor({ textareaId, statusId, applyId, resetId, downloadId, get, set, downloadName }) {
