@@ -10,9 +10,11 @@
 
   const KNOWN_STATUS_VARS = {
     "monitor-only": "monitor",
+    "to-do": "to-do",
     "qa-in-progress": "qa-progress",
     "for-qa-review": "qa-review",
     "for-code-review": "code-review",
+    "for-pm-review": "for-pm-review",
     "release-ready": "release-ready",
     "done": "done"
   };
@@ -21,9 +23,11 @@
   // in the order it first appears in the data.
   const PREFERRED_STATUS_ORDER = [
     "Monitor only",
+    "To Do",
     "QA In-Progress",
     "For QA Review",
     "For Code Review",
+    "For PM Review",
     "Release Ready",
     "Done"
   ];
