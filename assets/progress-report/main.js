@@ -186,11 +186,11 @@
     group.parents.forEach(parent => {
       const parentRows = parent.rows;
 
-      const parentCellChildren = [el("div", { class: "parent-id", text: parent.id })];
+      const parentCellChildren = [el("h3", { class: "parent-id", text: parent.id })];
       const descRecord = descMap[parent.id];
       if (descRecord && descRecord.desc) {
-        parentCellChildren.push(el("div", { class: "parent-summary", text: descRecord.summary }));
-        parentCellChildren.push(el("div", { class: "parent-desc", text: descRecord.desc }));
+        parentCellChildren.push(el("h4", { class: "parent-summary", text: descRecord.summary }));
+        parentCellChildren.push(el("p", { class: "parent-desc", text: descRecord.desc }));
       }
 
       const stats = computeParentStats(parentRows);
