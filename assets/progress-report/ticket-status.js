@@ -112,4 +112,42 @@ window.ticketStatusData = [
     { parent: "PUL-1143", intermediate: "", child: "PUL-1146", status: "For QA Review" },
     { parent: "PUL-1143", intermediate: "", child: "PUL-1147", status: "For QA Review" },
     { parent: "PUL-1143", intermediate: "", child: "PUL-1167", status: "For QA Review" },
+    // PLS-1103 (no children)
+    { parent: "PLS-1103", intermediate: "", child: "PLS-1103", status: "For Grooming" },
+    // PLS-1842 (no children)
+    { parent: "PLS-1842", intermediate: "", child: "PLS-1842", status: "For Grooming" },
+    // PLS-1851 (no children)
+    { parent: "PLS-1851", intermediate: "", child: "PLS-1851", status: "For Grooming" },
+    // PLS-1872 (no children)
+    { parent: "PLS-1872", intermediate: "", child: "PLS-1872", status: "For PM Review" },
+    // PLS-1961
+    { parent: "PLS-1961", intermediate: "", child: "PLS-1865", status: "For QA Review" },
+    { parent: "PLS-1961", intermediate: "", child: "PLS-1866", status: "For QA Review" },
+    { parent: "PLS-1961", intermediate: "", child: "PLS-1869", status: "For QA Review" },
+    { parent: "PLS-1961", intermediate: "", child: "PLS-1870", status: "For QA Review" },
+    // PLS-890
+    { parent: "PLS-890", intermediate: "", child: "PLS-741", status: "For Grooming" },
+    { parent: "PLS-890", intermediate: "", child: "PLS-761", status: "For Code Review" },
+    { parent: "PLS-890", intermediate: "", child: "PLS-774", status: "Done" },
+    // PLS-1054
+    { parent: "PLS-1054", intermediate: "", child: "PLS-1708", status: "For QA Review" },
+    { parent: "PLS-1054", intermediate: "", child: "PLS-1709", status: "For QA Review" },
+    // PLS-1702 (no children)
+    { parent: "PLS-1702", intermediate: "", child: "PLS-1702", status: "Monitor only" },
+    // PLS-1852 (no children)
+    { parent: "PLS-1852", intermediate: "", child: "PLS-1852", status: "Monitor only" },
+    // PLS-1936
+    { parent: "PLS-1936", intermediate: "", child: "PLS-1955", status: "To Do" },
+    // PLS-1986 (no children)
+    { parent: "PLS-1986", intermediate: "", child: "PLS-1986", status: "Backlog Support" },
+    // PLS-1923 (no children)
+    { parent: "PLS-1923", intermediate: "", child: "PLS-1923", status: "For Grooming" },
+    // PUL-1178
+    { parent: "PUL-1178", intermediate: "", child: "PUL-1179", status: "In Progress" },
+    { parent: "PUL-1178", intermediate: "", child: "PUL-1180", status: "For Grooming" },
+    { parent: "PUL-1178", intermediate: "", child: "PUL-1181", status: "Done" },
+    // PUL-1188
+    { parent: "PUL-1188", intermediate: "", child: "PUL-1189", status: "For PM Review" },
+    // PUL-1183 (no children)
+    { parent: "PUL-1183", intermediate: "", child: "PUL-1183", status: "For PM Review" },
   ];
