@@ -9,8 +9,10 @@
   const ORIGINAL_EFFORTS = window.ticketEffortsData;
 
   const KNOWN_STATUS_VARS = {
+    "for-grooming": "for-grooming",
     "monitor-only": "monitor",
     "to-do": "to-do",
+    "in-progress": "in-progress",
     "qa-in-progress": "qa-progress",
     "for-qa-review": "qa-review",
     "for-code-review": "code-review",
@@ -22,11 +24,13 @@
   // Preferred pipeline order for known statuses; anything else is appended
   // in the order it first appears in the data.
   const PREFERRED_STATUS_ORDER = [
+    "For Grooming",
     "Monitor only",
     "To Do",
-    "QA In-Progress",
-    "For QA Review",
+    "In-Progress",
     "For Code Review",
+    "For QA Review",
+    "QA In-Progress",        
     "For PM Review",
     "Release Ready",
     "Done"
@@ -314,7 +318,9 @@
     rerender();
   });
 
-  document.getElementById("toggle-columns").addEventListener("change", e => {
+  const toggleColumnsInput = document.getElementById("toggle-columns");
+  document.getElementById("report-root").classList.toggle("columns-collapsed", toggleColumnsInput.checked);
+  toggleColumnsInput.addEventListener("change", e => {
     document.getElementById("report-root").classList.toggle("columns-collapsed", e.target.checked);
   });
 

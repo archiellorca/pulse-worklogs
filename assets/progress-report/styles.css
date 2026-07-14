@@ -131,7 +131,7 @@
   }
 
   .legend {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 0.5rem 1.1rem;
     font-size: 0.78rem;
@@ -398,6 +398,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    max-width: 150px;
   }
 
   .parent-stat {

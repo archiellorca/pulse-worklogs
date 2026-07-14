@@ -223,4 +223,6 @@ window.ticketStatusData = [
     { parent: "PLS-1971", intermediate: "", child: "PLS-1973", status: "For QA Review" },
     // PLS-1988 (no children)
     { parent: "PLS-1988", intermediate: "", child: "PLS-1988", status: "Monitor only" },
+    // PUL-1112
+    { parent: "PUL-1112", intermediate: "", child: "PUL-1194", status: "To Do" },
   ];
