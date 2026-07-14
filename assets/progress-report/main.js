@@ -146,9 +146,9 @@
      }
   }
 
-  // Groups parents into per-release buckets, in order of first appearance.
-  // Parents with no matching description entry (or no release on it) land
-  // in a shared "No release" bucket.
+  // Groups parents into per-release buckets, sorted alphabetically (numeric-aware)
+  // by release name. Parents with no matching description entry (or no release
+  // on it) land in a shared "No release" bucket.
   function buildReleaseGroups(parents, descMap) {
     const order = [];
     const map = new Map();
@@ -158,6 +158,7 @@
       if (!map.has(release)) { map.set(release, []); order.push(release); }
       map.get(release).push(p);
     });
+    order.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
     return order.map(release => ({ release, parents: map.get(release) }));
   }
 
@@ -273,7 +274,7 @@
 
     const parentCount = group.parents.length;
     const ticketCount = groupRows.length;
-    const title = el("div", { class: "release-title" }, [
+    const summary = el("summary", { class: "release-title" }, [
       el("span", { class: "release-badge", text: group.release }),
       el("span", {
         class: "release-meta",
@@ -281,7 +282,9 @@
       })
     ]);
 
-    return el("section", { class: "release-section" }, [title, legend, tableWrap]);
+    const details = el("details", { class: "release-section" }, [summary, legend, tableWrap]);
+    details.open = true;
+    return details;
   }
 
   function renderReport(rows, descriptions, efforts) {

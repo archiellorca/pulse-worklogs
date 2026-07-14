@@ -177,6 +177,10 @@
     gap: 1rem;
   }
 
+  .release-section:not([open]) > *:not(summary) {
+    display: none;
+  }
+
   .release-title {
     display: flex;
     align-items: baseline;
@@ -184,6 +188,23 @@
     flex-wrap: wrap;
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.6rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .release-title::-webkit-details-marker {
+    display: none;
+  }
+
+  .release-title::before {
+    content: "▸";
+    color: var(--text-faint);
+    font-size: 0.75rem;
+    transition: transform 0.15s ease;
+  }
+
+  details[open] > .release-title::before {
+    transform: rotate(90deg);
   }
 
   .release-badge {
