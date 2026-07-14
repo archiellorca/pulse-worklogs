@@ -194,18 +194,30 @@
       }
 
       const stats = computeParentStats(parentRows);
+      const isDevDone = stats.total > 0 && stats.devDone === stats.total;
+      const isQaDone = stats.total > 0 && stats.qaDone === stats.total;
+      const isDevZero = stats.total > 0 && stats.devDone === 0;
+      const isQaZero = stats.total > 0 && stats.qaDone === 0;
+
+      function statValue(value, badgeVariant) {
+        if (badgeVariant) {
+          return el("span", { class: "parent-stat-value" }, [el("span", { class: `summary-badge summary-badge-${badgeVariant}`, text: value })]);
+        }
+        return el("span", { class: "parent-stat-value", text: value });
+      }
+
       const statsBlock = el("div", { class: "parent-stats" }, [
         el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: "Total" }),
-          el("span", { class: "parent-stat-value", text: String(stats.total) })
+          statValue(String(stats.total), null)
         ]),
         el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: "Dev-done" }),
-          el("span", { class: "parent-stat-value", text: String(stats.devDone) })
+          statValue(String(stats.devDone), isDevDone ? "green" : isDevZero ? "red" : null)
         ]),
         el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: "QA-done" }),
-          el("span", { class: "parent-stat-value", text: String(stats.qaDone) })
+          statValue(String(stats.qaDone), isQaDone ? "green" : isQaZero ? "red" : null)
         ])
       ]);
       parentCellChildren.push(statsBlock);
@@ -221,11 +233,6 @@
 
       const parentCell = el("th", { class: "col-parent" }, parentCellChildren);
       const row = el("tr", {}, [parentCell]);
-
-      const isDevDone = stats.total > 0 && stats.devDone === stats.total;
-      const isQaDone = stats.total > 0 && stats.qaDone === stats.total;
-      const isDevZero = stats.total > 0 && stats.devDone === 0;
-      const isQaZero = stats.total > 0 && stats.qaDone === 0;
 
       function summaryCell(value, badgeVariant) {
         if (badgeVariant) {

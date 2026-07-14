@@ -150,4 +150,77 @@ window.ticketStatusData = [
     { parent: "PUL-1188", intermediate: "", child: "PUL-1189", status: "For PM Review" },
     // PUL-1183 (no children)
     { parent: "PUL-1183", intermediate: "", child: "PUL-1183", status: "For PM Review" },
+    // PUL-1129
+    { parent: "PUL-1129", intermediate: "", child: "PUL-1130", status: "For PM Review" },
+    { parent: "PUL-1129", intermediate: "", child: "PUL-1131", status: "For Grooming" },
+    // PUL-1137
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1153", status: "For QA Review" },
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1154", status: "For PM Review" },
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1155", status: "For PM Review" },
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1156", status: "For QA Review" },
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1157", status: "For QA Review" },
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1160", status: "For QA Review" },
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1162", status: "For QA Review" },
+    { parent: "PUL-1137", intermediate: "", child: "PUL-1182", status: "For Code Review" },
+    // PUL-1138
+    { parent: "PUL-1138", intermediate: "", child: "PUL-1149", status: "For Grooming" },
+    { parent: "PUL-1138", intermediate: "", child: "PUL-1150", status: "For Grooming" },
+    { parent: "PUL-1138", intermediate: "", child: "PUL-1151", status: "For Grooming" },
+    { parent: "PUL-1138", intermediate: "", child: "PUL-1152", status: "For Grooming" },
+    // PUL-1023
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1024", status: "Done" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1042", status: "QA In-Progress" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1043", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1044", status: "Closed" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1045", status: "Closed" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1049", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1050", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1051", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1052", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1053", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1054", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1056", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1057", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1062", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1063", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1064", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1065", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1066", status: "For Grooming" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1067", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1071", status: "For Grooming" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1148", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1158", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1161", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1168", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1169", status: "For QA Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1170", status: "Done" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1172", status: "For PM Review" },
+    { parent: "PUL-1023", intermediate: "", child: "PUL-1173", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "PUL-1042", child: "PUL-1058", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "PUL-1042", child: "PUL-1059", status: "Release Ready" },
+    { parent: "PUL-1023", intermediate: "PUL-1043", child: "PUL-1061", status: "For PM Review" },
+    { parent: "PUL-1023", intermediate: "PUL-1067", child: "PUL-1069", status: "Release Ready" },
+    // PLS-1313 (no children)
+    { parent: "PLS-1313", intermediate: "", child: "PLS-1313", status: "For PM Review" },
+    // PLS-545
+    { parent: "PLS-545", intermediate: "", child: "PLS-1775", status: "For Grooming" },
+    { parent: "PLS-545", intermediate: "", child: "PLS-1776", status: "For PM Review" },
+    // PLS-547 (no children)
+    { parent: "PLS-547", intermediate: "", child: "PLS-547", status: "Backlog Support" },
+    // PLS-1357
+    { parent: "PLS-1357", intermediate: "", child: "PLS-1358", status: "Closed" },
+    { parent: "PLS-1357", intermediate: "", child: "PLS-1464", status: "Closed" },
+    { parent: "PLS-1357", intermediate: "", child: "PLS-1962", status: "For Grooming" },
+    // PLS-1633 (no children)
+    { parent: "PLS-1633", intermediate: "", child: "PLS-1633", status: "Monitor only" },
+    // PLS-1502
+    { parent: "PLS-1502", intermediate: "", child: "PLS-1501", status: "For Code Review" },
+    { parent: "PLS-1502", intermediate: "", child: "PLS-1503", status: "To Do" },
+    { parent: "PLS-1502", intermediate: "", child: "PLS-1504", status: "For QA Review" },
+    // PLS-1971
+    { parent: "PLS-1971", intermediate: "", child: "PLS-723", status: "Done" },
+    { parent: "PLS-1971", intermediate: "", child: "PLS-1972", status: "For QA Review" },
+    { parent: "PLS-1971", intermediate: "", child: "PLS-1973", status: "For QA Review" },
+    // PLS-1988 (no children)
+    { parent: "PLS-1988", intermediate: "", child: "PLS-1988", status: "Monitor only" },
   ];
