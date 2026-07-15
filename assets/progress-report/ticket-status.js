@@ -5,6 +5,7 @@ window.ticketStatusData = [
     { parent: "PLS-1960", intermediate: "", child: "PLS-1863", status: "Release Ready" },
     { parent: "PLS-1960", intermediate: "", child: "PLS-1864", status: "Release Ready" },
     { parent: "PLS-1960", intermediate: "", child: "PLS-1871", status: "Release Ready" },
+    { parent: "PLS-1960", intermediate: "", child: "PLS-1994", status: "To Do" },
     { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1554", status: "Release Ready" },
     { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1555", status: "Release Ready" },
     { parent: "PLS-1960", intermediate: "PLS-1530", child: "PLS-1556", status: "Release Ready" },
@@ -26,7 +27,7 @@ window.ticketStatusData = [
     { parent: "PLS-1523", intermediate: "PLS-1569", child: "PLS-1930", status: "Release Ready" },
     // PLS-1780
     { parent: "PLS-1780", intermediate: "", child: "PLS-1571", status: "Monitor only" },
-    { parent: "PLS-1780", intermediate: "", child: "PLS-1602", status: "For PM Review" },
+    { parent: "PLS-1780", intermediate: "", child: "PLS-1602", status: "QA In-Progress" },
     { parent: "PLS-1780", intermediate: "", child: "PLS-1640", status: "Release Ready" },
     { parent: "PLS-1780", intermediate: "", child: "PLS-1862", status: "Release Ready" },
     { parent: "PLS-1780", intermediate: "PLS-1571", child: "PLS-1793", status: "Release Ready" },
@@ -36,12 +37,12 @@ window.ticketStatusData = [
     { parent: "PLS-1780", intermediate: "PLS-1571", child: "PLS-1868", status: "Release Ready" },
     // PLS-1781
     { parent: "PLS-1781", intermediate: "", child: "PLS-1572", status: "Monitor only" },
-    { parent: "PLS-1781", intermediate: "", child: "PLS-1603", status: "For QA Review" },
-    { parent: "PLS-1781", intermediate: "", child: "PLS-1639", status: "To Do" },
+    { parent: "PLS-1781", intermediate: "", child: "PLS-1603", status: "QA In-Progress" },
+    { parent: "PLS-1781", intermediate: "", child: "PLS-1639", status: "Release Ready" },
     { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1624", status: "Release Ready" },
-    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1625", status: "To Do" },
-    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1626", status: "QA In-Progress" },
-    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1867", status: "QA In-Progress" },
+    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1625", status: "Release Ready" },
+    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1626", status: "Release Ready" },
+    { parent: "PLS-1781", intermediate: "PLS-1572", child: "PLS-1867", status: "Release Ready" },
     // PLS-1907
     { parent: "PLS-1907", intermediate: "", child: "PLS-1908", status: "Release Ready" },
     { parent: "PLS-1907", intermediate: "", child: "PLS-1909", status: "Release Ready" },
@@ -60,6 +61,7 @@ window.ticketStatusData = [
     { parent: "PLS-1881", intermediate: "", child: "PLS-1888", status: "Release Ready" },
     { parent: "PLS-1881", intermediate: "", child: "PLS-1889", status: "Release Ready" },
     { parent: "PLS-1881", intermediate: "", child: "PLS-1890", status: "Release Ready" },
+    { parent: "PLS-1881", intermediate: "", child: "PLS-1992", status: "Release Ready" },
     // PLS-1952 (no children)
     { parent: "PLS-1952", intermediate: "", child: "PLS-1952", status: "Done" },
     // PLS-1937
@@ -223,6 +225,8 @@ window.ticketStatusData = [
     { parent: "PLS-1971", intermediate: "", child: "PLS-1973", status: "For QA Review" },
     // PLS-1988 (no children)
     { parent: "PLS-1988", intermediate: "", child: "PLS-1988", status: "Monitor only" },
+    // PLS-1694 (no children)
+    { parent: "PLS-1694", intermediate: "", child: "PLS-1694", status: "Release Ready" },
     // PUL-1112
     { parent: "PUL-1112", intermediate: "", child: "PUL-1194", status: "To Do" },
   ];
