@@ -150,19 +150,34 @@
      }
   }
 
-  // Groups parents into per-release buckets, sorted alphabetically (numeric-aware)
-  // by release name. Parents with no matching description entry (or no release
-  // on it) land in a shared "No release" bucket.
-  function buildReleaseGroups(parents, descMap) {
+  // Groups parents into per-release buckets, following the order parents appear
+  // in tickets.js (the descriptions source) — both the release section order and
+  // the parent order within each section mirror that file. Parents with no
+  // matching description entry (or no release on it) land in a shared
+  // "No release" bucket, appended in their original row order.
+  function buildReleaseGroups(parents, descMap, descriptions) {
+    const parentById = new Map(parents.map(p => [p.id, p]));
     const order = [];
     const map = new Map();
-    parents.forEach(p => {
-      const rec = descMap[p.id];
-      const release = (rec && rec.release) ? rec.release : "No release";
+
+    function addToRelease(release, parent) {
       if (!map.has(release)) { map.set(release, []); order.push(release); }
-      map.get(release).push(p);
+      map.get(release).push(parent);
+    }
+
+    const seen = new Set();
+    (descriptions || []).forEach(d => {
+      const parent = d && d.parent ? parentById.get(d.parent) : null;
+      if (!parent || seen.has(d.parent)) return;
+      seen.add(d.parent);
+      addToRelease(d.release || "No release", parent);
     });
-    order.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
+
+    parents.forEach(p => {
+      if (seen.has(p.id)) return;
+      addToRelease("No release", p);
+    });
+
     return order.map(release => ({ release, parents: map.get(release) }));
   }
 
@@ -295,7 +310,7 @@
     const descMap = buildDescriptionMap(descriptions);
     const effortMap = buildEffortMap(descriptions);
     const parents = buildParents(rows);
-    const releaseGroups = buildReleaseGroups(parents, descMap);
+    const releaseGroups = buildReleaseGroups(parents, descMap, descriptions);
 
     const root = document.getElementById("report-root");
     root.innerHTML = "";
