@@ -227,6 +227,22 @@ window.ticketStatusData = [
     { parent: "PLS-1988", intermediate: "", child: "PLS-1988", status: "Monitor only" },
     // PLS-1694 (no children)
     { parent: "PLS-1694", intermediate: "", child: "PLS-1694", status: "Release Ready" },
+    // PLS-1812 (no children)
+    { parent: "PLS-1812", intermediate: "", child: "PLS-1812", status: "For QA Review" },
+    // PLS-1953 (no children)
+    { parent: "PLS-1953", intermediate: "", child: "PLS-1953", status: "Release Ready" },
+    // PLS-1099 (no children)
+    { parent: "PLS-1099", intermediate: "", child: "PLS-1099", status: "For Grooming" },
+    // PLS-1805 (no children)
+    { parent: "PLS-1805", intermediate: "", child: "PLS-1805", status: "For Grooming" },
+    // PLS-327 (no children)
+    { parent: "PLS-327", intermediate: "", child: "PLS-327", status: "Monitor only" },
+    // PLS-1933 (no children)
+    { parent: "PLS-1933", intermediate: "", child: "PLS-1933", status: "For QA Review" },
+    // PLS-1989 (no children)
+    { parent: "PLS-1989", intermediate: "", child: "PLS-1989", status: "For Grooming" },
+    // PLS-1993 (no children)
+    { parent: "PLS-1993", intermediate: "", child: "PLS-1993", status: "For Grooming" },
     // PUL-1112
     { parent: "PUL-1112", intermediate: "", child: "PUL-1194", status: "To Do" },
   ];
