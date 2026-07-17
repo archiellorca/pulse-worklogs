@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Ticket Progress</title>
+  <link rel="stylesheet" href="assets/worklogs/styles.css" />
+</head>
+<body>
+
+  <div class="filters">
+    <span class="filter-label">Date range</span>
+    <div class="filter-group">
+      <label for="from">From</label>
+      <input type="date" id="from" />
+    </div>
+    <div class="filter-group">
+      <label for="to">To</label>
+      <input type="date" id="to" />
+    </div>
+    <div class="filter-group">
+      <label for="devFilter">Dev</label>
+      <select id="devFilter">
+        <option value="all">All</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="ticketFilter">Ticket</label>
+      <input type="text" id="ticketFilter" placeholder="e.g. PLS-1604" style="width:130px;" />
+    </div>
+    <span class="stats" id="stats"></span>
+  </div>
+
+  <div class="legend" id="legend"></div>
+  <div id="tableContainer"></div>
+ 
+  <script src="assets/worklogs/tasks.js" ></script>
+  <script src="assets/worklogs/worklogs-jay-15622.js" ></script>
+  <script src="assets/worklogs/main.js" ></script>
+  
+</body>
+</html>
