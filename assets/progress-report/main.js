@@ -293,11 +293,15 @@
 
     const parentCount = group.parents.length;
     const ticketCount = groupRows.length;
+    const totalPoints = group.parents.reduce((sum, parent) => {
+      const points = Number(effortMap[parent.id] && effortMap[parent.id].points);
+      return sum + (Number.isFinite(points) ? points : 0);
+    }, 0);
     const summary = el("summary", { class: "release-title" }, [
       el("span", { class: "release-badge", text: group.release }),
       el("span", {
         class: "release-meta",
-        text: `${parentCount} parent epic${parentCount === 1 ? "" : "s"} · ${ticketCount} child ticket${ticketCount === 1 ? "" : "s"}`
+        text: `${parentCount} parent epic${parentCount === 1 ? "" : "s"} · ${ticketCount} child ticket${ticketCount === 1 ? "" : "s"} · ${totalPoints} total points`
       })
     ]);
 
