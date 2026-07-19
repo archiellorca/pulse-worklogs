@@ -35,7 +35,8 @@
     }
 
     function fmtHours(h) {
-      return Number.isInteger(h) ? h + "h" : Number(h) + "h";
+      const rounded = Math.round(Number(h) * 100) / 100;
+      return rounded + "h";
     }
 
     const allDates = [...new Set(raw.map(r => toISO(r.date)))].sort();
