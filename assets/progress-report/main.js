@@ -338,9 +338,21 @@
   });
 
   const toggleColumnsInput = document.getElementById("toggle-columns");
-  document.getElementById("report-root").classList.toggle("columns-collapsed", toggleColumnsInput.checked);
-  toggleColumnsInput.addEventListener("change", e => {
-    document.getElementById("report-root").classList.toggle("columns-collapsed", e.target.checked);
+  const toggleMonitorLabel = document.getElementById("toggle-monitor").closest(".toggle-control");
+
+  function syncColumnsToggle(checked) {
+    document.getElementById("report-root").classList.toggle("columns-collapsed", checked);
+    toggleMonitorLabel.style.display = checked ? "none" : "";
+  }
+
+  syncColumnsToggle(toggleColumnsInput.checked);
+  toggleColumnsInput.addEventListener("change", e => syncColumnsToggle(e.target.checked));
+
+  const optionsModal = document.getElementById("options-modal");
+  document.getElementById("open-options").addEventListener("click", () => optionsModal.showModal());
+  document.getElementById("close-options").addEventListener("click", () => optionsModal.close());
+  optionsModal.addEventListener("click", e => {
+    if (e.target === optionsModal) optionsModal.close();
   });
 
   function wireEditor({ textareaId, statusId, applyId, resetId, downloadId, get, set, downloadName }) {

@@ -5283,5 +5283,236 @@ window.workLogsData = [
     "date": "07/17/2026",
     "task": "IL-10",
     "hours": 2.0
+  },
+  {
+    "id": 1,
+    "name": "Jay",
+    "date": "06/01/2026",
+    "task": "PLS-1",
+    "hours": 1.0
+  },
+  {
+    "id": 27394,
+    "name": "Christopher",
+    "date": "04/21/2026",
+    "task": "PLS-1554",
+    "hours": 1.33
+  },
+  {
+    "id": 27399,
+    "name": "Christopher",
+    "date": "04/22/2026",
+    "task": "PLS-1554",
+    "hours": 0.75
+  },
+  {
+    "id": 27457,
+    "name": "Christopher",
+    "date": "04/29/2026",
+    "task": "PLS-1556",
+    "hours": 7.0
+  },
+  {
+    "id": 27463,
+    "name": "Christopher",
+    "date": "04/29/2026",
+    "task": "PLS-1584",
+    "hours": 7.0
+  },
+  {
+    "id": 27671,
+    "name": "Christopher",
+    "date": "05/20/2026",
+    "task": "PLS-1556",
+    "hours": 1.0
+  },
+  {
+    "id": 27672,
+    "name": "Christopher",
+    "date": "05/20/2026",
+    "task": "PLS-1714",
+    "hours": 0.5
+  },
+  {
+    "id": 27677,
+    "name": "Christopher",
+    "date": "05/21/2026",
+    "task": "PLS-1732",
+    "hours": 3.5
+  },
+  {
+    "id": 27693,
+    "name": "Christopher",
+    "date": "05/25/2026",
+    "task": "PLS-1750",
+    "hours": 1.0
+  },
+  {
+    "id": 27694,
+    "name": "Christopher",
+    "date": "05/25/2026",
+    "task": "PLS-1751",
+    "hours": 1.0
+  },
+  {
+    "id": 27784,
+    "name": "Christopher",
+    "date": "05/22/2026",
+    "task": "PLS-1750",
+    "hours": 4.0
+  },
+  {
+    "id": 27785,
+    "name": "Christopher",
+    "date": "05/22/2026",
+    "task": "PLS-1751",
+    "hours": 3.5
+  },
+  {
+    "id": 28005,
+    "name": "Kate",
+    "date": "06/08/2026",
+    "task": "PLS-1750",
+    "hours": 1.5
+  },
+  {
+    "id": 28014,
+    "name": "Jazel",
+    "date": "06/08/2026",
+    "task": "PLS-1556",
+    "hours": 1.5
+  },
+  {
+    "id": 28015,
+    "name": "Jazel",
+    "date": "06/08/2026",
+    "task": "PLS-1815",
+    "hours": 0.5
+  },
+  {
+    "id": 28017,
+    "name": "Kate",
+    "date": "06/08/2026",
+    "task": "PLS-1529",
+    "hours": 1.0
+  },
+  {
+    "id": 28018,
+    "name": "Christopher",
+    "date": "06/08/2026",
+    "task": "PLS-1815",
+    "hours": 1.5
+  },
+  {
+    "id": 28027,
+    "name": "Armin",
+    "date": "06/09/2026",
+    "task": "PLS-1529",
+    "hours": 1.0
+  },
+  {
+    "id": 28028,
+    "name": "Kate",
+    "date": "06/09/2026",
+    "task": "PLS-1529",
+    "hours": 1.0
+  },
+  {
+    "id": 28047,
+    "name": "Christopher",
+    "date": "06/09/2026",
+    "task": "PLS-1556",
+    "hours": 1.0
+  },
+  {
+    "id": 28052,
+    "name": "Jazel",
+    "date": "06/10/2026",
+    "task": "PLS-1556",
+    "hours": 1.0
+  },
+  {
+    "id": 28057,
+    "name": "Kate",
+    "date": "06/10/2026",
+    "task": "PLS-1529",
+    "hours": 0.5
+  },
+  {
+    "id": 28062,
+    "name": "Kate",
+    "date": "06/11/2026",
+    "task": "PLS-1529",
+    "hours": 2.0
+  },
+  {
+    "id": 28080,
+    "name": "Jazel",
+    "date": "06/15/2026",
+    "task": "PLS-1556",
+    "hours": 0.5
+  },
+  {
+    "id": 28086,
+    "name": "Armin",
+    "date": "06/15/2026",
+    "task": "PLS-1871",
+    "hours": 2.5
+  },
+  {
+    "id": 28087,
+    "name": "Jazel",
+    "date": "06/15/2026",
+    "task": "PLS-1815",
+    "hours": 1.0
+  },
+  {
+    "id": 28089,
+    "name": "Christopher",
+    "date": "06/11/2026",
+    "task": "PLS-1556",
+    "hours": 1.0
+  },
+  {
+    "id": 28108,
+    "name": "Christopher",
+    "date": "06/15/2026",
+    "task": "PLS-1556",
+    "hours": 0.5
+  },
+  {
+    "id": 28125,
+    "name": "Jazel",
+    "date": "06/17/2026",
+    "task": "PLS-1556",
+    "hours": 1.5
+  },
+  {
+    "id": 28133,
+    "name": "Kate",
+    "date": "06/17/2026",
+    "task": "PLS-1871",
+    "hours": 2.0
+  },
+  {
+    "id": 28412,
+    "name": "Armin",
+    "date": "06/26/2026",
+    "task": "PLS-1863",
+    "hours": 2.5
+  },
+  {
+    "id": 28463,
+    "name": "Ian",
+    "date": "06/26/2026",
+    "task": "PLS-1557",
+    "hours": 0.25
+  },
+  {
+    "id": 28468,
+    "name": "Kristine",
+    "date": "06/26/2026",
+    "task": "PLS-1557",
+    "hours": 1.5
   }
 ];

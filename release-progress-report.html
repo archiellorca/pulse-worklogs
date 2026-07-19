@@ -11,22 +11,30 @@
 <body>
 
   <header class="page-head">
-    <p class="eyebrow">Pulse Project</p>
+    <div class="page-head-top">
+      <p class="eyebrow">Pulse Project</p>
+      <button type="button" class="options-trigger" id="open-options">⚙ Options</button>
+    </div>
     <h1>Progress Report</h1>
     <p class="subtitle">description here</p>
   </header>
 
-  <div class="controls-row">
-    <p class="controls-hint">Applies to every release table below.</p>
-    <label class="toggle-control">
-      <input type="checkbox" id="toggle-monitor">
-      <span>Show [Monitor only] column</span>
-    </label>
-    <label class="toggle-control">
-      <input type="checkbox" id="toggle-columns" checked>
-      <span>Show only Work Item column</span>
-    </label>
-  </div>
+  <dialog class="options-modal" id="options-modal">
+    <div class="options-modal-head">
+      <p class="options-modal-title">Options</p>
+      <button type="button" class="options-modal-close" id="close-options" aria-label="Close">×</button>
+    </div>
+    <div class="options-modal-body">
+      <label class="toggle-control">
+        <input type="checkbox" id="toggle-columns" checked>
+        <span>Hide Kanban view</span>
+      </label>
+      <label class="toggle-control">
+        <input type="checkbox" id="toggle-monitor">
+        <span>Show [Monitor only] column</span>
+      </label>
+    </div>
+  </dialog>
 
   <div id="report-root"></div>
 
