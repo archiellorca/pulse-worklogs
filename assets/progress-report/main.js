@@ -5,8 +5,8 @@
   // "release" groups parents into their own table, in order of first appearance.
   const ORIGINAL_DESCRIPTIONS = window.ticketsData; 
 
-  // Parent key → dev/QA effort lookup, kept as its own JSON source.
-  const ORIGINAL_EFFORTS = window.ticketEffortsData;
+  // Parent key → dev/QA worklog lookup, kept as its own JSON source.
+  const ORIGINAL_EFFORTS = window.workLogsData;
 
   const KNOWN_STATUS_VARS = {
     "for-grooming": "for-grooming",
@@ -121,16 +121,63 @@
   const EFFORT_FIELDS = [
     { key: "points", label: "Points" },
     { key: "dev_est", label: "Dev Est." },
-    /*{ key: "dev_time", label: "Dev Time" },
+    { key: "dev_be_hours", label: "Dev BE Hours" },
+    { key: "dev_fe_hours", label: "Dev FE Hours" },
     { key: "qa_est", label: "QA Est." },
-    { key: "qa_time", label: "QA Time" }*/
+    { key: "qa_hours", label: "QA Hours" }
   ];
 
-  function formatEffort(key, n) {
+  // Placeholder stats — computation rules not defined yet, always shown as zero.
+  const ZERO_EFFORT_FIELDS = new Set();
+
+  // QA Est. is summed from the qa_est field on each of the parent's rows in
+  // ORIGINAL_DATA (ticketStatusData), not from the effort/description source.
+  function sumQaEst(parentRows) {
+    return parentRows.reduce((sum, r) => {
+      const n = Number(r.qa_est);
+      return sum + (Number.isFinite(n) ? n : 0);
+    }, 0);
+  }
+
+  // Name → role groups for attributing worklog hours (ORIGINAL_EFFORTS / workLogsData).
+  const FE_DEV_NAMES = new Set(["Armin", "John"]);
+  const BE_DEV_NAMES = new Set(["Ian", "Christopher", "Ryan", "Jay"]);
+  const QA_NAMES = new Set(["Kristine", "Jazel", "Kate"]);
+
+  // Groups worklog hours by task (child ticket id), split into be/fe/qa buckets
+  // by the logger's name. Built once per render and reused across all parents.
+  function buildWorklogHoursByTask(worklogs) {
+    const map = new Map();
+    (worklogs || []).forEach(w => {
+      if (!w || !w.task) return;
+      const hours = Number(w.hours);
+      if (!Number.isFinite(hours)) return;
+      let bucket = map.get(w.task);
+      if (!bucket) { bucket = { be: 0, fe: 0, qa: 0 }; map.set(w.task, bucket); }
+      if (BE_DEV_NAMES.has(w.name)) bucket.be += hours;
+      else if (FE_DEV_NAMES.has(w.name)) bucket.fe += hours;
+      else if (QA_NAMES.has(w.name)) bucket.qa += hours;
+    });
+    return map;
+  }
+
+  // dev-be-hours / dev-fe-hours / qa-hours: total worklog hours logged against
+  // this parent's child tickets (not the parent itself), split by role.
+  function sumWorklogHours(parentRows, worklogHoursByTask) {
+    let be = 0, fe = 0, qa = 0;
+    parentRows.forEach(r => {
+      const bucket = r.child ? worklogHoursByTask.get(r.child) : null;
+      if (bucket) { be += bucket.be; fe += bucket.fe; qa += bucket.qa; }
+    });
+    return { devBeHours: be, devFeHours: fe, qaHours: qa };
+  }
+
+  function formatEffort(key, n) {console.log(key);
+    if (ZERO_EFFORT_FIELDS.has(key)) return "0";
     const num = Number(n);
     if (Number.isFinite(num)) {
       if (key === "points") return n;
-      if (key === "dev_est") {
+      if (key === "dev_est" || key === "qa_est" || key === "dev_be_hours" || key === "dev_fe_hours" || key === "qa_hours") {
         const MINUTES_PER_HOUR = 60;
         const HOURS_PER_DAY = 8;
         const MINUTES_PER_DAY = MINUTES_PER_HOUR * HOURS_PER_DAY;
@@ -183,7 +230,7 @@
 
   let showMonitorOnly = false;
 
-  function buildReleaseSection(group, descMap, effortMap) {
+  function buildReleaseSection(group, descMap, effortMap, worklogHoursByTask) {
     const groupRows = group.parents.flatMap(p => p.rows);
     let columns = buildColumns(groupRows);
     if (!showMonitorOnly) columns = columns.filter(s => slug(s) !== "monitor-only");
@@ -243,10 +290,22 @@
       parentCellChildren.push(statsBlock);
 
       const effortRecord = effortMap[parent.id];
+      const qaEstTotal = sumQaEst(parentRows);
+      const worklogHours = sumWorklogHours(parentRows, worklogHoursByTask);
+      const WORKLOG_HOUR_VALUES = {
+        dev_be_hours: worklogHours.devBeHours * 60,
+        dev_fe_hours: worklogHours.devFeHours * 60,
+        qa_hours: worklogHours.qaHours * 60
+      };
       const effortBlock = el("div", { class: "parent-stats" },
         EFFORT_FIELDS.map(f => el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: f.label }),
-          el("span", { class: "parent-stat-value", text: formatEffort(f.key, effortRecord && effortRecord[f.key]) })
+          el("span", {
+            class: "parent-stat-value",
+            text: f.key === "qa_est" ? formatEffort("qa_est", qaEstTotal * 60)
+              : f.key in WORKLOG_HOUR_VALUES ? formatEffort(f.key, WORKLOG_HOUR_VALUES[f.key])
+              : formatEffort(f.key, effortRecord && effortRecord[f.key])
+          })
         ]))
       );
       parentCellChildren.push(effortBlock);
@@ -313,12 +372,13 @@
   function renderReport(rows, descriptions, efforts) {
     const descMap = buildDescriptionMap(descriptions);
     const effortMap = buildEffortMap(descriptions);
+    const worklogHoursByTask = buildWorklogHoursByTask(efforts);
     const parents = buildParents(rows);
     const releaseGroups = buildReleaseGroups(parents, descMap, descriptions);
 
     const root = document.getElementById("report-root");
     root.innerHTML = "";
-    releaseGroups.forEach(group => root.appendChild(buildReleaseSection(group, descMap, effortMap)));
+    releaseGroups.forEach(group => root.appendChild(buildReleaseSection(group, descMap, effortMap, worklogHoursByTask)));
 
     document.getElementById("report-footer").textContent =
       `${releaseGroups.length} release${releaseGroups.length === 1 ? "" : "s"} · ${parents.length} parent epics · ${rows.length} child tickets · rendered from the JSON below`;
