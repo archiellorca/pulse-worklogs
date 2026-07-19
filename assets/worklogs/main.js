@@ -3,7 +3,7 @@
     
     const taskDetailMap = Object.fromEntries(taskDetails.map(t => [t.task, t]));
 
-    const raw = window.raw;
+    const raw = window.workLogsData;
     //const raw = [{"name":"Kate","date":"05/25/2026","task":"PLS-1645","hours":1},{"name":"Kate","date":"05/25/2026","task":"PLS-1645","hours":1},{"name":"Kate","date":"05/26/2026","task":"PLS-1644","hours":2},{"name":"Kate","date":"05/26/2026","task":"PLS-1716","hours":1},{"name":"Kate","date":"05/26/2026","task":"PLS-1749","hours":1.5},{"name":"Kate","date":"05/28/2026","task":"PLS-1743","hours":1},{"name":"Kate","date":"05/28/2026","task":"PLS-1744","hours":2},{"name":"Kate","date":"05/28/2026","task":"PLS-1753","hours":2},{"name":"Kate","date":"05/29/2026","task":"PLS-1696","hours":0.5},{"name":"Kate","date":"05/29/2026","task":"PLS-1729","hours":1.5},{"name":"Kate","date":"05/29/2026","task":"PLS-1743","hours":2},{"name":"Kate","date":"06/01/2026","task":"PLS-1696","hours":1},{"name":"Kate","date":"06/01/2026","task":"PLS-1743","hours":2},{"name":"Kate","date":"06/01/2026","task":"PLS-1769","hours":1},{"name":"Kate","date":"06/01/2026","task":"PLS-1789","hours":0.5},{"name":"Kate","date":"06/02/2026","task":"PLS-1743","hours":0.5},{"name":"Kate","date":"06/02/2026","task":"PLS-1745","hours":2},{"name":"Kate","date":"06/02/2026","task":"PLS-1762","hours":1},{"name":"Kate","date":"06/03/2026","task":"PLS-1559","hours":0.58},{"name":"Kate","date":"06/03/2026","task":"PLS-1791","hours":0.25},{"name":"Kate","date":"06/03/2026","task":"PLS-1800","hours":1.5},{"name":"Kate","date":"06/04/2026","task":"PLS-1737","hours":1.5},{"name":"Kate","date":"06/04/2026","task":"PLS-1768","hours":2},{"name":"Kate","date":"06/04/2026","task":"PLS-1791","hours":0.25},{"name":"Kate","date":"06/04/2026","task":"PLS-748","hours":0.5},{"name":"Kate","date":"06/05/2026","task":"PLS-1677","hours":1},{"name":"Kate","date":"06/05/2026","task":"PLS-1699","hours":1},{"name":"Kate","date":"06/05/2026","task":"PLS-1700","hours":1.5},{"name":"Kate","date":"06/08/2026","task":"PLS-1529","hours":1},{"name":"Kate","date":"06/08/2026","task":"PLS-1606","hours":1},{"name":"Kate","date":"06/08/2026","task":"PLS-1626","hours":1.5},{"name":"Kate","date":"06/08/2026","task":"PLS-1626","hours":0.17},{"name":"Kate","date":"06/08/2026","task":"PLS-1720","hours":1},{"name":"Kate","date":"06/08/2026","task":"PLS-1750","hours":1.5},{"name":"Kate","date":"06/09/2026","task":"PLS-1529","hours":1},{"name":"Kate","date":"06/09/2026","task":"PLS-1624","hours":2},{"name":"Kate","date":"06/09/2026","task":"PLS-1689","hours":1},{"name":"Kate","date":"06/09/2026","task":"PLS-1701","hours":1.5},{"name":"Kate","date":"06/09/2026","task":"PLS-1831","hours":0.5},{"name":"Kate","date":"06/10/2026","task":"PLS-1529","hours":0.5},{"name":"Kate","date":"06/10/2026","task":"PLS-1694","hours":1},{"name":"Kate","date":"06/10/2026","task":"PLS-1844","hours":4},{"name":"Kate","date":"06/11/2026","task":"PLS-1529","hours":1},{"name":"Kate","date":"06/11/2026","task":"PLS-1592","hours":1.5},{"name":"Kate","date":"06/11/2026","task":"PLS-1625","hours":1},{"name":"Kate","date":"06/11/2026","task":"PLS-1626","hours":0.75},{"name":"Kate","date":"06/11/2026","task":"PLS-1743","hours":0.5},{"name":"Kate","date":"06/11/2026","task":"PLS-1840","hours":0.5},{"name":"Kate","date":"06/15/2026","task":"PLS-1625","hours":2},{"name":"Kate","date":"06/15/2026","task":"PUL-1120","hours":1},{"name":"Kate","date":"06/15/2026","task":"PUL-1121","hours":1},{"name":"Kate","date":"06/15/2026","task":"PUL-1122","hours":1},{"name":"Kate","date":"06/16/2026","task":"PLS-1793","hours":1},{"name":"Kate","date":"06/16/2026","task":"PLS-1861","hours":1.5},{"name":"Kate","date":"06/17/2026","task":"PLS-1625","hours":2},{"name":"Kate","date":"06/17/2026","task":"PLS-1793","hours":1},{"name":"Kate","date":"06/17/2026","task":"PLS-1871","hours":2},{"name":"Kate","date":"06/17/2026","task":"PLS-1878","hours":1}];
 
     const PERSON_COLORS = [
@@ -65,12 +65,24 @@
       legend.appendChild(span);
     });
 
-    // Set default date range
+    // Set default date range: rolling 7 days (today - 7 days, to today)
     const fromInput = document.getElementById("from");
     const toInput = document.getElementById("to");
     const ticketFilter = document.getElementById("ticketFilter");
-    fromInput.value = "2026-06-29"; //allDates[0];
-    toInput.value = allDates[allDates.length - 1];
+
+    function toLocalISO(date) {
+      const y = date.getFullYear();
+      const m = String(date.getMonth() + 1).padStart(2, "0");
+      const d = String(date.getDate()).padStart(2, "0");
+      return `${y}-${m}-${d}`;
+    }
+
+    const today = new Date();
+    const twoWeeksAgo = new Date(today);
+    twoWeeksAgo.setDate(today.getDate() - 14);
+
+    fromInput.value = toLocalISO(twoWeeksAgo);
+    toInput.value = toLocalISO(today);
     
     function render() {
       const from = fromInput.value;
