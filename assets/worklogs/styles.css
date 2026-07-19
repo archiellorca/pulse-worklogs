@@ -44,7 +44,7 @@
     .ticket-meta { font-size: 11px; color: #3b82f6; margin-top: 2px; }
     .cell-names { display: flex; flex-direction: column; gap: 4px; }
     .name-badge {
-      display: inline-flex; align-items: center; gap: 5px;
+      display: inline-flex; align-items: center; justify-content: space-between; gap: 5px;
       font-size: 11px; padding: 2px 8px; border-radius: 999px;
       font-weight: 500; white-space: nowrap;
     }
