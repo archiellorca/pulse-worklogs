@@ -555,6 +555,10 @@
     font-weight: 400;
   }
 
+  .parent-stat-label.dev_be_hours, .parent-stat-label.dev_fe_hours, .parent-stat-label.qa_hours {
+    margin-left: 1rem;
+  }
+
   .parent-stat-value {
     font-family: var(--font-mono);
     font-size: 0.78rem;

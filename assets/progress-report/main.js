@@ -397,7 +397,7 @@
       };
       const effortBlock = el("div", { class: "parent-stats" },
         EFFORT_FIELDS.map(f => el("div", { class: "parent-stat" }, [
-          el("span", { class: "parent-stat-label", text: f.label }),
+          el("span", { class: "parent-stat-label " + f.key, text: f.label }),
           el("span", {
             class: "parent-stat-value",
             text: f.key === "qa_est" ? formatEffort("qa_est", qaEstTotal * 60)
