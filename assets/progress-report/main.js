@@ -172,6 +172,104 @@
     return { devBeHours: be, devFeHours: fe, qaHours: qa };
   }
 
+  // --- Work calendar (per-parent weekly worklog grid) ---
+
+  const CALENDAR_WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+
+  function parseWorklogDate(dateStr) {
+    const [m, d, y] = String(dateStr).split("/").map(Number);
+    return new Date(Date.UTC(y, m - 1, d));
+  }
+
+  function formatCalendarDate(date) {
+    const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(date.getUTCDate()).padStart(2, "0");
+    return `${mm}/${dd}/${date.getUTCFullYear()}`;
+  }
+
+  function formatCalendarDateShort(date) {
+    const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(date.getUTCDate()).padStart(2, "0");
+    return `${mm}/${dd}`;
+  }
+
+  // ISO 8601 week number (Monday-start) + the ISO year it belongs to, since
+  // the last/first days of a year can fall in a week owned by the other year.
+  function getISOWeekInfo(date) {
+    const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+    const isoDayNum = (d.getUTCDay() + 6) % 7; // Mon=0 .. Sun=6
+    d.setUTCDate(d.getUTCDate() - isoDayNum + 3); // Thursday of this ISO week
+    const isoYear = d.getUTCFullYear();
+    const yearStart = new Date(Date.UTC(isoYear, 0, 1));
+    const week = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+    return { isoYear, week };
+  }
+
+  function getMondayOfISOWeek(isoYear, week) {
+    const jan4 = new Date(Date.UTC(isoYear, 0, 4));
+    const jan4DayNum = (jan4.getUTCDay() + 6) % 7; // Mon=0 .. Sun=6
+    const week1Monday = new Date(jan4);
+    week1Monday.setUTCDate(jan4.getUTCDate() - jan4DayNum);
+    const monday = new Date(week1Monday);
+    monday.setUTCDate(week1Monday.getUTCDate() + (week - 1) * 7);
+    return monday;
+  }
+
+  // Worklogs whose task is one of this parent's child tickets, sorted by date.
+  function getParentWorklogs(parentRows, worklogs) {
+    const childIds = new Set(parentRows.map(r => r.child).filter(Boolean));
+    return (worklogs || [])
+      .filter(w => w && w.task && childIds.has(w.task))
+      .map(w => ({ ...w, dateObj: parseWorklogDate(w.date) }))
+      .sort((a, b) => a.dateObj - b.dateObj);
+  }
+
+  // Buckets sorted worklog entries into ISO week rows, each split across Mon-Fri.
+  function buildWorkCalendarWeeks(entries) {
+    const weekMap = new Map();
+    const weekOrder = [];
+    entries.forEach(e => {
+      const { isoYear, week } = getISOWeekInfo(e.dateObj);
+      const key = `${isoYear}-${week}`;
+      if (!weekMap.has(key)) {
+        weekMap.set(key, { isoYear, week, days: { Mon: [], Tue: [], Wed: [], Thu: [], Fri: [] } });
+        weekOrder.push(key);
+      }
+      const isoDayNum = (e.dateObj.getUTCDay() + 6) % 7; // Mon=0 .. Sun=6
+      const dayName = CALENDAR_WEEKDAYS[isoDayNum];
+      if (dayName) weekMap.get(key).days[dayName].push(e);
+    });
+    return weekOrder.map(key => weekMap.get(key));
+  }
+
+  function buildWorkCalendarTable(parentRows, worklogs) {
+    const entries = getParentWorklogs(parentRows, worklogs);
+    const weeks = buildWorkCalendarWeeks(entries);
+
+    const thead = el("thead", {}, [
+      el("tr", {}, ["Week", ...CALENDAR_WEEKDAYS].map(label => el("th", { text: label })))
+    ]);
+
+    const tbody = el("tbody", {}, weeks.map(w => {
+      const monday = getMondayOfISOWeek(w.isoYear, w.week);
+      const friday = new Date(monday);
+      friday.setUTCDate(monday.getUTCDate() + 4);
+      const weekLabel = `${formatCalendarDate(monday)} ${formatCalendarDate(friday)}`;
+
+      const weekCell = el("td", { class: "calendar-week-cell", text: weekLabel });
+      const dayCells = CALENDAR_WEEKDAYS.map(day => el("td", { class: "calendar-day-cell" },
+        w.days[day].map(entry => el("div", {
+          class: "calendar-entry",
+          text: `${formatCalendarDateShort(entry.dateObj)} ${entry.task} ${entry.name} ${entry.hours}`
+        }))
+      ));
+
+      return el("tr", {}, [weekCell, ...dayCells]);
+    }));
+
+    return el("table", { class: "work-calendar-table" }, [thead, tbody]);
+  }
+
   function formatEffort(key, n) {console.log(key);
     if (ZERO_EFFORT_FIELDS.has(key)) return "0";
     const num = Number(n);
@@ -230,7 +328,7 @@
 
   let showMonitorOnly = false;
 
-  function buildReleaseSection(group, descMap, effortMap, worklogHoursByTask) {
+  function buildReleaseSection(group, descMap, effortMap, worklogHoursByTask, worklogs) {
     const groupRows = group.parents.flatMap(p => p.rows);
     let columns = buildColumns(groupRows);
     if (!showMonitorOnly) columns = columns.filter(s => slug(s) !== "monitor-only");
@@ -346,6 +444,13 @@
       });
 
       tbody.appendChild(row);
+
+      const calendarCell = el("td", { class: "work-calendar-cell" }, [
+        el("h4", { text: `${parent.id} Calendar` }),
+        buildWorkCalendarTable(parentRows, worklogs)
+      ]);
+      calendarCell.setAttribute("colspan", String(1 + SUMMARY_COLUMNS.length + columns.length));
+      tbody.appendChild(el("tr", { class: "work-calendar" }, [calendarCell]));
     });
 
     const tableWrap = el("div", { class: "table-wrap" }, [el("table", {}, [thead, tbody])]);
@@ -378,7 +483,7 @@
 
     const root = document.getElementById("report-root");
     root.innerHTML = "";
-    releaseGroups.forEach(group => root.appendChild(buildReleaseSection(group, descMap, effortMap, worklogHoursByTask)));
+    releaseGroups.forEach(group => root.appendChild(buildReleaseSection(group, descMap, effortMap, worklogHoursByTask, efforts)));
 
     document.getElementById("report-footer").textContent =
       `${releaseGroups.length} release${releaseGroups.length === 1 ? "" : "s"} · ${parents.length} parent epics · ${rows.length} child tickets · rendered from the JSON below`;

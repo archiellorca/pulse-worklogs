@@ -427,6 +427,76 @@
     display: none;
   }
 
+  .work-calendar-cell {
+    background: var(--surface-sunken);
+  }
+
+  .work-calendar-cell h4 {
+    margin: 0 0 0.6rem;
+    font-family: var(--font-head);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .work-calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.76rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .work-calendar-table th {
+    text-align: left;
+    padding: 0.5rem 0.6rem;
+    background: var(--surface-sunken);
+    color: var(--text-muted);
+    font-family: var(--font-head);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+  .work-calendar-table td {
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    vertical-align: top;
+    width: 16.66%;
+  }
+
+  .work-calendar-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .work-calendar-table td:last-child {
+    border-right: none;
+  }
+
+  .calendar-week-cell {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    background: var(--surface-sunken);
+  }
+
+  .calendar-entry {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+  }
+
+  .calendar-entry + .calendar-entry {
+    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    border-top: 1px dashed var(--border);
+  }
+
   .col-parent {
     position: sticky;
     left: 0;
