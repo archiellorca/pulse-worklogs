@@ -121,9 +121,12 @@
   const EFFORT_FIELDS = [
     { key: "points", label: "Points" },
     { key: "dev_est", label: "Dev Est." },
+    { key: "dev_be_names", label: "Dev BE" },
     { key: "dev_be_hours", label: "Dev BE Hours" },
+    { key: "dev_fe_names", label: "Dev FE" },
     { key: "dev_fe_hours", label: "Dev FE Hours" },
     { key: "qa_est", label: "QA Est." },
+    { key: "qa_names", label: "QA" },
     { key: "qa_hours", label: "QA Hours" }
   ];
 
@@ -143,6 +146,26 @@
   const FE_DEV_NAMES = new Set(["Armin", "John"]);
   const BE_DEV_NAMES = new Set(["Ian", "Christopher", "Ryan", "Jay"]);
   const QA_NAMES = new Set(["Kristine", "Jazel", "Kate"]);
+
+  function firstNameOf(fullName) {
+    return String(fullName || "").trim().split(/\s+/)[0] || "";
+  }
+
+  // Collates unique first names from the "dev" and "qa" fields on each of the
+  // parent's rows in ORIGINAL_DATA (ticketStatusData). "dev" values whose first
+  // name is Armin/John are grouped under dev-fe, the rest under dev-be.
+  function collateDevQaNames(parentRows) {
+    const devBe = new Set();
+    const devFe = new Set();
+    const qa = new Set();
+    parentRows.forEach(r => {
+      const dev = firstNameOf(r.dev);
+      if (dev) (FE_DEV_NAMES.has(dev) ? devFe : devBe).add(dev);
+      const qaName = firstNameOf(r.qa);
+      if (qaName) qa.add(qaName);
+    });
+    return { devBe: [...devBe], devFe: [...devFe], qa: [...qa] };
+  }
 
   // Groups worklog hours by task (child ticket id), split into be/fe/qa buckets
   // by the logger's name. Built once per render and reused across all parents.
@@ -378,7 +401,7 @@
       const statsBlock = el("div", { class: "parent-stats" }, [
         el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: "Total" }),
-          statValue(String(stats.total), null)
+          statValue(String(stats.total), "transparent")
         ]),
         el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: "Dev-done" }),
@@ -399,12 +422,19 @@
         dev_fe_hours: worklogHours.devFeHours * 60,
         qa_hours: worklogHours.qaHours * 60
       };
+      const collatedNames = collateDevQaNames(parentRows);
+      const NAME_VALUES = {
+        dev_be_names: collatedNames.devBe.join(", ") || "—",
+        dev_fe_names: collatedNames.devFe.join(", ") || "—",
+        qa_names: collatedNames.qa.join(", ") || "—"
+      };
       const effortBlock = el("div", { class: "parent-stats" },
         EFFORT_FIELDS.map(f => el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label " + f.key, text: f.label }),
           el("span", {
             class: "parent-stat-value",
             text: f.key === "qa_est" ? formatEffort("qa_est", qaEstTotal * 60)
+              : f.key in NAME_VALUES ? NAME_VALUES[f.key]
               : f.key in WORKLOG_HOUR_VALUES ? formatEffort(f.key, WORKLOG_HOUR_VALUES[f.key])
               : formatEffort(f.key, effortRecord && effortRecord[f.key])
           })
@@ -516,6 +546,12 @@
 
   syncColumnsToggle(toggleColumnsInput.checked);
   toggleColumnsInput.addEventListener("change", e => syncColumnsToggle(e.target.checked));
+
+  const toggleCalendarInput = document.getElementById("toggle-calendar");
+  document.getElementById("report-root").classList.toggle("show-calendar", toggleCalendarInput.checked);
+  toggleCalendarInput.addEventListener("change", e => {
+    document.getElementById("report-root").classList.toggle("show-calendar", e.target.checked);
+  });
 
   const optionsModal = document.getElementById("options-modal");
   document.getElementById("open-options").addEventListener("click", () => optionsModal.showModal());
