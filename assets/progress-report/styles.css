@@ -427,8 +427,13 @@
     display: none;
   }
 
+  .work-calendar h3 {
+    text-align: center;
+  }
+
   .work-calendar-cell {
     background: var(--surface-sunken);
+    padding-bottom: 4rem;
   }
 
   .work-calendar-cell h4 {
@@ -447,6 +452,7 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
+    margin-top: 1rem;
   }
 
   .work-calendar-table th {
@@ -514,6 +520,23 @@
     font-variant-numeric: tabular-nums;
     text-align: left;
     margin: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .parent-idea {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.72rem;
+    font-variant-numeric: normal;
+    text-align: right;
+    display: inline-block;
+    background: var(--status-qa-review-bg);
+    color: var(--status-qa-review);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
   }
 
   .parent-summary, .parent-desc {

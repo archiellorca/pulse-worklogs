@@ -351,8 +351,12 @@
     group.parents.forEach(parent => {
       const parentRows = parent.rows;
 
-      const parentCellChildren = [el("h3", { class: "parent-id", text: parent.id })];
       const descRecord = descMap[parent.id];
+      const parentIdHeading = el("h3", { class: "parent-id" }, [document.createTextNode(parent.id)]);
+      if (descRecord && descRecord.idea) {
+        parentIdHeading.appendChild(el("span", { class: "parent-idea", text: descRecord.idea }));
+      }
+      const parentCellChildren = [parentIdHeading];
       if (descRecord && descRecord.desc) {
         parentCellChildren.push(el("h4", { class: "parent-summary", text: descRecord.summary }));
         parentCellChildren.push(el("p", { class: "parent-desc", text: descRecord.desc }));
@@ -446,7 +450,7 @@
       tbody.appendChild(row);
 
       const calendarCell = el("td", { class: "work-calendar-cell" }, [
-        el("h4", { text: `${parent.id} Calendar` }),
+        el("h3", { class:"parent-id", text: `${parent.id} Calendar` }),
         buildWorkCalendarTable(parentRows, worklogs)
       ]);
       calendarCell.setAttribute("colspan", String(1 + SUMMARY_COLUMNS.length + columns.length));
