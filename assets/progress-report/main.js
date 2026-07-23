@@ -538,10 +538,12 @@
 
   const toggleColumnsInput = document.getElementById("toggle-columns");
   const toggleMonitorLabel = document.getElementById("toggle-monitor").closest(".toggle-control");
+  const toggleCalendarLabel = document.getElementById("toggle-calendar").closest(".toggle-control");
 
-  function syncColumnsToggle(checked) {
-    document.getElementById("report-root").classList.toggle("columns-collapsed", checked);
-    toggleMonitorLabel.style.display = checked ? "none" : "";
+  function syncColumnsToggle(showKanban) {
+    document.getElementById("report-root").classList.toggle("columns-collapsed", !showKanban);
+    toggleMonitorLabel.style.display = showKanban ? "" : "none";
+    toggleCalendarLabel.style.display = showKanban ? "" : "none";
   }
 
   syncColumnsToggle(toggleColumnsInput.checked);
