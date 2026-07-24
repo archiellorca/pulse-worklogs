@@ -325,7 +325,7 @@
     return el("table", { class: "work-calendar-table" }, [thead, tbody]);
   }
 
-  function formatEffort(key, n) {console.log(key);
+  function formatEffort(key, n) {
     if (ZERO_EFFORT_FIELDS.has(key)) return "0";
     const num = Number(n);
     if (Number.isFinite(num)) {
@@ -381,18 +381,15 @@
     return order.map(release => ({ release, parents: map.get(release) }));
   }
 
-  let showMonitorOnly = false;
-
   function buildReleaseSection(group, descMap, effortMap, worklogHoursByTask, worklogs) {
     const groupRows = group.parents.flatMap(p => p.rows);
-    let columns = buildColumns(groupRows);
-    if (!showMonitorOnly) columns = columns.filter(s => slug(s) !== "monitor-only");
+    const columns = buildColumns(groupRows);
     const colorMap = buildColorMap(columns);
 
     const legend = el("div", { class: "legend" });
     renderLegend(legend, columns, colorMap);
 
-    const SUMMARY_COLUMNS = ["Total", "Dev-done", "QA-done", "Points", "Dev Est."];
+    const SUMMARY_COLUMNS = ["Total", "Dev-done", "QA-done", ...EFFORT_FIELDS.map(f => f.label)];
 
     const thead = el("thead", {}, [
       el("tr", {}, [
@@ -440,16 +437,18 @@
         dev_fe_names: collatedNames.devFe.join(", ") || "—",
         qa_names: collatedNames.qa.join(", ") || "—"
       };
+
+      function effortFieldValue(key) {
+        if (key === "qa_est") return formatEffort("qa_est", qaEstTotal * 60);
+        if (key in NAME_VALUES) return NAME_VALUES[key];
+        if (key in WORKLOG_HOUR_VALUES) return formatEffort(key, WORKLOG_HOUR_VALUES[key]);
+        return formatEffort(key, effortRecord && effortRecord[key]);
+      }
+
       const effortBlock = el("div", { class: "parent-stats" },
         EFFORT_FIELDS.map(f => el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label " + f.key, text: f.label }),
-          el("span", {
-            class: "parent-stat-value",
-            text: f.key === "qa_est" ? formatEffort("qa_est", qaEstTotal * 60)
-              : f.key in NAME_VALUES ? NAME_VALUES[f.key]
-              : f.key in WORKLOG_HOUR_VALUES ? formatEffort(f.key, WORKLOG_HOUR_VALUES[f.key])
-              : formatEffort(f.key, effortRecord && effortRecord[f.key])
-          })
+          el("span", { class: "parent-stat-value", text: effortFieldValue(f.key) })
         ]))
       );
       parentCellChildren.push(effortBlock);
@@ -467,8 +466,7 @@
       row.appendChild(summaryCell(String(stats.total), null));
       row.appendChild(summaryCell(String(stats.devDone), isDevDone ? "green" : isDevZero ? "red" : null));
       row.appendChild(summaryCell(String(stats.qaDone), isQaDone ? "green" : isQaZero ? "red" : null));
-      row.appendChild(summaryCell(formatEffort("points", effortRecord && effortRecord.points), null));
-      row.appendChild(summaryCell(formatEffort("dev_est", effortRecord && effortRecord.dev_est), null));
+      EFFORT_FIELDS.forEach(f => row.appendChild(summaryCell(effortFieldValue(f.key), null)));
 
       columns.forEach(status => {
         const matches = parentRows.filter(r => r.status === status);
@@ -546,37 +544,36 @@
     renderReport(currentRows, currentDescriptions, currentEfforts);
   }
 
-  document.getElementById("toggle-monitor").addEventListener("change", e => {
-    showMonitorOnly = e.target.checked;
-    rerender();
-  });
-
   const toggleColumnsInput = document.getElementById("toggle-columns");
-  const toggleMonitorLabel = document.getElementById("toggle-monitor").closest(".toggle-control");
-  const toggleCalendarLabel = document.getElementById("toggle-calendar").closest(".toggle-control");
-  const toggleStatusLabel = document.getElementById("toggle-status").closest(".toggle-control");
+  const toggleMonitorInput = document.getElementById("toggle-monitor");
+  const toggleStatusInput = document.getElementById("toggle-status");
+  const toggleCalendarInput = document.getElementById("toggle-calendar");
+  const toggleMonitorLabel = toggleMonitorInput.closest(".toggle-control");
+  const toggleStatusLabel = toggleStatusInput.closest(".toggle-control");
+  const toggleCalendarLabel = toggleCalendarInput.closest(".toggle-control");
 
-  function syncColumnsToggle(showKanban) {
-    document.getElementById("report-root").classList.toggle("columns-collapsed", !showKanban);
-    toggleMonitorLabel.style.display = showKanban ? "" : "none";
-    toggleCalendarLabel.style.display = showKanban ? "" : "none";
-    toggleStatusLabel.style.display = showKanban ? "" : "none";
+  function setCalendarChecked(checked) {
+    toggleCalendarInput.checked = checked;
+    document.getElementById("report-root").classList.toggle("show-calendar", checked);
+  }
+
+  function syncColumnsToggle(showAll) {
+    document.getElementById("report-root").classList.toggle("columns-collapsed", !showAll);
+    toggleMonitorLabel.style.display = showAll ? "" : "none";
+    toggleStatusLabel.style.display = showAll ? "" : "none";
+    toggleCalendarLabel.style.display = showAll ? "" : "none";
+
+    if (!showAll) {
+      toggleMonitorInput.checked = false;
+      toggleStatusInput.checked = false;
+      setCalendarChecked(false);
+    }
   }
 
   syncColumnsToggle(toggleColumnsInput.checked);
   toggleColumnsInput.addEventListener("change", e => syncColumnsToggle(e.target.checked));
 
-  const toggleCalendarInput = document.getElementById("toggle-calendar");
-  document.getElementById("report-root").classList.toggle("show-calendar", toggleCalendarInput.checked);
-  toggleCalendarInput.addEventListener("change", e => {
-    document.getElementById("report-root").classList.toggle("show-calendar", e.target.checked);
-  });
-
-  const toggleStatusInput = document.getElementById("toggle-status");
-  document.getElementById("report-root").classList.toggle("show-status", toggleStatusInput.checked);
-  toggleStatusInput.addEventListener("change", e => {
-    document.getElementById("report-root").classList.toggle("show-status", e.target.checked);
-  });
+  toggleCalendarInput.addEventListener("change", e => setCalendarChecked(e.target.checked));
 
   const optionsModal = document.getElementById("options-modal");
   document.getElementById("open-options").addEventListener("click", () => optionsModal.showModal());

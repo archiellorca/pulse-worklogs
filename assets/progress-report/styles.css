@@ -391,12 +391,42 @@
     font-size: 0.86rem;
   }
 
-  /* Only force the wide multi-column layout when the status (Kanban) columns
-     are actually visible — otherwise the leftover width balloons into
-     .col-parent well past its own max-width, since table auto-layout doesn't
-     reliably honor max-width on table cells. */
-  #report-root:not(.columns-collapsed).show-status table {
-    min-width: 980px;
+  #report-root:not(.columns-collapsed) table {
+    min-width: 600px;
+  }
+
+  /* work-item (.col-parent) is always shown. status-col and summary-col are
+     mutually exclusive: status-col shows when the Kanban toggle is checked
+     (not collapsed), summary-col shows when it's unchecked (collapsed). */
+  th.status-col,
+  td.status-cell {
+    display: none;
+  }
+
+  #report-root:not(.columns-collapsed) th.status-col,
+  #report-root:not(.columns-collapsed) td.status-cell {
+    display: table-cell;
+  }
+
+  th.summary-col,
+  td.summary-cell {
+    display: none;
+  }
+
+  #report-root.columns-collapsed th.summary-col,
+  #report-root.columns-collapsed td.summary-cell {
+    display: table-cell;
+  }
+
+  /* The per-parent stats card (.parent-stats) has its own toggle-linked
+     rule further down, next to its base style. */
+
+  tr.work-calendar {
+    display: none;
+  }
+
+  #report-root.show-calendar tr.work-calendar {
+    display: table-row;
   }
 
   thead th {
@@ -430,31 +460,6 @@
     border-bottom: none;
   }
 
-  th.summary-col,
-  td.summary-cell {
-    display: none;
-  }
-
-  #report-root.columns-collapsed thead th:not(.col-parent):not(.summary-col),
-  #report-root.columns-collapsed tbody td:not(.col-parent):not(.summary-cell) {
-    display: none;
-  }
-
-  #report-root.columns-collapsed th.summary-col,
-  #report-root.columns-collapsed td.summary-cell {
-    display: table-cell;
-  }
-
-  th.status-col,
-  td.status-cell {
-    display: none;
-  }
-
-  #report-root:not(.columns-collapsed).show-status th.status-col,
-  #report-root:not(.columns-collapsed).show-status td.status-cell {
-    display: table-cell;
-  }
-
   .summary-badge {
     display: inline-block;
     min-width: 1.6em;
@@ -477,20 +482,8 @@
     color: var(--status-danger);
   }
 
-  #report-root.columns-collapsed .parent-stats {
-    display: none;
-  }
-
   .work-calendar h3 {
     text-align: center;
-  }
-
-  tr.work-calendar {
-    display: none;
-  }
-
-  #report-root.show-calendar tr.work-calendar {
-    display: table-row;
   }
 
   .work-calendar-cell {
@@ -507,7 +500,8 @@
   }
 
   .work-calendar-table {
-    width: 100%;
+    min-width: 600px;
+    max-width: 1400px;
     border-collapse: collapse;
     font-size: 0.76rem;
     background: var(--surface);
@@ -624,6 +618,10 @@
     flex-direction: column;
     gap: 0.2rem;
     max-width: 250px;
+  }
+
+  #report-root.columns-collapsed .parent-stats {
+    display: none;
   }
 
   .parent-stat {
