@@ -366,7 +366,7 @@
       el("tr", {}, [
         el("th", { class: "col-parent", text: "Work Item" }),
         ...SUMMARY_COLUMNS.map(label => el("th", { class: "summary-col", text: label })),
-        ...columns.map(status => el("th", { text: status }))
+        ...columns.map(status => el("th", { class: "status-col", text: status }))
       ])
     ]);
     const tbody = el("tbody");
@@ -405,11 +405,11 @@
         ]),
         el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: "Dev-done" }),
-          statValue(String(stats.devDone), isDevDone ? "green" : isDevZero ? "red" : null)
+          statValue(String(stats.devDone), isDevDone ? "green" : isDevZero ? "red" : "transparent")
         ]),
         el("div", { class: "parent-stat" }, [
           el("span", { class: "parent-stat-label", text: "QA-done" }),
-          statValue(String(stats.qaDone), isQaDone ? "green" : isQaZero ? "red" : null)
+          statValue(String(stats.qaDone), isQaDone ? "green" : isQaZero ? "red" : "transparent")
         ])
       ]);
       parentCellChildren.push(statsBlock);
@@ -504,6 +504,7 @@
     ]);
 
     const details = el("details", { class: "release-section" }, [summary, legend, tableWrap]);
+    details.id = `release-${slug(group.release)}`;
     details.open = true;
     return details;
   }
@@ -539,11 +540,13 @@
   const toggleColumnsInput = document.getElementById("toggle-columns");
   const toggleMonitorLabel = document.getElementById("toggle-monitor").closest(".toggle-control");
   const toggleCalendarLabel = document.getElementById("toggle-calendar").closest(".toggle-control");
+  const toggleStatusLabel = document.getElementById("toggle-status").closest(".toggle-control");
 
   function syncColumnsToggle(showKanban) {
     document.getElementById("report-root").classList.toggle("columns-collapsed", !showKanban);
     toggleMonitorLabel.style.display = showKanban ? "" : "none";
     toggleCalendarLabel.style.display = showKanban ? "" : "none";
+    toggleStatusLabel.style.display = showKanban ? "" : "none";
   }
 
   syncColumnsToggle(toggleColumnsInput.checked);
@@ -553,6 +556,12 @@
   document.getElementById("report-root").classList.toggle("show-calendar", toggleCalendarInput.checked);
   toggleCalendarInput.addEventListener("change", e => {
     document.getElementById("report-root").classList.toggle("show-calendar", e.target.checked);
+  });
+
+  const toggleStatusInput = document.getElementById("toggle-status");
+  document.getElementById("report-root").classList.toggle("show-status", toggleStatusInput.checked);
+  toggleStatusInput.addEventListener("change", e => {
+    document.getElementById("report-root").classList.toggle("show-status", e.target.checked);
   });
 
   const optionsModal = document.getElementById("options-modal");

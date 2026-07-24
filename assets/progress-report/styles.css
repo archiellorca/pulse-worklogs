@@ -240,6 +240,10 @@
     gap: 2.75rem;
   }
 
+  #release-no-release {
+    display: none;
+  }
+
   .release-section {
     display: flex;
     flex-direction: column;
@@ -355,8 +359,15 @@
   table {
     border-collapse: collapse;
     width: 100%;
-    min-width: 980px;
     font-size: 0.86rem;
+  }
+
+  /* Only force the wide multi-column layout when the status (Kanban) columns
+     are actually visible — otherwise the leftover width balloons into
+     .col-parent well past its own max-width, since table auto-layout doesn't
+     reliably honor max-width on table cells. */
+  #report-root:not(.columns-collapsed).show-status table {
+    min-width: 980px;
   }
 
   thead th {
@@ -402,6 +413,16 @@
 
   #report-root.columns-collapsed th.summary-col,
   #report-root.columns-collapsed td.summary-cell {
+    display: table-cell;
+  }
+
+  th.status-col,
+  td.status-cell {
+    display: none;
+  }
+
+  #report-root:not(.columns-collapsed).show-status th.status-col,
+  #report-root:not(.columns-collapsed).show-status td.status-cell {
     display: table-cell;
   }
 
@@ -559,6 +580,7 @@
     line-height: 1.35;
     white-space: normal;
     text-align: left;
+    overflow-wrap: anywhere;
   }
 
   .parent-summary {
