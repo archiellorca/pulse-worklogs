@@ -53,6 +53,14 @@
     return { total, devDone, qaDone };
   }
 
+  // green when count fully covers total, red when count is zero (and total > 0), else transparent.
+  function badgeVariantFor(total, count) {
+    if (total <= 0) return "transparent";
+    if (count === total) return "green";
+    if (count === 0) return "red";
+    return "transparent";
+  }
+
   function buildColumns(rows) {
     const presentSlugs = new Set(rows.map(r => slug(r.status)));
     const cols = PREFERRED_STATUS_ORDER.filter(s => presentSlugs.has(slug(s)));
@@ -96,6 +104,30 @@
     if (opts.text != null) node.textContent = opts.text;
     children.forEach(c => c && node.appendChild(c));
     return node;
+  }
+
+  function statValueEl(value, badgeVariant) {
+    if (badgeVariant && badgeVariant !== "transparent") {
+      return el("span", { class: "parent-stat-value" }, [el("span", { class: `summary-badge summary-badge-${badgeVariant}`, text: value })]);
+    }
+    return el("span", { class: "parent-stat-value" }, [el("span", { class: "summary-badge summary-badge-transparent", text: value })]);
+  }
+
+  function buildStatsBlock(stats, className) {
+    return el("div", { class: className }, [
+      el("div", { class: "parent-stat" }, [
+        el("span", { class: "parent-stat-label", text: "Total" }),
+        statValueEl(String(stats.total), "transparent")
+      ]),
+      el("div", { class: "parent-stat" }, [
+        el("span", { class: "parent-stat-label", text: "Dev-done" }),
+        statValueEl(String(stats.devDone), badgeVariantFor(stats.total, stats.devDone))
+      ]),
+      el("div", { class: "parent-stat" }, [
+        el("span", { class: "parent-stat-label", text: "QA-done" }),
+        statValueEl(String(stats.qaDone), badgeVariantFor(stats.total, stats.qaDone))
+      ])
+    ]);
   }
 
   function renderLegend(container, columns, colorMap) {
@@ -391,27 +423,7 @@
       const isDevZero = stats.total > 0 && stats.devDone === 0;
       const isQaZero = stats.total > 0 && stats.qaDone === 0;
 
-      function statValue(value, badgeVariant) {
-        if (badgeVariant) {
-          return el("span", { class: "parent-stat-value" }, [el("span", { class: `summary-badge summary-badge-${badgeVariant}`, text: value })]);
-        }
-        return el("span", { class: "parent-stat-value", text: value });
-      }
-
-      const statsBlock = el("div", { class: "parent-stats" }, [
-        el("div", { class: "parent-stat" }, [
-          el("span", { class: "parent-stat-label", text: "Total" }),
-          statValue(String(stats.total), "transparent")
-        ]),
-        el("div", { class: "parent-stat" }, [
-          el("span", { class: "parent-stat-label", text: "Dev-done" }),
-          statValue(String(stats.devDone), isDevDone ? "green" : isDevZero ? "red" : "transparent")
-        ]),
-        el("div", { class: "parent-stat" }, [
-          el("span", { class: "parent-stat-label", text: "QA-done" }),
-          statValue(String(stats.qaDone), isQaDone ? "green" : isQaZero ? "red" : "transparent")
-        ])
-      ]);
+      const statsBlock = buildStatsBlock(stats, "parent-stats");
       parentCellChildren.push(statsBlock);
 
       const effortRecord = effortMap[parent.id];
@@ -495,12 +507,14 @@
       const points = Number(effortMap[parent.id] && effortMap[parent.id].points);
       return sum + (Number.isFinite(points) ? points : 0);
     }, 0);
+    const releaseStats = computeParentStats(groupRows);
     const summary = el("summary", { class: "release-title" }, [
       el("span", { class: "release-badge", text: group.release }),
       el("span", {
         class: "release-meta",
-        text: `${parentCount} parent epic${parentCount === 1 ? "" : "s"} · ${ticketCount} child ticket${ticketCount === 1 ? "" : "s"} · ${totalPoints} total points`
-      })
+        text: `${parentCount} work item${parentCount === 1 ? "" : "s"} · ${totalPoints} total points`
+      }),
+      buildStatsBlock(releaseStats, "release-stats")
     ]);
 
     const details = el("details", { class: "release-section" }, [summary, legend, tableWrap]);

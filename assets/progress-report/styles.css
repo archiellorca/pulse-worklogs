@@ -294,6 +294,35 @@
     font-variant-numeric: tabular-nums;
   }
 
+  .release-stats {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    margin-left: auto;
+  }
+
+  .release-stats .parent-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+  }
+
+  .release-stats .parent-stat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 400;
+  }
+
+  .release-stats .parent-stat-value {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+
   .toggle-control {
     display: inline-flex;
     align-items: center;
