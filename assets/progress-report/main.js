@@ -505,12 +505,16 @@
       const points = Number(effortMap[parent.id] && effortMap[parent.id].points);
       return sum + (Number.isFinite(points) ? points : 0);
     }, 0);
+    const totalDevEst = group.parents.reduce((sum, parent) => {
+      const devEst = Number(effortMap[parent.id] && effortMap[parent.id].dev_est);
+      return sum + (Number.isFinite(devEst) ? devEst : 0);
+    }, 0);
     const releaseStats = computeParentStats(groupRows);
     const summary = el("summary", { class: "release-title" }, [
       el("span", { class: "release-badge", text: group.release }),
       el("span", {
         class: "release-meta",
-        text: `${parentCount} work item${parentCount === 1 ? "" : "s"} · ${totalPoints} total points`
+        text: `${parentCount} work item${parentCount === 1 ? "" : "s"} · ${totalPoints} total points · ${formatEffort("dev_est", totalDevEst)} total dev est`
       }),
       buildStatsBlock(releaseStats, "release-stats")
     ]);
