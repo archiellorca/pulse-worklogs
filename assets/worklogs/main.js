@@ -149,6 +149,13 @@
         keySpan.textContent = ticket;
         tdKey.appendChild(keySpan);
 
+        if (detail && detail.release) {
+          const releaseSpan = document.createElement("span");
+          releaseSpan.className = "ticket-release";
+          releaseSpan.textContent = detail.release;
+          tdKey.appendChild(releaseSpan);
+        }
+
         if (detail) {
           const desc = document.createElement("div");
           desc.className = "ticket-desc";
