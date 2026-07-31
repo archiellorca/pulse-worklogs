@@ -469,7 +469,7 @@
       EFFORT_FIELDS.forEach(f => row.appendChild(summaryCell(effortFieldValue(f.key), null)));
 
       columns.forEach(status => {
-        const matches = parentRows.filter(r => r.status === status);
+        const matches = parentRows.filter(r => slug(r.status) === slug(status));
         const cell = el("td", { class: "status-cell" });
         if (matches.length === 0) {
           cell.appendChild(el("span", { class: "empty-cell", text: "—" }));
