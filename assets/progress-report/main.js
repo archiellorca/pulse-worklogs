@@ -468,6 +468,26 @@
       row.appendChild(summaryCell(String(stats.qaDone), isQaDone ? "green" : isQaZero ? "red" : null));
       EFFORT_FIELDS.forEach(f => row.appendChild(summaryCell(effortFieldValue(f.key), null)));
 
+      // Per-child ticket details. Points/Dev Est. have no per-child data source
+      // yet, so they're shown as 0 placeholders. QA Est. reads directly off the
+      // row; the hours fields read from the same worklog-by-task map used for
+      // the parent-level totals, just looked up per child instead of summed.
+      function childTicketDetails(r) {
+        const bucket = worklogHoursByTask.get(r.child);
+        const devBeHours = (bucket && bucket.be) || 0;
+        const devFeHours = (bucket && bucket.fe) || 0;
+        const qaHours = (bucket && bucket.qa) || 0;
+        const qaEst = Number(r.qa_est) || 0;
+        return [
+          { label: "Points", value: "0" },
+          { label: "Dev Est.", value: "0" },
+          { label: "Dev BE Hours", value: formatEffort("dev_be_hours", devBeHours * 60) },
+          { label: "Dev FE Hours", value: formatEffort("dev_fe_hours", devFeHours * 60) },
+          { label: "QA Est.", value: formatEffort("qa_est", qaEst * 60) },
+          { label: "QA Hours", value: formatEffort("qa_hours", qaHours * 60) }
+        ];
+      }
+
       columns.forEach(status => {
         const matches = parentRows.filter(r => slug(r.status) === slug(status));
         const cell = el("td", { class: "status-cell" });
@@ -480,6 +500,12 @@
               el("span", { class: "ticket-id", text: r.child })
             ]);
             if (r.intermediate) item.appendChild(el("span", { class: "ticket-via", text: `via ${r.intermediate}` }));
+            item.appendChild(el("div", { class: "ticket-details" },
+              childTicketDetails(r).map(d => el("div", { class: "ticket-detail" }, [
+                el("span", { class: "ticket-detail-label", text: d.label }),
+                el("span", { class: "ticket-detail-value", text: d.value })
+              ]))
+            ));
             list.appendChild(item);
           });
           cell.appendChild(list);

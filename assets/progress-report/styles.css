@@ -682,6 +682,33 @@
     font-family: var(--font-mono);
   }
 
+  .ticket-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.6rem;
+    margin-top: 0.2rem;
+  }
+
+  .ticket-detail {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+  }
+
+  .ticket-detail-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .ticket-detail-value {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+  }
+
   .empty-cell {
     color: var(--text-faint);
     font-size: 0.85rem;
