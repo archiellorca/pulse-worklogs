@@ -57,7 +57,7 @@ window.taskDetails = [
 },
 {
 "task": "OW-2815",
-"release": "CO-2.10.3",
+"release": "",
 "desc": "Implement updated lightbox content embeds – Batch 2",
 "dev": "6.0",
 "qa": "0"
@@ -239,7 +239,7 @@ window.taskDetails = [
 },
 {
 "task": "OW-3153",
-"release": "PH-2.8.3",
+"release": "",
 "desc": "reCAPTCHA phase 2",
 "dev": "8.0",
 "qa": "0.0"
@@ -288,7 +288,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1076",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Staff » People » Edit: show charge out information  for delivery staff only",
 "dev": "8.0",
 "qa": "3.0"
@@ -302,7 +302,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1532",
-"release": "rc.bench",
+"release": "rc.p99.pls.backlog",
 "desc": "BE - Technical - Add ON DELETE CASCADE / SET NULL to allow clean employee & user deletion",
 "dev": "5.0",
 "qa": "0.0"
@@ -421,14 +421,14 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1699",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Existing client growth: zero-staff indicator & exit reason",
 "dev": "4.0",
 "qa": "1.0"
 },
 {
 "task": "PLS-1700",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - add staff's employment status in graphql",
 "dev": "2.0",
 "qa": "2.0"
@@ -463,7 +463,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1731",
-"release": "rc.50",
+"release": "rc.p02.pls.50",
 "desc": "BE - Optimization - Switch Lighthouse query cache to OPcache mode",
 "dev": "3.0",
 "qa": "0"
@@ -498,7 +498,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1742",
-"release": "rc.bench",
+"release": "rc.p99.pls.backlog",
 "desc": "FE - Internal Server Error on Anonymous Feedback Page When Sorting Columns Without Filter/Search Permissions",
 "dev": "3.0",
 "qa": "0"
@@ -610,14 +610,14 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1799",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Show proper validation errors for recruiter + make recruiters field nullable",
 "dev": "3.0",
 "qa": "2.0"
 },
 {
 "task": "PLS-1812",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Staff  » People  » edit: tooltips for labels",
 "dev": "1.0",
 "qa": "2.0"
@@ -701,7 +701,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1847",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "Investigate resource utilization spike in cloudways / new relic",
 "dev": "0.0",
 "qa": "0"
@@ -743,14 +743,14 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1865",
-"release": "v3.1.17.4",
+"release": "rc.p04.pls-dev.01",
 "desc": "FE - Download multiple payslips",
 "dev": "4.0",
 "qa": "0"
 },
 {
 "task": "PLS-1866",
-"release": "v3.1.17.4",
+"release": "rc.p04.pls-dev.01",
 "desc": "BE - Download multiple payslips",
 "dev": "6.0",
 "qa": "0"
@@ -771,14 +771,14 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1869",
-"release": "v3.1.17.4",
+"release": "rc.p04.pls-dev.01",
 "desc": "FE - export as CSV",
 "dev": "6.0",
 "qa": "0"
 },
 {
 "task": "PLS-1870",
-"release": "v3.1.17.4",
+"release": "rc.p04.pls-dev.01",
 "desc": "BE - export as CSV - permission adjustments",
 "dev": "1.0",
 "qa": "0"
@@ -876,7 +876,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1904",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Include no placement type",
 "dev": "3.0",
 "qa": "2.0"
@@ -911,14 +911,14 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1912",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "FE - BHC Classification — Service Type & Placement Type UI changes",
 "dev": "5.0",
 "qa": "0"
 },
 {
 "task": "PLS-1913",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "BE » BHC Classification — New service_type field on staff record",
 "dev": "5.0",
 "qa": "3.0"
@@ -932,14 +932,14 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1918",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Reports » Existing Client Growth: Front-End Filter UI Update",
 "dev": "4.0",
 "qa": "2.0"
 },
 {
 "task": "PLS-1919",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Reports » Existing Client Growth: Back-End Rolling Cohort Query Logic",
 "dev": "4.0",
 "qa": "2.0"
@@ -988,7 +988,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1934",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "BE » BHC Classification - New console command and cron to update service_type and placement_type options from Hubspot",
 "dev": "13.0",
 "qa": "3.0"
@@ -1002,21 +1002,21 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1936",
-"release": "rc.50",
+"release": "rc.p02.pls.50",
 "desc": "Pulse > Admin > Staff (Last Increase + Months Since Last Increase) New Markets",
 "dev": "8.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1938",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Staff > People > Edit: Hide charge-out for operations staff",
 "dev": "0.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1940",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "Reports: Exclude future starters",
 "dev": "7.0",
 "qa": "2.0"
@@ -1044,21 +1044,21 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1944",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "BE - Review excessive API calls to/from Sprout",
 "dev": "12.0",
 "qa": "0"
 },
 {
 "task": "PLS-1945",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "BE - Optimize Sprout leave-days sync to stop re-fetching the full leave history daily",
 "dev": "4.0",
 "qa": "0"
 },
 {
 "task": "PLS-1947",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "BE - Reduce daily Sprout leave-requests sync volume via employee selection + date-bounded fetch (same API calls)",
 "dev": "8.0",
 "qa": "0"
@@ -1079,7 +1079,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1953",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Replace label references of employee",
 "dev": "1.0",
 "qa": "2.0"
@@ -1093,28 +1093,28 @@ window.taskDetails = [
 },
 {
 "task": "PUL-1042",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "BE - Query GraphQL services for my team's leave request & schedule",
 "dev": "2.0",
 "qa": "4.0"
 },
 {
 "task": "PUL-1052",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "FE - View pending leave request grid/page",
 "dev": "6.0",
 "qa": "0.0"
 },
 {
 "task": "PUL-1062",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "FE - Zero state - Pending approval",
 "dev": "4.0",
 "qa": "0.0"
 },
 {
 "task": "PUL-1063",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "FE - Zero state - Approved / Declined",
 "dev": "4.0",
 "qa": "0.0"
@@ -1156,84 +1156,84 @@ window.taskDetails = [
 },
 {
 "task": "PUL-1143",
-"release": "rc.pul.50",
+"release": "rc.p07.pul-dev.04",
 "desc": "New Report > Salary Review",
 "dev": "39.0",
 "qa": "0"
 },
 {
 "task": "PUL-1145",
-"release": "rc.pul.50",
+"release": "rc.p07.pul-dev.04",
 "desc": "[BE] Salary Review Report — Database Schema & Data Models",
 "dev": "5.0",
 "qa": "0"
 },
 {
 "task": "PUL-1146",
-"release": "rc.pul.50",
+"release": "rc.p07.pul-dev.04",
 "desc": "[BE] Salary Review Report — API Endpoints",
 "dev": "13.0",
 "qa": "0"
 },
 {
 "task": "PUL-1147",
-"release": "rc.pul.50",
+"release": "rc.p07.pul-dev.04",
 "desc": "[BE] Salary Review Report — Auto-Escalation Job (Contacted → Follow Up)",
 "dev": "5.0",
 "qa": "0"
 },
 {
 "task": "PUL-1148",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "FE - Calendar UI/UX updates",
 "dev": "6.0",
 "qa": "0"
 },
 {
 "task": "PUL-1153",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "FE - Shoutouts: Client View",
 "dev": "4.0",
 "qa": "2.0"
 },
 {
 "task": "PUL-1156",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "BE - Client Shoutout GraphQL Services",
 "dev": "13.0",
 "qa": "3.0"
 },
 {
 "task": "PUL-1157",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "FE - Shoutouts: Send a Shoutout (Client)",
 "dev": "4.0",
 "qa": "2.0"
 },
 {
 "task": "PUL-1158",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "FE - Calendar: clickable staff name + Name column sorting",
 "dev": "3.0",
 "qa": "0"
 },
 {
 "task": "PUL-1160",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "FE - Setup client shoutout page with permission",
 "dev": "5.0",
 "qa": "2.0"
 },
 {
 "task": "PUL-1161",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "FE - Remove Leave Request ID and Employee ID from the Filter settings, remove from the UI only",
 "dev": "3.0",
 "qa": "0"
 },
 {
 "task": "PUL-1162",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "FE - Shoutouts (Client): Column fields picker and sortable columns",
 "dev": "4.0",
 "qa": "2.0"
@@ -1247,14 +1247,14 @@ window.taskDetails = [
 },
 {
 "task": "PUL-1165",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "BE - provide the data required by Client Retention report",
 "dev": "16.0",
 "qa": "0"
 },
 {
 "task": "PUL-1167",
-"release": "rc.pul.50",
+"release": "rc.p07.pul-dev.04",
 "desc": "[BE] Salary Review Report — HubSpot owners local store, team categorization & CS-user linkage",
 "dev": "8.0",
 "qa": "0"
@@ -1310,7 +1310,7 @@ window.taskDetails = [
 },
 {
 "task": "OW-3211",
-"release": "",
+"release": "CO-2.10.3",
 "desc": "Jobs - design issue",
 "dev": "3.0",
 "qa": "0"
@@ -1338,49 +1338,49 @@ window.taskDetails = [
 },
 {
 "task": "OW-3221",
-"release": "CO-2.10.3",
+"release": "",
 "desc": "DEV: Missing 404 page on both Global and PH",
 "dev": "1.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1103",
-"release": "rc.50",
+"release": "rc.p02.pls.50",
 "desc": "Reports » Clients: wrong counts",
 "dev": "3.0",
 "qa": "0"
 },
 {
 "task": "PLS-1275",
-"release": "rc.50",
+"release": "rc.p02.pls.50",
 "desc": "Reports » Staff by recruiter: NM has no recruiter",
 "dev": "6.5",
 "qa": "0.0"
 },
 {
 "task": "PLS-1439",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "BE - Add Client Region filter for the Growth by Industry report",
 "dev": "3.0",
 "qa": "5.0"
 },
 {
 "task": "PLS-1501",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "FE - Profile Picture Nudge Banner for Employees Without Profile Photo",
 "dev": "4.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1503",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "FE - Display Profile Picture Reward Points in UI",
 "dev": "4.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1504",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "BE - Award Reward Points for First Profile Picture Upload",
 "dev": "5.0",
 "qa": "0.0"
@@ -1394,7 +1394,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1592",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Implement Staff Category Filter API",
 "dev": "4.0",
 "qa": "2.0"
@@ -1422,35 +1422,35 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1657",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "BE – Optimization - Existing Client Growth report: eliminate duplicate query + push PHP filters to SQL",
 "dev": "12.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1678",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "Reports » CS allocation, unassigned clients",
 "dev": "2.0",
 "qa": "3.0"
 },
 {
 "task": "PLS-1701",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - extend Existing Client Growth response with zero-staff clients",
 "dev": "8.0",
 "qa": "2.0"
 },
 {
 "task": "PLS-1775",
-"release": "rc.54",
+"release": "rc.p20.pls.2026Q3",
 "desc": "BE - Add new datapoints in endpoint",
 "dev": "3.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1784",
-"release": "rc.54",
+"release": "rc.p20.pls.2026Q3",
 "desc": "BE - Auto-run data masking after employee sync on non-production environments",
 "dev": "5.0",
 "qa": "0.0"
@@ -1464,28 +1464,28 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1798",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Allow inactive recruiters when saving/editing employees",
 "dev": "6.5",
 "qa": "2.0"
 },
 {
 "task": "PLS-1806",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Growth by industry: staff inclusion filter",
 "dev": "4.0",
 "qa": "2.0"
 },
 {
 "task": "PLS-1807",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Growth by industry filter: all staff/operations/delivery",
 "dev": "12.0",
 "qa": "4.0"
 },
 {
 "task": "PLS-1842",
-"release": "rc.50",
+"release": "rc.p02.pls.50",
 "desc": "FE - Reports » Staff Margin » New Flag Rule",
 "dev": "3.0",
 "qa": "0.0"
@@ -1499,35 +1499,35 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1851",
-"release": "rc.50",
+"release": "rc.p05.pls.51",
 "desc": "Cron: Weekly Pulse Update (shoutouts + rewards)",
 "dev": "3.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1931",
-"release": "rc.50",
+"release": "rc.p02.pls.50",
 "desc": "FE - Optimize People (Staff Listing) page performance: reduce redundant GraphQL requests and re-renders (frontend only)",
 "dev": "4.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1939",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Exclude future starters staff",
 "dev": "0.0",
 "qa": "2.0"
 },
 {
 "task": "PLS-1948",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "BE - Optimize Growth By Industry command",
 "dev": "10.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1955",
-"release": "rc.50",
+"release": "rc.p02.pls.50",
 "desc": "BE - Populate salary history for Deel-paid (New Markets) staff",
 "dev": "8.0",
 "qa": "0.0"
@@ -1541,49 +1541,49 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1972",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "FE - Add Core Values step to Shoutouts flow",
 "dev": "4.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1973",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "BE - core_value field for Shoutouts",
 "dev": "5.0",
 "qa": "0.0"
 },
 {
 "task": "PLS-1975",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - deprecate chargeout display permission for operations",
 "dev": "5.0",
 "qa": "2.0"
 },
 {
 "task": "PLS-1977",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "FE - Remove operations charge out information from the permissions page",
 "dev": "3.0",
 "qa": "1.0"
 },
 {
 "task": "PLS-1978",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "BE - New datapoint last_chargeout_adjustment_date",
 "dev": "9.5",
 "qa": "3.0"
 },
 {
 "task": "PLS-1979",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "Add \"staff location\" to the selectable \"fields\" options",
 "dev": "0.0",
 "qa": "0"
 },
 {
 "task": "PLS-1987",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "BE - Sync Client column Client First Hire Date to hubspot",
 "dev": "5.0",
 "qa": "0.0"
@@ -1611,7 +1611,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-1997",
-"release": "rc.54",
+"release": "rc.p02.pls.50",
 "desc": "New accounts not reflecting in Pulsechat",
 "dev": "1.0",
 "qa": "0.0"
@@ -1625,7 +1625,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-2001",
-"release": "rc.49",
+"release": "rc.p02.pls.50",
 "desc": "[BE] Reports > Add Export across 3 reports",
 "dev": "0.0",
 "qa": "0"
@@ -1653,7 +1653,7 @@ window.taskDetails = [
 },
 {
 "task": "PLS-2008",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Capture all chargeout changes in employee_chargeout_history (+ baseline backfill)",
 "dev": "16.0",
 "qa": "3.0"
@@ -1667,14 +1667,14 @@ window.taskDetails = [
 },
 {
 "task": "PLS-2010",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Create custom field endpoint for Sprout",
 "dev": "12.0",
 "qa": "2.0"
 },
 {
 "task": "PLS-2012",
-"release": "rc.49",
+"release": "v3.1.18",
 "desc": "BE - Reports » Existing Client Growth: account for CS director history",
 "dev": "8.0",
 "qa": "0.0"
@@ -1688,35 +1688,35 @@ window.taskDetails = [
 },
 {
 "task": "PUL-1054",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "FE - Leave request view popup and approvals",
 "dev": "8.0",
 "qa": "0.0"
 },
 {
 "task": "PUL-1137",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "Phase 3.1 - Shoutouts: Client view",
 "dev": "35.0",
 "qa": "0.0"
 },
 {
 "task": "PUL-1144",
-"release": "rc.pul.50",
+"release": "rc.p07.pul-dev.04",
 "desc": "FE - Salary Review Report — Tracker View UI",
 "dev": "8.0",
 "qa": "0.0"
 },
 {
 "task": "PUL-1168",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "QA - Staff Leave & Calendar: Functional & UI/UX testing",
 "dev": "0.0",
 "qa": "0"
 },
 {
 "task": "PUL-1172",
-"release": "rc.pul.45",
+"release": "rc.p01.pul.45",
 "desc": "Proof of concept: Leave application, auto-approval for level 1",
 "dev": "4.0",
 "qa": "0.0"
@@ -1737,28 +1737,28 @@ window.taskDetails = [
 },
 {
 "task": "PUL-1179",
-"release": "rc.pul.50",
+"release": "rc.p06.pul.51",
 "desc": "FE - Create FE design for forecasted starters",
 "dev": "6.0",
 "qa": "0.0"
 },
 {
 "task": "PUL-1180",
-"release": "rc.pul.50",
+"release": "rc.p06.pul.51",
 "desc": "BE - Integration and GraphQL Services Forecasted Starters Report",
 "dev": "0.0",
 "qa": "0"
 },
 {
 "task": "PUL-1182",
-"release": "rc.pul.49",
+"release": "v3.1.18",
 "desc": "BE - Client Shoutouts navigation menu",
 "dev": "3.0",
 "qa": "2.0"
 },
 {
 "task": "PUL-1194",
-"release": "rc.pul.55",
+"release": "rc.p08.pul-dev.01",
 "desc": "FE UI/UX Prototype - Contractor Invoices (Service Invoice Form + Invoice History)",
 "dev": "12.0",
 "qa": "0.0"
@@ -1772,7 +1772,7 @@ window.taskDetails = [
 },
 {
 "task": "PUL-1204",
-"release": "rc.pul.50",
+"release": "rc.p07.pul-dev.04",
 "desc": "BE - Add country filter in report salary review",
 "dev": "0.0",
 "qa": "0"
@@ -1817,70 +1817,70 @@ window.taskDetails = [
 "desc": "BE - Ticket view / comment system",
 "dev": "0.0",
 "qa": 0.0,
-"release": "rc.50"
+"release": "rc.p05.pls.51"
 },
 {
 "task": "PLS-1720",
 "desc": "BE - Newsfeed — fast path for single-post `posts(id: $id)` query",
 "dev": "16.0",
 "qa": 1.0,
-"release": "rc.49"
+"release": "rc.p02.pls.50"
 },
 {
 "task": "PLS-1933",
 "desc": "HMO Dependent Cost value in Staff Grid (and in Staff Margin Report)",
 "dev": "5.0",
 "qa": 0.0,
-"release": "rc.50"
+"release": "rc.p02.pls.50"
 },
 {
 "task": "PLS-1956",
 "desc": "anonymousFeedbackList errors when a date filter is combined with other filters",
 "dev": "8.0",
 "qa": 5.0,
-"release": "rc.bench"
+"release": "rc.p99.pls.backlog"
 },
 {
 "task": "PLS-1989",
 "desc": "Exclude staff with no company email from hris sync",
 "dev": "0.0",
 "qa": 0.0,
-"release": "rc.54"
+"release": "rc.p02.pls.50"
 },
 {
 "task": "PLS-1993",
 "desc": "BE - Hubspot types/subtypes enhancement",
 "dev": "3.0",
 "qa": 0.0,
-"release": "rc.50"
+"release": "rc.p02.pls.50"
 },
 {
 "task": "PLS-2000",
 "desc": "FE - Reports > Add Export across 3 reports",
 "dev": "5.0",
 "qa": 0.0,
-"release": "rc.49"
+"release": "rc.p02.pls.50"
 },
 {
 "task": "PLS-2011",
 "desc": "FE - Capture history of CS director changes",
 "dev": "5.0",
 "qa": 3.0,
-"release": "rc.49"
+"release": "v3.1.18"
 },
 {
 "task": "PLS-2016",
 "desc": "FE - Attendance Summary: record scroll does not work",
 "dev": "2.0",
 "qa": 0.0,
-"release": "v3.1.17.4"
+"release": "rc.p04.pls-dev.01"
 },
 {
 "task": "PLS-2017",
 "desc": "FE - Payroll: Hide for contractors",
 "dev": "2.0",
 "qa": 0.0,
-"release": "v3.1.17.4"
+"release": "rc.p04.pls-dev.01"
 },
 {
 "task": "PLS-2026",
@@ -1901,14 +1901,14 @@ window.taskDetails = [
 "desc": "BE - enable edit for Deel staff",
 "dev": "6.5",
 "qa": 0.0,
-"release": "rc.50"
+"release": "rc.p02.pls.50"
 },
 {
 "task": "PLS-2033",
 "desc": "BE - enforce mandatory fields",
 "dev": "16.0",
 "qa": 0.0,
-"release": ""
+"release": "rc.p02.pls.50"
 },
 {
 "task": "PLS-2039",
@@ -1922,14 +1922,14 @@ window.taskDetails = [
 "desc": "FE - Hide Attendance Summary link on mobile",
 "dev": "1.0",
 "qa": 0.0,
-"release": "v3.1.17.4"
+"release": "rc.p04.pls-dev.01"
 },
 {
 "task": "PLS-2046",
 "desc": "BE - Attendance Summary: record scroll does not work",
 "dev": "0.0",
 "qa": 0.0,
-"release": "v3.1.17.4"
+"release": "rc.p04.pls-dev.01"
 },
 {
 "task": "PLS-2047",
@@ -1943,42 +1943,42 @@ window.taskDetails = [
 "desc": "Technical Debt: Correct future-dated employee_chargeout_fx_history records",
 "dev": "0.0",
 "qa": 0.0,
-"release": "rc.bench"
+"release": "rc.p99.pls.backlog"
 },
 {
 "task": "PUL-1155",
 "desc": "BE — Shoutouts: Restrict client recipient scope to team staff only",
 "dev": "0.0",
 "qa": 0.0,
-"release": "rc.pul.49"
+"release": "v3.1.18"
 },
 {
 "task": "PUL-1166",
 "desc": "FE - Create a new report named Client Retention",
 "dev": "6.0",
 "qa": 0.0,
-"release": "rc.pul.49"
+"release": "v3.1.18"
 },
 {
 "task": "PUL-1205",
 "desc": "BE - Update filterable label in report salary review",
 "dev": "0.0",
 "qa": 0.0,
-"release": "rc.pul.50"
+"release": "rc.p07.pul-dev.04"
 },
 {
 "task": "PUL-1207",
 "desc": "BE - add db column for client view",
 "dev": "0.0",
 "qa": 0.0,
-"release": "rc.pul.49"
+"release": "v3.1.18"
 },
 {
 "task": "PUL-1208",
 "desc": "BE - shoutouts for client must be filtered by is_client_view",
 "dev": "0.0",
 "qa": 0.0,
-"release": "rc.pul.49"
+"release": "v3.1.18"
 },
 {
 "task": "PUL-1209",
@@ -1986,5 +1986,257 @@ window.taskDetails = [
 "dev": "0.0",
 "qa": 0.0,
 "release": ""
+},
+{
+"task": "IL-21",
+"desc": "BETA TEST FEEDBACK - Improve payment URL",
+"dev": "4.0",
+"qa": 0.0,
+"release": ""
+},
+{
+"task": "IL-22",
+"desc": "Learning & Development worklogs aug2026",
+"dev": "0.0",
+"qa": 0.0,
+"release": ""
+},
+{
+"task": "IL-23",
+"desc": "Leadership worklogs aug2026",
+"dev": "0.0",
+"qa": 0.0,
+"release": ""
+},
+{
+"task": "OW-2963",
+"desc": "Engineering & Architecture > List update",
+"dev": "2.0",
+"qa": 0.0,
+"release": ""
+},
+{
+"task": "OW-3245",
+"desc": "CO - Case study popup background not working",
+"dev": "1.0",
+"qa": 0.0,
+"release": "CO-2.10.3"
+},
+{
+"task": "OW-3246",
+"desc": "PH - Overlapping issue in social events and resource hub",
+"dev": "1.0",
+"qa": 0.0,
+"release": "PH-2.8.3"
+},
+{
+"task": "OW-3252",
+"desc": "Resolve \"As Featured In\" Logo Display Issue (.PH)",
+"dev": "2.0",
+"qa": 0.0,
+"release": "PH-2.8.3"
+},
+{
+"task": "PLS-1440",
+"desc": "FE - Add Client Location dropdown filter to Growth by Industry report",
+"dev": "2.0",
+"qa": 2.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-1472",
+"desc": "FE - Update CS/CX reference to CS",
+"dev": "4.0",
+"qa": 0.0,
+"release": "rc.p99.pls.backlog"
+},
+{
+"task": "PLS-1708",
+"desc": "FE - Staff & Client Staff Listing/grids: display Country and Province/State",
+"dev": "4.0",
+"qa": 2.0,
+"release": "v3.1.18"
+},
+{
+"task": "PLS-1709",
+"desc": "BE - Include Country and Region to Staff List",
+"dev": "3.0",
+"qa": 3.0,
+"release": "v3.1.18"
+},
+{
+"task": "PLS-1962",
+"desc": "FE - Enforce mandatory fields",
+"dev": "5.0",
+"qa": 0.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-1986",
+"desc": "Client count discrepancy",
+"dev": "7.5",
+"qa": 0.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-2028",
+"desc": "FE - enable edit for Deel staff",
+"dev": "4.0",
+"qa": 0.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-2030",
+"desc": "FE - add report option component",
+"dev": "5.0",
+"qa": 0.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-2032",
+"desc": "BE - provide data to new report view",
+"dev": "7.0",
+"qa": 5.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-2037",
+"desc": "BE - Overtime: start and end dates must be stored as complete datetime",
+"dev": "16.0",
+"qa": 0.0,
+"release": "rc.p04.pls-dev.01"
+},
+{
+"task": "PLS-2038",
+"desc": "FE - Overtime: start and end dates must be stored as complete datetime",
+"dev": "2.0",
+"qa": 0.0,
+"release": "rc.p04.pls-dev.01"
+},
+{
+"task": "PLS-2040",
+"desc": "FE - Reports » Growth By Industry: Display all categories",
+"dev": "5.0",
+"qa": 2.0,
+"release": "v3.1.18.1"
+},
+{
+"task": "PLS-2041",
+"desc": "BE - Reports » Growth By Industry: Display all categories",
+"dev": "3.0",
+"qa": 4.0,
+"release": "v3.1.18.1"
+},
+{
+"task": "PLS-2043",
+"desc": "BE - Undertime: start and end dates must be stored as complete datetime",
+"dev": "12.0",
+"qa": 0.0,
+"release": "rc.p04.pls-dev.01"
+},
+{
+"task": "PLS-2044",
+"desc": "FE - Undertime: start and end dates must be stored as complete datetime",
+"dev": "2.0",
+"qa": 0.0,
+"release": "rc.p04.pls-dev.01"
+},
+{
+"task": "PLS-2049",
+"desc": "FE - add new filter for last_chargeout_adjustment_date",
+"dev": "2.0",
+"qa": 2.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-2050",
+"desc": "BE - Reports » Staff Margin: exclude future starters",
+"dev": "3.5",
+"qa": 0.0,
+"release": "rc.p02.pls.50"
+},
+{
+"task": "PLS-2055",
+"desc": "HR: manual update of TP salary",
+"dev": "0.5",
+"qa": 0.0,
+"release": "v3.1.18"
+},
+{
+"task": "PLS-2057",
+"desc": "v3.1.18 release rollout",
+"dev": "0.0",
+"qa": 0.0,
+"release": "v3.1.18"
+},
+{
+"task": "PLS-2061",
+"desc": "FE - update hire_date to start_date",
+"dev": "1.0",
+"qa": 0.5,
+"release": "v3.1.18"
+},
+{
+"task": "PUL-1043",
+"desc": "BE - Mutation GraphQL services for client's staff leave approval process (appove/decline)",
+"dev": "20.0",
+"qa": 0.0,
+"release": "rc.p01.pul.45"
+},
+{
+"task": "PUL-1206",
+"desc": "FE - add consent checkbox for client view",
+"dev": "2.0",
+"qa": 2.0,
+"release": "v3.1.18"
+},
+{
+"task": "PUL-1210",
+"desc": "FE - add columns to tracker view",
+"dev": "2.0",
+"qa": 0.0,
+"release": "rc.p07.pul-dev.04"
+},
+{
+"task": "PUL-1211",
+"desc": "BE - add columns in tracker view",
+"dev": "0.0",
+"qa": 0.0,
+"release": "rc.p07.pul-dev.04"
+},
+{
+"task": "PUL-1212",
+"desc": "BE - add global / country filter",
+"dev": "0.0",
+"qa": 0.0,
+"release": "rc.p07.pul-dev.04"
+},
+{
+"task": "PUL-1214",
+"desc": "BE - add recipient's company to the shoutout recipient picker",
+"dev": "3.5",
+"qa": 0.0,
+"release": "v3.1.18"
+},
+{
+"task": "PUL-1218",
+"desc": "[BE] Salary Review Report — Record Creation Scheduled Command",
+"dev": "0.0",
+"qa": 0.0,
+"release": "rc.p07.pul-dev.04"
+},
+{
+"task": "PUL-1219",
+"desc": "BE - For client shoutout, the consent value must always be true",
+"dev": "1.0",
+"qa": 0.0,
+"release": "v3.1.18"
+},
+{
+"task": "PUL-1228",
+"desc": "FE - Change all labels CS/CX to CS",
+"dev": "1.0",
+"qa": 0.0,
+"release": "rc.p03.pul.50"
 }
 ];
