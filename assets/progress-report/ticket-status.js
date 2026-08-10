@@ -32,6 +32,8 @@ window.ticketStatusData = [
   { parent: "PUL-1023", intermediate: "", child: "PUL-1202", status: "For Grooming", dev: "", qa: "", qa_est: 0 },
   { parent: "PUL-1023", intermediate: "", child: "PUL-1239", status: "Monitor Only", dev: "", qa: "", qa_est: 0 },
   { parent: "PUL-1023", intermediate: "", child: "PUL-1253", status: "For QA Review", dev: "John Perri Cruz", qa: "Kristine Simon", qa_est: 0 },
+  { parent: "PLS-2076", intermediate: "", child: "PLS-2073", status: "To Do", dev: "Armin Almuete", qa: "Kate Antonette Carpina", qa_est: 0 },
+  { parent: "PLS-2076", intermediate: "", child: "PLS-2077", status: "For Grooming", dev: "", qa: "Kate Antonette Carpina", qa_est: 0 },
   { parent: "PLS-1005", intermediate: "", child: "PLS-1177", status: "Done", dev: "Jay Sobredilla", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PLS-1005", intermediate: "", child: "PLS-1439", status: "QA In-Progress", dev: "Christopher Buenafe", qa: "Kate Antonette Carpina, Kristine Simon", qa_est: 5 },
   { parent: "PLS-1005", intermediate: "", child: "PLS-1440", status: "QA In-Progress", dev: "Armin Almuete, John Perri Cruz", qa: "Kate Antonette Carpina, Kristine Simon", qa_est: 2 },
