@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Progress Report</title>
+  <link rel="stylesheet" href="assets/progress-report/styles.css" />
+</head>
+
+<body>
+
+  <header class="page-head">
+    <div class="page-head-top">
+      <p class="eyebrow">Pulse Project</p>
+      <button type="button" class="options-trigger" id="open-options">⚙ Options</button>
+    </div>
+    <h1>Progress Report</h1>
+    <p class="subtitle">description here</p>
+  </header>
+
+  <dialog class="options-modal" id="options-modal">
+    <div class="options-modal-head">
+      <p class="options-modal-title">Options</p>
+      <button type="button" class="options-modal-close" id="close-options" aria-label="Close">×</button>
+    </div>
+    <div class="options-modal-body">
+      <label class="toggle-control">
+        <input type="checkbox" id="toggle-columns">
+        <span>Show Kanban view</span>
+      </label>
+      <label class="toggle-control">
+        <input type="checkbox" id="toggle-monitor">
+        <span>Show [Monitor only] column</span>
+      </label>
+      <label class="toggle-control">
+        <input type="checkbox" id="toggle-status">
+        <span>Show Status</span>
+      </label>
+      <label class="toggle-control">
+        <input type="checkbox" id="toggle-calendar">
+        <span>Show calendar</span>
+      </label>
+    </div>
+  </dialog>
+
+  <div id="report-root"></div>
+
+  <footer id="report-footer"></footer>
+
+  <div style="display:none">
+  <details class="editor-panel" id="editor-panel">
+    <summary>Edit data (JSON)</summary>
+    <div class="editor-body">
+      <p class="editor-hint">
+        One row per record, matching the source CSV exactly:
+        <code>{ "parent": "PLS-XXXX", "intermediate": "", "child": "PLS-XXXX", "status": "…" }</code> — leave
+        <code>intermediate</code> as an empty string when a child sits directly under its parent. Add, remove, or
+        re-status rows, then press Apply. New statuses get their own column automatically.
+      </p>
+      <textarea id="json-editor" class="json-editor" spellcheck="false"></textarea>
+      <div class="editor-actions">
+        <button type="button" class="btn-primary" id="apply-btn">Apply changes</button>
+        <button type="button" class="btn-ghost" id="reset-btn">Reset to original</button>
+        <button type="button" class="btn-ghost" id="download-btn">Download JSON</button>
+        <span class="editor-status" id="editor-status"></span>
+      </div>
+    </div>
+  </details>
+
+  <details class="editor-panel" id="desc-editor-panel">
+    <summary>Edit parent descriptions (JSON)</summary>
+    <div class="editor-body">
+      <p class="editor-hint">
+        One entry per parent: <code>{ "release": "v3.1.1", "parent": "PLS-XXXX", "desc": "…" }</code>.
+        <code>release</code> determines which table a parent's row appears in — each distinct release gets its own
+        table, in order of first appearance. Parents with no matching entry here are grouped under "No release" and show
+        just the key.
+      </p>
+      <textarea id="desc-json-editor" class="json-editor" spellcheck="false"></textarea>
+      <div class="editor-actions">
+        <button type="button" class="btn-primary" id="desc-apply-btn">Apply changes</button>
+        <button type="button" class="btn-ghost" id="desc-reset-btn">Reset to original</button>
+        <button type="button" class="btn-ghost" id="desc-download-btn">Download JSON</button>
+        <span class="editor-status" id="desc-editor-status"></span>
+      </div>
+    </div>
+  </details>
+
+  <details class="editor-panel" id="effort-editor-panel">
+    <summary>Edit parent effort (JSON)</summary>
+    <div class="editor-body">
+      <p class="editor-hint">
+        One entry per parent:
+        <code>{ "parent": "PLS-XXXX", "dev_est": 0, "dev_time": 0, "qa_est": 0, "qa_time": 0 }</code>. Shown under the
+        totals as Dev Est., Dev Time, QA Est., QA Time, formatted to 2 decimal places. Parents with no matching entry
+        here show "—" for all four.
+      </p>
+      <textarea id="effort-json-editor" class="json-editor" spellcheck="false"></textarea>
+      <div class="editor-actions">
+        <button type="button" class="btn-primary" id="effort-apply-btn">Apply changes</button>
+        <button type="button" class="btn-ghost" id="effort-reset-btn">Reset to original</button>
+        <button type="button" class="btn-ghost" id="effort-download-btn">Download JSON</button>
+        <span class="editor-status" id="effort-editor-status"></span>
+      </div>
+    </div>
+  </details>
+  </div>
+
+  <script src="assets/progress-report/2026-08-10/tickets.js"></script>
+  <script src="assets/progress-report/2026-08-10/ticket-status.js"></script>
+  <script src="assets/worklogs/worklogs-all-72695.js" ></script>
+  <script src="assets/progress-report/main.js"></script>
+
+</body>
+
+</html>
