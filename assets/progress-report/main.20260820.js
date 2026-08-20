@@ -1,6 +1,3 @@
-  // work item reference data, used to link to the work item in the Jira web UI.
-  const WORK_ITEMS = window.workItems;
-
   // Flat records — one per CSV row: parent, intermediate, child, status.
   const ORIGINAL_DATA = window.ticketStatusData;
 
@@ -138,35 +135,6 @@
     columns.forEach(status => {
       const dot = el("span", { class: "legend-dot", style: `background:var(--status-${colorMap[status]})` });
       container.appendChild(el("span", { class: "legend-item" }, [dot, document.createTextNode(status)]));
-    });
-  }
-
-  function buildWorkItemMap(workItems) {
-    const map = new Map();
-    (workItems || []).forEach(w => { if (w && w.work_item_key) map.set(w.work_item_key, w); });
-    return map;
-  }
-
-  // ORIGINAL_DESCRIPTIONS no longer carries release/points/dev_est/summary
-  // directly — they're hydrated from the matching WORK_ITEMS entry, joined on
-  // description.parent === work_item.work_item_key. Falls back to whatever the
-  // description entry already has (or undefined) when there's no match.
-  // original_estimate is in hours; dev_est is expected in minutes throughout
-  // this file (formatEffort's day/hour/minute parsing), so it's converted here.
-  function hydrateDescriptions(descriptions, workItems) {
-    const workItemMap = buildWorkItemMap(workItems);
-    return (descriptions || []).map(d => {
-      if (!d) return d;
-      const workItem = d.parent ? workItemMap.get(d.parent) : null;
-      if (!workItem) return d;
-      const devEstHours = Number(workItem.original_estimate);
-      return {
-        ...d,
-        release: workItem.fix_version,
-        points: workItem.story_point_estimate,
-        dev_est: Number.isFinite(devEstHours) ? devEstHours * 60 : workItem.original_estimate,
-        summary: workItem.summary
-      };
     });
   }
 
@@ -584,12 +552,11 @@
   }
 
   function renderReport(rows, descriptions, efforts) {
-    const hydratedDescriptions = hydrateDescriptions(descriptions, WORK_ITEMS);
-    const descMap = buildDescriptionMap(hydratedDescriptions);
-    const effortMap = buildEffortMap(hydratedDescriptions);
+    const descMap = buildDescriptionMap(descriptions);
+    const effortMap = buildEffortMap(descriptions);
     const worklogHoursByTask = buildWorklogHoursByTask(efforts);
     const parents = buildParents(rows);
-    const releaseGroups = buildReleaseGroups(parents, descMap, hydratedDescriptions);
+    const releaseGroups = buildReleaseGroups(parents, descMap, descriptions);
 
     const root = document.getElementById("report-root");
     root.innerHTML = "";
