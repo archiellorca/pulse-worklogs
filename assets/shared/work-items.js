@@ -180,7 +180,7 @@ window.workItems = [
         "status": "Release Ready"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PLS-1606",
         "summary": "BE – Fix row-lock contention on employee_timelog_entries from MyAttendanceLogs read path",
         "parent_key": "PLS-1900",
@@ -189,10 +189,10 @@ window.workItems = [
         "original_estimate": 6.0,
         "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 2,
-        "status": "For QA Review"
+        "status": "Done"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PLS-1607",
         "summary": "BE – Investigate SaveHubspotTicketJob failures (537 in 7 days, 0 successes)",
         "parent_key": "PLS-1900",
@@ -201,7 +201,7 @@ window.workItems = [
         "original_estimate": 2.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 1,
-        "status": "In Progress"
+        "status": "Done"
     },
     {
         "fix_version": "rc.p02.pls.50",
@@ -360,7 +360,7 @@ window.workItems = [
         "status": "For QA Review"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PLS-1946",
         "summary": "BE - Review duplicate accounts (non-leaders)",
         "parent_key": "PLS-1900",
@@ -369,7 +369,7 @@ window.workItems = [
         "original_estimate": 2.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
-        "status": "For PM Review"
+        "status": "Done"
     },
     {
         "fix_version": "rc.p02.pls.50",
@@ -636,7 +636,7 @@ window.workItems = [
         "status": "Monitor only"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PLS-2073",
         "summary": "FE - Reports > Growth By Industry (colours and numbers)",
         "parent_key": "PLS-2076",
@@ -645,7 +645,7 @@ window.workItems = [
         "original_estimate": 2.0,
         "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 2,
-        "status": "For QA Review"
+        "status": "Done"
     },
     {
         "fix_version": "rc.p02.pls.50",
@@ -660,16 +660,16 @@ window.workItems = [
         "status": "Monitor only"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PLS-2077",
         "summary": "BE - Reports > Growth By Industry: custom sort categories",
         "parent_key": "PLS-2076",
-        "developers": "",
+        "developers": "Ryan Puriran",
         "story_point_estimate": 5,
         "original_estimate": 0.0,
         "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 3,
-        "status": "For QA Review"
+        "status": "Done"
     },
     {
         "fix_version": "rc.p02.pls.50",
@@ -696,16 +696,16 @@ window.workItems = [
         "status": "Monitor Only"
     },
     {
-        "fix_version": "rc.p03.pul.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PUL-1217",
         "summary": "FE - Security > GDPR compliance",
         "parent_key": "PUL-1201",
-        "developers": "Armin Almuete",
+        "developers": "",
         "story_point_estimate": 5,
         "original_estimate": 4.0,
-        "qa_testers": "Kristine Simon",
+        "qa_testers": "",
         "qa_estimate_hours": 2,
-        "status": "Release Ready"
+        "status": "Done"
     },
     {
         "fix_version": "rc.p03.pul.50",
@@ -720,40 +720,40 @@ window.workItems = [
         "status": "Monitor Only"
     },
     {
-        "fix_version": "rc.p03.pul.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PUL-1222",
         "summary": "BE - Reports » Key Updates: Employees, Consultants, Trainees breakdown",
         "parent_key": "PUL-1221",
-        "developers": "Ryan Puriran",
+        "developers": "",
         "story_point_estimate": 5,
         "original_estimate": 5.0,
-        "qa_testers": "Kate Antonette Carpina",
+        "qa_testers": "",
         "qa_estimate_hours": 2,
-        "status": "Release Ready"
+        "status": "Done"
     },
     {
-        "fix_version": "rc.p03.pul.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PUL-1223",
         "summary": "FE - Reports » Key Updates: Employees, Consultants, Trainees breakdown",
         "parent_key": "PUL-1221",
-        "developers": "Armin Almuete",
+        "developers": "",
         "story_point_estimate": 5,
         "original_estimate": 4.0,
-        "qa_testers": "Kate Antonette Carpina",
+        "qa_testers": "",
         "qa_estimate_hours": 2,
-        "status": "Release Ready"
+        "status": "Done"
     },
     {
-        "fix_version": "rc.p03.pul.50",
+        "fix_version": "v3.1.19",
         "work_item_key": "PUL-1266",
         "summary": "FE - display no engagement types",
         "parent_key": "PUL-1221",
-        "developers": "Armin Almuete",
+        "developers": "",
         "story_point_estimate": 1,
         "original_estimate": 1.0,
-        "qa_testers": "Kate Antonette Carpina",
+        "qa_testers": "",
         "qa_estimate_hours": 1,
-        "status": "Release Ready"
+        "status": "Done"
     },
     {
         "fix_version": "rc.p01.pul.45",
@@ -1178,26 +1178,26 @@ window.workItems = [
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1199",
-        "summary": "[Leave Page] \"Show all results\" pagination broken for Deel and Sprout staff — count mismatch (Deel) and stuck loading (Sprout)",
+        "summary": "FE - [Leave Page] \"Show all results\" pagination broken for Deel and Sprout staff — count mismatch (Deel) and stuck loading (Sprout)",
         "parent_key": "PUL-1023",
         "developers": "",
-        "story_point_estimate": "",
-        "original_estimate": 0.0,
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
         "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1202",
-        "summary": "[Leave Request] Uploading .webp attachment fails with generic \"Failed\" status instead of clear validation error",
+        "summary": "FE - [Leave Request] Uploading .webp attachment fails with generic \"Failed\" status instead of clear validation error",
         "parent_key": "PUL-1023",
         "developers": "",
-        "story_point_estimate": "",
-        "original_estimate": 0.0,
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
         "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
@@ -1228,72 +1228,72 @@ window.workItems = [
         "work_item_key": "PUL-1240",
         "summary": "BE - Staff Leave: page-scoped status handling + status filter",
         "parent_key": "PUL-1239",
-        "developers": "Christopher Buenafe",
+        "developers": "",
         "story_point_estimate": 13,
         "original_estimate": 10.5,
-        "qa_testers": "Kristine Simon",
+        "qa_testers": "",
         "qa_estimate_hours": 8,
-        "status": "QA In-Progress"
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1241",
         "summary": "BE - Staff Leave: myTeamLeaveRequestsFilterValues endpoint (Leave Type + Status options)",
         "parent_key": "PUL-1239",
-        "developers": "Christopher Buenafe",
+        "developers": "",
         "story_point_estimate": 5,
         "original_estimate": 7.0,
-        "qa_testers": "Kristine Simon",
+        "qa_testers": "",
         "qa_estimate_hours": 4,
-        "status": "QA In-Progress"
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1242",
-        "summary": "BE - Populate nickname on leave grids and calendar",
+        "summary": "BE - Populate nickname and profile picture on leave grids and calendar",
         "parent_key": "PUL-1239",
-        "developers": "Christopher Buenafe",
+        "developers": "",
         "story_point_estimate": 5,
         "original_estimate": 6.0,
-        "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "",
+        "qa_estimate_hours": 3,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1243",
         "summary": "BE - Staff Leave: approval message, client comment column, optional comment",
         "parent_key": "PUL-1239",
-        "developers": "Christopher Buenafe",
+        "developers": "",
         "story_point_estimate": 3,
         "original_estimate": 5.0,
         "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "In Progress"
+        "qa_estimate_hours": 4,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1252",
         "summary": "FE - Staff Leave: adopt page scope on leave grids + filter option sources",
         "parent_key": "PUL-1239",
-        "developers": "John Perri Cruz",
+        "developers": "",
         "story_point_estimate": 1,
         "original_estimate": 2.0,
         "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 4,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1253",
         "summary": "FE - Pending leave request - Exclude Leave on \"Submitted\" status",
         "parent_key": "PUL-1023",
-        "developers": "John Perri Cruz",
+        "developers": "",
         "story_point_estimate": 1,
         "original_estimate": 2.0,
-        "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "",
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p02.pls.51",
@@ -1372,12 +1372,12 @@ window.workItems = [
         "work_item_key": "PLS-2051",
         "summary": "Reports > Staff margin: Sort by gross margin %",
         "parent_key": "PLS-2034",
-        "developers": "",
-        "story_point_estimate": "",
-        "original_estimate": 0.0,
+        "developers": "Jay Sobredilla",
+        "story_point_estimate": 3,
+        "original_estimate": 3.0,
         "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "In Progress"
     },
     {
         "fix_version": "rc.p02.pls.51",
@@ -1386,10 +1386,10 @@ window.workItems = [
         "parent_key": "PLS-2034",
         "developers": "Christopher Buenafe",
         "story_point_estimate": 5,
-        "original_estimate": 0.0,
+        "original_estimate": 7.0,
         "qa_testers": "Jazel Hanne Cornillez",
         "qa_estimate_hours": 0,
-        "status": "To Do"
+        "status": "For Code Review"
     },
     {
         "fix_version": "rc.p02.pls.51",
@@ -1399,7 +1399,7 @@ window.workItems = [
         "developers": "Armin Almuete",
         "story_point_estimate": 2,
         "original_estimate": 2.0,
-        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 1,
         "status": "Release Ready"
     },
@@ -1462,5 +1462,701 @@ window.workItems = [
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Backlog"
+    },
+    {
+        "fix_version": "CO-2.10.4",
+        "work_item_key": "OW-3227",
+        "summary": "Global > Roles > 5 countries > SOC Analyst",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 1.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Release"
+    },
+    {
+        "fix_version": "PH-2.8.4",
+        "work_item_key": "OW-3250",
+        "summary": "PH - AI Augmented Form",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 16.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Release"
+    },
+    {
+        "fix_version": "",
+        "work_item_key": "OW-3258",
+        "summary": "HubSpot Form – Set Up Webhook for HMO Benefit Renewal Form Email Confirmation",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 5.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "CO-2.10.4",
+        "work_item_key": "OW-3259",
+        "summary": "CO - Role page content becomes unreadable while scrolling",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Release"
+    },
+    {
+        "fix_version": "PH-2.8.4",
+        "work_item_key": "OW-3260",
+        "summary": "PH - Footer icons",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 1.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Release"
+    },
+    {
+        "fix_version": "CO-2.10.4",
+        "work_item_key": "OW-3261",
+        "summary": "Global > Great place to work",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Release"
+    },
+    {
+        "fix_version": "CO-2.10.4",
+        "work_item_key": "OW-3262",
+        "summary": "Global .co mobile navigation issue",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "CO-2.10.4",
+        "work_item_key": "OW-3263",
+        "summary": "FAQs block (for LLMs)",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA"
+    },
+    {
+        "fix_version": "PH-2.8.4",
+        "work_item_key": "OW-3266",
+        "summary": "PH > Global Locations",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "",
+        "work_item_key": "OW-3267",
+        "summary": "Resolve Global Location-Specific Footer URLs with Missing Trailing Slash",
+        "parent_key": "OW-3251",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 1.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "PH-2.8.4",
+        "work_item_key": "OW-3271",
+        "summary": "PH> Back to all articles > Point directly to the final destination URL ",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Release"
+    },
+    {
+        "fix_version": "",
+        "work_item_key": "OW-3274",
+        "summary": "Fix .CO Nav Menu Team Builder Button Redirecting Issue",
+        "parent_key": "OW-3164",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Release"
+    },
+    {
+        "fix_version": "PH-2.8.4",
+        "work_item_key": "OW-3275",
+        "summary": "Update Great Place to Work Logo Across All Website Pages",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 3.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA"
+    },
+    {
+        "fix_version": "CO-2.10.3.1",
+        "work_item_key": "OW-3278",
+        "summary": "Broken form - mobile",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "CO-2.10.4",
+        "work_item_key": "OW-3307",
+        "summary": "Global home page update",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "In Progress"
+    },
+    {
+        "fix_version": "PH-2.8.4",
+        "work_item_key": "OW-3310",
+        "summary": "Fix Footer Location Typo – “Phillipines” to “Philippines”",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 1.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "PM Review"
+    },
+    {
+        "fix_version": "rc.p06.pls.52",
+        "work_item_key": "PLS-761",
+        "summary": "FE - Implement Ticket View Page UI in Pulse",
+        "parent_key": "PLS-890",
+        "developers": "Armin Almuete, John Perri Cruz",
+        "story_point_estimate": 8,
+        "original_estimate": 8.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Code Review"
+    },
+    {
+        "fix_version": "rc.p30.pls.2026Q4",
+        "work_item_key": "PLS-1843",
+        "summary": "FE - Pulsechat » improve error message",
+        "parent_key": "PLS-2072",
+        "developers": "Armin Almuete, John Perri Cruz",
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p06.pls.52",
+        "work_item_key": "PLS-1995",
+        "summary": "FE - Missing \"Leave Request\" and close button",
+        "parent_key": "PLS-2122",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2031",
+        "summary": "FE - create new report view",
+        "parent_key": "PLS-1923",
+        "developers": "Armin Almuete, John Perri Cruz",
+        "story_point_estimate": 5,
+        "original_estimate": 5.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 3,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2063",
+        "summary": "BE - Optimization - Remove web middleware group + duplicate Sanctum middleware from the /graphql route",
+        "parent_key": "PLS-2036",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 3,
+        "original_estimate": 6.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p06.pls.52",
+        "work_item_key": "PLS-2066",
+        "summary": "BE - Optimization - Schedule cache:prune-stale-tags to trim stale Redis tag sets",
+        "parent_key": "PLS-2121",
+        "developers": "Jay Sobredilla",
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2067",
+        "summary": "BE - Fix fail-open CORS (fail-closed origins + single header source) and cache preflight responses",
+        "parent_key": "PLS-2036",
+        "developers": "Jay Sobredilla",
+        "story_point_estimate": 3,
+        "original_estimate": 5.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2075",
+        "summary": "BE - Fix Service Type errors in Staff placement update and Staff grid sorting",
+        "parent_key": "PLS-1911",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 2,
+        "original_estimate": 3.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p04.pls-dev.01",
+        "work_item_key": "PLS-2078",
+        "summary": "BE - payroll sync on-demand",
+        "parent_key": "PLS-2015",
+        "developers": "",
+        "story_point_estimate": 8,
+        "original_estimate": 0.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2079",
+        "summary": "BE - staff list on hover for By Client Details report view",
+        "parent_key": "PLS-1923",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 8,
+        "original_estimate": 5.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p06.pls.52",
+        "work_item_key": "PLS-2080",
+        "summary": "BE - Technical Debt - Cache::flexible background refresh never refreshes in it's halfway ttl",
+        "parent_key": "PLS-2121",
+        "developers": "Jay Sobredilla",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Code Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2081",
+        "summary": "FE - staff list on hover for By Client Details report view",
+        "parent_key": "PLS-1923",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2082",
+        "summary": "FE - Client totals",
+        "parent_key": "PLS-1923",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2083",
+        "summary": "BE - create endpoint for placement types including \"no placement type\"",
+        "parent_key": "PLS-1911",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 3,
+        "original_estimate": 3.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2084",
+        "summary": "FE - BHC Classification — Placement Type UI changes",
+        "parent_key": "PLS-1911",
+        "developers": "Armin Almuete, John Perri Cruz",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p04.pls-dev.01",
+        "work_item_key": "PLS-2089",
+        "summary": "Change shift schedule in sprout does not reflect",
+        "parent_key": "PLS-2015",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 1,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "",
+        "work_item_key": "PLS-2090",
+        "summary": "attendance records are 1 day ahead",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 1,
+        "status": "Cancelled"
+    },
+    {
+        "fix_version": "rc.p04.pls-dev.01",
+        "work_item_key": "PLS-2091",
+        "summary": "Payroll: Deductions mismatch",
+        "parent_key": "PLS-2015",
+        "developers": "",
+        "story_point_estimate": 2,
+        "original_estimate": 3.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "In Progress"
+    },
+    {
+        "fix_version": "rc.p04.pls-dev.01",
+        "work_item_key": "PLS-2096",
+        "summary": "BE - OT/UT Summary — computed total_hours must be sum of active status only",
+        "parent_key": "PLS-1990",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p04.pls-dev.01",
+        "work_item_key": "PLS-2097",
+        "summary": "FE - Clock in-out adjustment indicator",
+        "parent_key": "PLS-2092",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "v3.1.19",
+        "work_item_key": "PLS-2101",
+        "summary": "v3.1.19 release rollout",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "v3.1.19",
+        "work_item_key": "PLS-2107",
+        "summary": "FE - Notification frequency should be 1 month",
+        "parent_key": "PLS-1502",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "v3.1.19",
+        "work_item_key": "PLS-2108",
+        "summary": "FE - Shoutouts : display core value",
+        "parent_key": "PLS-1971",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 1,
+        "original_estimate": 1.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 1,
+        "status": "Done"
+    },
+    {
+        "fix_version": "v3.1.19.1",
+        "work_item_key": "PLS-2111",
+        "summary": "FE - People > Staff edit: Employee substatus is required",
+        "parent_key": "PLS-2118",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 3,
+        "original_estimate": 4.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "v3.1.19.1",
+        "work_item_key": "PLS-2115",
+        "summary": "FE - remove chart stats number for previous month",
+        "parent_key": "PLS-2114",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 1,
+        "original_estimate": 1.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "v3.1.19.1",
+        "work_item_key": "PLS-2116",
+        "summary": "BE - rename subcategory",
+        "parent_key": "PLS-2114",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 1,
+        "original_estimate": 1.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "v3.1.19.1",
+        "work_item_key": "PLS-2119",
+        "summary": "BE - People > Staff edit: Employee substatus is required",
+        "parent_key": "PLS-2118",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 5,
+        "original_estimate": 5.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 3,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2120",
+        "summary": "HS 47684114053: shoutout not showing",
+        "parent_key": "PLS-1902",
+        "developers": "Ian Ulita",
+        "story_point_estimate": 1,
+        "original_estimate": 1.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2126",
+        "summary": "HR Support: Provide masterlist for key update report",
+        "parent_key": "PLS-1902",
+        "developers": "",
+        "story_point_estimate": 2,
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "v3.1.19.1",
+        "work_item_key": "PLS-2130",
+        "summary": "BE - modify newsfeed filter recipient",
+        "parent_key": "PLS-2129",
+        "developers": "",
+        "story_point_estimate": 8,
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p07.pul.52",
+        "work_item_key": "PUL-1245",
+        "summary": "BE - Reports » Growth by sales agent: separate unassigned with former staff",
+        "parent_key": "PUL-1226",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p25.pul.2026Q3",
+        "work_item_key": "PUL-1248",
+        "summary": "BE - Reports » Staff by recruiter: separate unassigned with former staff",
+        "parent_key": "PUL-1246",
+        "developers": "",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p25.pul.2026Q3",
+        "work_item_key": "PUL-1250",
+        "summary": "FE - Reports » CS allocation: separate unassigned with former staff",
+        "parent_key": "PUL-1249",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p07.pul.52",
+        "work_item_key": "PUL-1262",
+        "summary": "BE - ERD change",
+        "parent_key": "PUL-1226",
+        "developers": "",
+        "story_point_estimate": 8,
+        "original_estimate": 8.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1269",
+        "summary": "BE - Staff Leave: normalise date filter input on the leave grids",
+        "parent_key": "PUL-1239",
+        "developers": "",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 4,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "v3.1.19",
+        "work_item_key": "PUL-1270",
+        "summary": "v3.1.19 release ticket",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "",
+        "work_item_key": "PUL-1277",
+        "summary": "Leave grid: Results counter shows count exceeds total record count",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Cancelled"
+    },
+    {
+        "fix_version": "rc.p25.pul.2026Q3",
+        "work_item_key": "PUL-1280",
+        "summary": "[BE] Job Category > Level 3 sub-type \"Grandchild\"",
+        "parent_key": "PUL-1260",
+        "developers": "",
+        "story_point_estimate": 8,
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p25.pul.2026Q3",
+        "work_item_key": "PUL-1282",
+        "summary": "[BE] Reports > Staff Margin: include Charge-out Notes in selectable fields",
+        "parent_key": "PUL-1274",
+        "developers": "",
+        "story_point_estimate": 2,
+        "original_estimate": 3.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Code Review"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1285",
+        "summary": "BE - Staff Leave: Block approvals for Failed and Submitted Leave Requests",
+        "parent_key": "PUL-1239",
+        "developers": "",
+        "story_point_estimate": 2,
+        "original_estimate": 5.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 2,
+        "status": "QA In-Progress"
+    },
+    {
+        "fix_version": "rc.p07.pul.52",
+        "work_item_key": "PUL-1300",
+        "summary": "BE - Technical Debt - Module registry re-scanned ~174 times per request adds ~450ms to every API response",
+        "parent_key": "PUL-1292",
+        "developers": "",
+        "story_point_estimate": 2,
+        "original_estimate": 2.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p07.pul.52",
+        "work_item_key": "PUL-1301",
+        "summary": "Upgrade PHP version from v8.2",
+        "parent_key": "PUL-1292",
+        "developers": "",
+        "story_point_estimate": 13,
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
     }
 ];

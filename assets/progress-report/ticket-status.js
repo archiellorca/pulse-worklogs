@@ -34,7 +34,6 @@ window.ticketStatusData = [
   { parent: "PUL-1023", intermediate: "", child: "PUL-1237", status: "For Grooming", dev: "", qa: "", qa_est: 0 },
   { parent: "PUL-1023", intermediate: "", child: "PUL-1239", status: "Monitor Only", dev: "", qa: "", qa_est: 0 },
   { parent: "PUL-1023", intermediate: "", child: "PUL-1253", status: "Release Ready", dev: "John Perri Cruz", qa: "Kristine Simon", qa_est: 1 },
-
   { parent: "PLS-1911", intermediate: "", child: "PLS-1912", status: "For QA Review", dev: "John Perri Cruz", qa: "Jazel Hanne Cornillez", qa_est: 3 },
   { parent: "PLS-1911", intermediate: "", child: "PLS-1913", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 3 },
   { parent: "PLS-1911", intermediate: "", child: "PLS-1914", status: "Closed", dev: "", qa: "", qa_est: 0 },
@@ -42,57 +41,42 @@ window.ticketStatusData = [
   { parent: "PLS-1911", intermediate: "", child: "PLS-2075", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PLS-1911", intermediate: "", child: "PLS-2083", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PLS-1911", intermediate: "", child: "PLS-2084", status: "For QA Review", dev: "Armin Almuete, John Perri Cruz", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-
   { parent: "PLS-1923", intermediate: "", child: "PLS-2030", status: "Release Ready", dev: "Armin Almuete", qa: "Kristine Simon", qa_est: 1 },
-  { parent: "PLS-1923", intermediate: "", child: "PLS-2031", status: "For QA Review", dev: "Armin Almuete, John Perri Cruz", qa: "Kristine Simon", qa_est: 3 },
+  { parent: "PLS-1923", intermediate: "", child: "PLS-2031", status: "Release Ready", dev: "Armin Almuete, John Perri Cruz", qa: "Kristine Simon", qa_est: 3 },
   { parent: "PLS-1923", intermediate: "", child: "PLS-2032", status: "Release Ready", dev: "Christopher Buenafe", qa: "Kristine Simon", qa_est: 5 },
-  { parent: "PLS-1923", intermediate: "", child: "PLS-2079", status: "For Code Review", dev: "", qa: "Kristine Simon", qa_est: 0 },
-  { parent: "PLS-1923", intermediate: "", child: "PLS-2081", status: "To Do", dev: "John Perri Cruz", qa: "Kristine Simon", qa_est: 0 },
-  { parent: "PLS-1923", intermediate: "", child: "PLS-2082", status: "For QA Review", dev: "John Perri Cruz", qa: "Kristine Simon", qa_est: 0 },
-
-  { parent: "PLS-1936", intermediate: "", child: "PLS-1955", status: "For QA Review", dev: "Jay Sobredilla", qa: "Kate Antonette Carpina", qa_est: 3 },
-
+  { parent: "PLS-1923", intermediate: "", child: "PLS-2079", status: "For QA Review", dev: "Christopher Buenafe", qa: "Kristine Simon", qa_est: 0 },
+  { parent: "PLS-1923", intermediate: "", child: "PLS-2081", status: "For QA Review", dev: "John Perri Cruz", qa: "Kristine Simon", qa_est: 0 },
+  { parent: "PLS-1923", intermediate: "", child: "PLS-2082", status: "Release Ready", dev: "John Perri Cruz", qa: "Kristine Simon", qa_est: 2 },
+  { parent: "PLS-1936", intermediate: "", child: "PLS-1955", status: "QA In-Progress", dev: "Jay Sobredilla", qa: "Kate Antonette Carpina", qa_est: 3 },
   { parent: "PLS-2007", intermediate: "", child: "PLS-2007", status: "For QA Review", dev: "", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-
   { parent: "PLS-1851", intermediate: "", child: "PLS-1851", status: "For QA Review", dev: "Jay Sobredilla", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-
-  { parent: "PLS-2051", intermediate: "", child: "PLS-2051", status: "For Grooming", dev: "", qa: "", qa_est: 0 },
-
-  { parent: "PLS-2088", intermediate: "", child: "PLS-2088", status: "To Do", dev: "Christopher Buenafe", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-
-  { parent: "PLS-2100", intermediate: "", child: "PLS-2100", status: "For QA Review", dev: "Armin Almuete", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-
+  { parent: "PLS-2051", intermediate: "", child: "PLS-2051", status: "In Progress", dev: "Jay Sobredilla", qa: "Kate Antonette Carpina", qa_est: 0 },
+  { parent: "PUL-1261", intermediate: "", child: "PUL-1261", status: "To Do", dev: "Armin Almuete", qa: "Kate Antonette Carpina", qa_est: 0 },
+  { parent: "PLS-2088", intermediate: "", child: "PLS-2088", status: "For Code Review", dev: "Christopher Buenafe", qa: "Jazel Hanne Cornillez", qa_est: 0 },
+  { parent: "PLS-2100", intermediate: "", child: "PLS-2100", status: "Release Ready", dev: "Armin Almuete", qa: "Jazel Hanne Cornillez", qa_est: 1 },
   { parent: "PLS-2036", intermediate: "", child: "PLS-1532", status: "For QA Review", dev: "Christopher Buenafe", qa: "Kristine Simon", qa_est: 0 },
   { parent: "PLS-2036", intermediate: "", child: "PLS-1657", status: "For QA Review", dev: "Christopher Buenafe", qa: "Kristine Simon", qa_est: 0 },
   { parent: "PLS-2036", intermediate: "", child: "PLS-1944", status: "Monitor only", dev: "", qa: "", qa_est: 3.5 },
-  { parent: "PLS-2036", intermediate: "", child: "PLS-1948", status: "QA In-Progress", dev: "Christopher Buenafe", qa: "Kristine Simon", qa_est: 4 },
-  { parent: "PLS-2036", intermediate: "", child: "PLS-2063", status: "QA In-Progress", dev: "Christopher Buenafe", qa: "Kate Antonette Carpina", qa_est: 1 },
+  { parent: "PLS-2036", intermediate: "", child: "PLS-1948", status: "Release Ready", dev: "Christopher Buenafe", qa: "Kristine Simon", qa_est: 4 },
+  { parent: "PLS-2036", intermediate: "", child: "PLS-2063", status: "Release Ready", dev: "Christopher Buenafe", qa: "Kate Antonette Carpina", qa_est: 1 },
   { parent: "PLS-2036", intermediate: "", child: "PLS-2064", status: "For QA Review", dev: "Christopher Buenafe", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-  { parent: "PLS-2036", intermediate: "", child: "PLS-2067", status: "QA In-Progress", dev: "Jay Sobredilla", qa: "Kate Antonette Carpina", qa_est: 1 },
-
-  { parent: "PUL-1264", intermediate: "", child: "PUL-1264", status: "For QA Review", dev: "", qa: "", qa_est: 0 },
-
-  { parent: "PUL-1261", intermediate: "", child: "PUL-1261", status: "To Do", dev: "", qa: "", qa_est: 0 },
-
+  { parent: "PLS-2036", intermediate: "", child: "PLS-2067", status: "Release Ready", dev: "Jay Sobredilla", qa: "Kate Antonette Carpina", qa_est: 1 },
   { parent: "PUL-1291", intermediate: "", child: "PUL-1291", status: "Backlog", dev: "", qa: "", qa_est: 0 },
-
-  { parent: "PUL-1143", intermediate: "", child: "PUL-1144", status: "To Do", dev: "Armin Almuete", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-  { parent: "PUL-1143", intermediate: "", child: "PUL-1145", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
+  { parent: "PUL-1143", intermediate: "", child: "PUL-1144", status: "For QA Review", dev: "Armin Almuete", qa: "Jazel Hanne Cornillez", qa_est: 0 },
+  { parent: "PUL-1143", intermediate: "", child: "PUL-1145", status: "QA In-Progress", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 3 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1146", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1147", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1167", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1204", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1205", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-  { parent: "PUL-1143", intermediate: "", child: "PUL-1210", status: "To Do", dev: "Armin Almuete", qa: "Jazel Hanne Cornillez", qa_est: 0 },
+  { parent: "PUL-1143", intermediate: "", child: "PUL-1210", status: "For QA Review", dev: "Armin Almuete", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1211", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1212", status: "Cancelled", dev: "", qa: "", qa_est: 0 },
   { parent: "PUL-1143", intermediate: "", child: "PUL-1218", status: "For QA Review", dev: "Ryan Puriran", qa: "Jazel Hanne Cornillez", qa_est: 0 },
-
   { parent: "PLS-1961", intermediate: "", child: "PLS-1865", status: "For QA Review", dev: "Armin Almuete", qa: "Kate Antonette Carpina", qa_est: 2 },
-  { parent: "PLS-1961", intermediate: "", child: "PLS-1866", status: "To Do", dev: "Christopher Buenafe", qa: "Kate Antonette Carpina", qa_est: 2 },
+  { parent: "PLS-1961", intermediate: "", child: "PLS-1866", status: "In Progress", dev: "Christopher Buenafe", qa: "Kate Antonette Carpina", qa_est: 2 },
   { parent: "PLS-1961", intermediate: "", child: "PLS-1869", status: "Release Ready", dev: "John Perri Cruz", qa: "Kate Antonette Carpina", qa_est: 1 },
   { parent: "PLS-1961", intermediate: "", child: "PLS-1870", status: "Release Ready", dev: "Christopher Buenafe", qa: "Kate Antonette Carpina", qa_est: 1.5 },
-
   { parent: "PLS-2015", intermediate: "", child: "PLS-1990", status: "Monitor only", dev: "", qa: "", qa_est: 0 },
   { parent: "PLS-2015", intermediate: "", child: "PLS-2016", status: "For QA Review", dev: "John Perri Cruz", qa: "Kristine Simon", qa_est: 0 },
   { parent: "PLS-2015", intermediate: "", child: "PLS-2017", status: "For QA Review", dev: "Armin Almuete", qa: "", qa_est: 0 },
@@ -102,7 +86,7 @@ window.ticketStatusData = [
   { parent: "PLS-2015", intermediate: "", child: "PLS-2046", status: "For QA Review", dev: "Christopher Buenafe", qa: "Kristine Simon", qa_est: 0 },
   { parent: "PLS-2015", intermediate: "", child: "PLS-2078", status: "To Do", dev: "", qa: "Kate Antonette Carpina", qa_est: 0 },
   { parent: "PLS-2015", intermediate: "", child: "PLS-2089", status: "For Grooming", dev: "", qa: "", qa_est: 1 },
-  { parent: "PLS-2015", intermediate: "", child: "PLS-2091", status: "For Grooming", dev: "", qa: "", qa_est: 0 },
+  { parent: "PLS-2015", intermediate: "", child: "PLS-2091", status: "In Progress", dev: "", qa: "", qa_est: 0 },
   { parent: "PLS-2015", intermediate: "", child: "PLS-2092", status: "Monitor only", dev: "", qa: "", qa_est: 0 },
   { parent: "PLS-2015", intermediate: "", child: "PLS-2099", status: "For Grooming", dev: "", qa: "", qa_est: 0 },
 ];
