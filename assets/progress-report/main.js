@@ -1,12 +1,69 @@
   // work item reference data, used to link to the work item in the Jira web UI.
   const WORK_ITEMS = window.workItems;
 
-  // Flat records — one per CSV row: parent, intermediate, child, status.
-  const ORIGINAL_DATA = window.ticketStatusData;
-
   // Parent key → release + description lookup, kept as its own JSON source.
   // "release" groups parents into their own table, in order of first appearance.
-  const ORIGINAL_DESCRIPTIONS = window.ticketsData; 
+  const ORIGINAL_DESCRIPTIONS = window.ticketsData;
+
+  // Flat records — one per parent/child pair: parent, intermediate, child, status.
+  // Derived from WORK_ITEMS by walking two levels of the parent_key hierarchy,
+  // seeded from the parents named in ORIGINAL_DESCRIPTIONS:
+  //   level 1 — work items whose parent_key is a description's parent
+  //             (recorded with an empty "intermediate")
+  //   level 2 — work items whose parent_key is one of those level-1 items
+  //             (recorded with that level-1 item as the "intermediate")
+  // A level-1 item is emitted as its own record and can still act as the
+  // intermediate for its own children. A parent with no children at all is
+  // emitted as a single self-row (child === parent, read off its own WORK_ITEMS
+  // entry) so it still appears in the report.
+  function buildTicketStatusData(descriptions, workItems) {
+    const childrenByParentKey = new Map();
+    const workItemByKey = new Map();
+    (workItems || []).forEach(w => {
+      if (!w) return;
+      if (w.work_item_key) workItemByKey.set(w.work_item_key, w);
+      if (!w.parent_key) return;
+      if (!childrenByParentKey.has(w.parent_key)) childrenByParentKey.set(w.parent_key, []);
+      childrenByParentKey.get(w.parent_key).push(w);
+    });
+
+    function toRecord(parentKey, intermediateKey, workItem) {
+      return {
+        parent: parentKey,
+        intermediate: intermediateKey,
+        child: workItem.work_item_key,
+        status: workItem.status,
+        dev: workItem.developers,
+        qa: workItem.qa_testers,
+        qa_est: workItem.qa_estimate_hours
+      };
+    }
+
+    const rows = [];
+    (descriptions || []).forEach(d => {
+      const parentKey = d && d.parent;
+      if (!parentKey) return;
+
+      const children = childrenByParentKey.get(parentKey) || [];
+      if (children.length === 0) {
+        const self = workItemByKey.get(parentKey);
+        if (self) rows.push(toRecord(parentKey, "", self));
+        return;
+      }
+
+      children.forEach(child => {
+        rows.push(toRecord(parentKey, "", child));
+
+        const intermediateKey = child.work_item_key;
+        (childrenByParentKey.get(intermediateKey) || []).forEach(grandChild => {
+          rows.push(toRecord(parentKey, intermediateKey, grandChild));
+        });
+      });
+    });
+    return rows;
+  }
+
+  const ORIGINAL_DATA = buildTicketStatusData(ORIGINAL_DESCRIPTIONS, WORK_ITEMS);
 
   // Parent key → dev/QA worklog lookup, kept as its own JSON source.
   const ORIGINAL_EFFORTS = window.workLogsData;
