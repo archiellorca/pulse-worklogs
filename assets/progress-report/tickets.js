@@ -1,5 +1,7 @@
 window.ticketsData = [
   { parent: "PUL-1023", idea:"PL-11", desc: "Adds staff leave and calendar capabilities to the client portal's My Team section. Clients can view the leave calendar, see pending and processed leave requests, and approve or decline requests. Access to each capability is controlled by dedicated permission nodes." },
+  { parent: "PUL-1311", idea:"PL-11", desc: "Covers the leave approval workflow within the Phase 3.1 Staff Leave & Calendar feature — allowing clients to approve and decline leave requests submitted by their staff." },
+  { parent: "PUL-1310", idea:"PL-11", desc: "Tracks bugs and enhancements identified during the Phase 3.1 Staff Leave & Calendar rollout." },
 
   { parent: "PLS-1911", idea:"PL-66", desc: "Introduces a new staff-level \"Service Type\" field (EOR or Full-Service, defaulting to Full-Service) to distinguish BHC staff classifications for financial reporting and margin analysis. Also extends the \"Placement Type\" dropdown with a \"Transfer\" option, with both fields' options auto-synced from HubSpot. Service Type is tracked in Client Placement History, editable by Finance roles, and includes a full audit trail." },  
   { parent: "PLS-1923", idea:"PL-94", desc: "Adds a \"Display data as\" dropdown to the CS Allocation report (similar to Growth by Industry). The new \"By Client Details\" view shows Client Name, Staff Count, Staff Location, and Client Region grouped under expandable CS Manager rows, alongside the existing \"By CS Manager\" view." },  
@@ -10,6 +12,7 @@ window.ticketsData = [
   { parent: "PUL-1261", idea:"", desc: "Adds a Glassdoor review link to the Happiness Score email, shown only when the staff member gives a score of 9 or 10. Displayed below the closing line with a branded Glassdoor button, styled similarly to the existing Trustpilot link." },
   { parent: "PLS-2088", idea:"", desc: "Fixes the staff editable-fields query so view-only users receive the full field list with every field marked readonly, instead of null. Moves the permission check from an all-or-nothing gate on the query to a per-field readonly flag, leaving the save path unchanged." },
   { parent: "PLS-2100", idea:"", desc: "Updates the staff grid inline edit to respect the same per-staff editable-field rules as the staff detail screen — only fields the backend returns as editable are shown and saved. Rows with no editable fields do not open for inline edit and show an explanatory message." },
+  { parent: "PUL-1274", idea:"", desc: "Adds Charge-out Notes from the staff detail page as a selectable display field in the Staff Margin report." },
   { parent: "PLS-2036", idea:"", desc: "Umbrella epic for rc.51 tech debt cleanup, performance optimizations, and general housekeeping tasks." },
   { parent: "PUL-1291", idea:"", desc: "Umbrella epic for rc.51 PUL tech debt cleanup, performance optimizations, and general housekeeping tasks." },
   
