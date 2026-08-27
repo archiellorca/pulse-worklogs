@@ -204,14 +204,14 @@ window.workItems = [
         "status": "Done"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "rc.p02.pls.51",
         "work_item_key": "PLS-1657",
         "summary": "BE – Optimization - Existing Client Growth report: eliminate duplicate query + push PHP filters to SQL",
-        "parent_key": "PLS-1900",
+        "parent_key": "PLS-2036",
         "developers": "Christopher Buenafe",
         "story_point_estimate": 3,
         "original_estimate": 12.0,
-        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -336,28 +336,28 @@ window.workItems = [
         "status": "Release Ready"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "rc.p02.pls.51",
         "work_item_key": "PLS-1944",
         "summary": "BE - Review excessive API calls to/from Sprout",
-        "parent_key": "PLS-1900",
+        "parent_key": "PLS-2036",
         "developers": "",
         "story_point_estimate": 13,
         "original_estimate": 12.0,
         "qa_testers": "",
-        "qa_estimate_hours": 0,
+        "qa_estimate_hours": 3.5,
         "status": "Monitor only"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "rc.p02.pls.51",
         "work_item_key": "PLS-1945",
         "summary": "BE - Optimize Sprout leave-days sync to stop re-fetching the full leave history daily",
         "parent_key": "PLS-1944",
         "developers": "Ryan Puriran",
         "story_point_estimate": 5,
         "original_estimate": 4.0,
-        "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 1.5,
+        "status": "Release Ready"
     },
     {
         "fix_version": "v3.1.19",
@@ -372,28 +372,28 @@ window.workItems = [
         "status": "Done"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "rc.p02.pls.51",
         "work_item_key": "PLS-1947",
         "summary": "BE - Reduce daily Sprout leave-requests sync volume via employee selection + date-bounded fetch (same API calls)",
         "parent_key": "PLS-1944",
         "developers": "Ryan Puriran",
         "story_point_estimate": 8,
         "original_estimate": 8.0,
-        "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
-        "fix_version": "rc.p02.pls.50",
+        "fix_version": "rc.p02.pls.51",
         "work_item_key": "PLS-1948",
         "summary": "BE - Optimize Growth By Industry command",
-        "parent_key": "PLS-1900",
+        "parent_key": "PLS-2036",
         "developers": "Christopher Buenafe",
-        "story_point_estimate": 5,
+        "story_point_estimate": 13,
         "original_estimate": 10.0,
-        "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 4,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p02.pls.50",
@@ -842,7 +842,7 @@ window.workItems = [
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1050",
-        "summary": "BE - Include Client comment in the Staff's leave request grid",
+        "summary": "BE - Include Client comment in the Staff's leave request grid ",
         "parent_key": "PUL-1023",
         "developers": "Ian Ulita",
         "story_point_estimate": 3,
@@ -1100,14 +1100,14 @@ window.workItems = [
         "story_point_estimate": "",
         "original_estimate": 0.0,
         "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 40,
+        "status": "QA In-Progress"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1169",
         "summary": "QA - Leave approval workflow: HRIS integration testing (Deel & Sprout)",
-        "parent_key": "PUL-1023",
+        "parent_key": "PUL-1311",
         "developers": "",
         "story_point_estimate": "",
         "original_estimate": 0.0,
@@ -1119,7 +1119,7 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1170",
         "summary": "Workshop - Sprout leave approval hierarchy - Decision capture",
-        "parent_key": "PUL-1023",
+        "parent_key": "PUL-1311",
         "developers": "Ian Ulita",
         "story_point_estimate": 2,
         "original_estimate": 1.0,
@@ -1131,19 +1131,19 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1172",
         "summary": "Proof of concept: Leave application, auto-approval for level 1",
-        "parent_key": "PUL-1023",
+        "parent_key": "PUL-1311",
         "developers": "Ian Ulita",
         "story_point_estimate": 13,
         "original_estimate": 8.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "To Do"
+        "status": "For QA Review"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1173",
         "summary": "Proof of concept: setup of approval level scenarios",
-        "parent_key": "PUL-1023",
+        "parent_key": "PUL-1311",
         "developers": "",
         "story_point_estimate": "",
         "original_estimate": 0.0,
@@ -1155,7 +1155,7 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1195",
         "summary": "BE - Query GraphQL services for my team's leave request & schedule",
-        "parent_key": "PUL-1023",
+        "parent_key": "PUL-1310",
         "developers": "",
         "story_point_estimate": 2,
         "original_estimate": 2.0,
@@ -1167,7 +1167,7 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1196",
         "summary": "Remove \"Available Leave days\"  information from Client view",
-        "parent_key": "PUL-1023",
+        "parent_key": "PUL-1310",
         "developers": "",
         "story_point_estimate": 6,
         "original_estimate": 5.0,
@@ -1179,11 +1179,11 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1199",
         "summary": "FE - [Leave Page] \"Show all results\" pagination broken for Deel and Sprout staff — count mismatch (Deel) and stuck loading (Sprout)",
-        "parent_key": "PUL-1023",
-        "developers": "",
+        "parent_key": "PUL-1310",
+        "developers": "John Perri Cruz",
         "story_point_estimate": 1,
         "original_estimate": 2.0,
-        "qa_testers": "",
+        "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 1,
         "status": "Release Ready"
     },
@@ -1191,11 +1191,11 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1202",
         "summary": "FE - [Leave Request] Uploading .webp attachment fails with generic \"Failed\" status instead of clear validation error",
-        "parent_key": "PUL-1023",
-        "developers": "",
+        "parent_key": "PUL-1310",
+        "developers": "John Perri Cruz",
         "story_point_estimate": 1,
         "original_estimate": 2.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 1,
         "status": "Release Ready"
     },
@@ -1215,10 +1215,10 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1239",
         "summary": "BE - Staff Leave & Calendar: QA fixes from PUL-1168",
-        "parent_key": "PUL-1023",
+        "parent_key": "PUL-1310",
         "developers": "",
-        "story_point_estimate": 27,
-        "original_estimate": 30.5,
+        "story_point_estimate": 42,
+        "original_estimate": 50,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
@@ -1228,10 +1228,10 @@ window.workItems = [
         "work_item_key": "PUL-1240",
         "summary": "BE - Staff Leave: page-scoped status handling + status filter",
         "parent_key": "PUL-1239",
-        "developers": "",
+        "developers": "Christopher Buenafe",
         "story_point_estimate": 13,
         "original_estimate": 10.5,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 8,
         "status": "Release Ready"
     },
@@ -1240,10 +1240,10 @@ window.workItems = [
         "work_item_key": "PUL-1241",
         "summary": "BE - Staff Leave: myTeamLeaveRequestsFilterValues endpoint (Leave Type + Status options)",
         "parent_key": "PUL-1239",
-        "developers": "",
+        "developers": "Christopher Buenafe",
         "story_point_estimate": 5,
         "original_estimate": 7.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 4,
         "status": "Release Ready"
     },
@@ -1252,10 +1252,10 @@ window.workItems = [
         "work_item_key": "PUL-1242",
         "summary": "BE - Populate nickname and profile picture on leave grids and calendar",
         "parent_key": "PUL-1239",
-        "developers": "",
+        "developers": "Christopher Buenafe",
         "story_point_estimate": 5,
         "original_estimate": 6.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 3,
         "status": "Release Ready"
     },
@@ -1264,10 +1264,10 @@ window.workItems = [
         "work_item_key": "PUL-1243",
         "summary": "BE - Staff Leave: approval message, client comment column, optional comment",
         "parent_key": "PUL-1239",
-        "developers": "",
+        "developers": "Christopher Buenafe",
         "story_point_estimate": 3,
         "original_estimate": 5.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 4,
         "status": "Release Ready"
     },
@@ -1276,10 +1276,10 @@ window.workItems = [
         "work_item_key": "PUL-1252",
         "summary": "FE - Staff Leave: adopt page scope on leave grids + filter option sources",
         "parent_key": "PUL-1239",
-        "developers": "",
+        "developers": "John Perri Cruz",
         "story_point_estimate": 1,
         "original_estimate": 2.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 4,
         "status": "Release Ready"
     },
@@ -1287,11 +1287,11 @@ window.workItems = [
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1253",
         "summary": "FE - Pending leave request - Exclude Leave on \"Submitted\" status",
-        "parent_key": "PUL-1023",
-        "developers": "",
+        "parent_key": "PUL-1310",
+        "developers": "John Perri Cruz",
         "story_point_estimate": 1,
         "original_estimate": 2.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 1,
         "status": "Release Ready"
     },
@@ -1316,7 +1316,7 @@ window.workItems = [
         "story_point_estimate": 41,
         "original_estimate": 33.0,
         "qa_testers": "",
-        "qa_estimate_hours": 9,
+        "qa_estimate_hours": 14,
         "status": "Monitor only"
     },
     {
@@ -1328,7 +1328,7 @@ window.workItems = [
         "story_point_estimate": 37,
         "original_estimate": 28.0,
         "qa_testers": "",
-        "qa_estimate_hours": 11,
+        "qa_estimate_hours": 17,
         "status": "Monitor only"
     },
     {
@@ -1376,8 +1376,8 @@ window.workItems = [
         "story_point_estimate": 3,
         "original_estimate": 3.0,
         "qa_testers": "Kate Antonette Carpina",
-        "qa_estimate_hours": 0,
-        "status": "In Progress"
+        "qa_estimate_hours": 3,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p02.pls.51",
@@ -1387,9 +1387,9 @@ window.workItems = [
         "developers": "Christopher Buenafe",
         "story_point_estimate": 5,
         "original_estimate": 7.0,
-        "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For Code Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 3,
+        "status": "For QA Review"
     },
     {
         "fix_version": "rc.p02.pls.51",
@@ -1444,12 +1444,12 @@ window.workItems = [
         "work_item_key": "PUL-1261",
         "summary": "FE - Happiness Score > Glassdoor Review ",
         "parent_key": "PUL-1284",
-        "developers": "",
-        "story_point_estimate": 3,
-        "original_estimate": 4.0,
-        "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "For PM Review"
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 1,
+        "original_estimate": 2.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p03.pul.51",
@@ -1461,7 +1461,43 @@ window.workItems = [
         "original_estimate": 0.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
-        "status": "Backlog"
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p03.pul.51",
+        "work_item_key": "PUL-1265",
+        "summary": "FE - Dashboard > Happiness: Text change",
+        "parent_key": "PUL-1284",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 1,
+        "original_estimate": 1.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p03.pul.51",
+        "work_item_key": "PUL-1274",
+        "summary": "Reports > Staff Margin: include Charge-out Notes in selectable fields",
+        "parent_key": "PUL-1284",
+        "developers": "",
+        "story_point_estimate": 7,
+        "original_estimate": 7.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p03.pul.51",
+        "work_item_key": "PUL-1281",
+        "summary": "FE - Reports > Staff Margin: include Charge-out Notes in selectable fields",
+        "parent_key": "PUL-1274",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "QA In-Progress"
     },
     {
         "fix_version": "CO-2.10.4",
@@ -1747,7 +1783,7 @@ window.workItems = [
         "developers": "Ryan Puriran",
         "story_point_estimate": 2,
         "original_estimate": 3.0,
-        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -1772,8 +1808,8 @@ window.workItems = [
         "story_point_estimate": 8,
         "original_estimate": 5.0,
         "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 4,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pls.52",
@@ -1796,8 +1832,8 @@ window.workItems = [
         "story_point_estimate": 5,
         "original_estimate": 4.0,
         "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p02.pls.51",
@@ -1819,9 +1855,9 @@ window.workItems = [
         "developers": "Ryan Puriran",
         "story_point_estimate": 3,
         "original_estimate": 3.0,
-        "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 3,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p02.pls.51",
@@ -1831,9 +1867,9 @@ window.workItems = [
         "developers": "Armin Almuete, John Perri Cruz",
         "story_point_estimate": 5,
         "original_estimate": 4.0,
-        "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p04.pls-dev.01",
@@ -2004,6 +2040,174 @@ window.workItems = [
         "status": "Done"
     },
     {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-1532",
+        "summary": "BE - Technical - Add ON DELETE CASCADE / SET NULL to allow clean employee & user deletion",
+        "parent_key": "PLS-2036",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 2,
+        "original_estimate": 5,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-1912",
+        "summary": "FE - BHC Classification — Service Type UI changes",
+        "parent_key": "PLS-1911",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 5,
+        "original_estimate": 5,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 3,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-1913",
+        "summary": "BE » BHC Classification — New service_type field on staff record",
+        "parent_key": "PLS-1911",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 13,
+        "original_estimate": 5,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 3,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-1914",
+        "summary": "BE » BHC Classification — Add \"Staff Transfer\" option to placement_type",
+        "parent_key": "PLS-1911",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Closed"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-1934",
+        "summary": "BE » BHC Classification - New console command and cron to update service_type and placement_type options from Hubspot",
+        "parent_key": "PLS-1911",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 13,
+        "original_estimate": 13,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 3,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-1955",
+        "summary": "BE - Populate salary history for Deel-paid (New Markets) staff",
+        "parent_key": "PLS-1936",
+        "developers": "Jay Sobredilla",
+        "story_point_estimate": 8,
+        "original_estimate": 8,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 3,
+        "status": "In Progress"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2030",
+        "summary": "FE - add report option component",
+        "parent_key": "PLS-1923",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 5,
+        "original_estimate": 5,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2032",
+        "summary": "BE - provide data to new report view",
+        "parent_key": "PLS-1923",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 13,
+        "original_estimate": 7,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 5,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2034",
+        "summary": "rc.51 enhancements",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": 47,
+        "original_estimate": 43,
+        "qa_testers": "",
+        "qa_estimate_hours": 18,
+        "status": "Monitor only"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2035",
+        "summary": "rc.51 bugs",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor only"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2064",
+        "summary": "BE - Optimization - Enable Lighthouse GraphQL validation cache",
+        "parent_key": "PLS-2036",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 3,
+        "original_estimate": 1.5,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2085",
+        "summary": "GraphQL API user",
+        "parent_key": "PLS-1902",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For PM Review"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2134",
+        "summary": "Sprout API password rotation 2026-08-26",
+        "parent_key": "PLS-1902",
+        "developers": "",
+        "story_point_estimate": 1,
+        "original_estimate": 1,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "rc.p02.pls.51",
+        "work_item_key": "PLS-2138",
+        "summary": "Assign NM recruiters",
+        "parent_key": "PLS-1902",
+        "developers": "Ian Ulita",
+        "story_point_estimate": 1,
+        "original_estimate": 1,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
         "fix_version": "v3.1.19.1",
         "work_item_key": "PLS-2130",
         "summary": "BE - modify newsfeed filter recipient",
@@ -2068,10 +2272,10 @@ window.workItems = [
         "work_item_key": "PUL-1269",
         "summary": "BE - Staff Leave: normalise date filter input on the leave grids",
         "parent_key": "PUL-1239",
-        "developers": "",
+        "developers": "Christopher Buenafe",
         "story_point_estimate": 5,
         "original_estimate": 4.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 4,
         "status": "Release Ready"
     },
@@ -2112,28 +2316,124 @@ window.workItems = [
         "status": "To Do"
     },
     {
-        "fix_version": "rc.p25.pul.2026Q3",
+        "fix_version": "rc.p03.pul.51",
         "work_item_key": "PUL-1282",
         "summary": "[BE] Reports > Staff Margin: include Charge-out Notes in selectable fields",
         "parent_key": "PUL-1274",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 2,
+        "original_estimate": 3.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 3,
+        "status": "QA In-Progress"
+    },
+    {
+        "fix_version": "rc.p03.pul.51",
+        "work_item_key": "PUL-1283",
+        "summary": "rc.pul.51 bugs",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p03.pul.51",
+        "work_item_key": "PUL-1284",
+        "summary": "rc.pul.51 enhancements",
+        "parent_key": "",
         "developers": "",
         "story_point_estimate": 2,
         "original_estimate": 3.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
-        "status": "For Code Review"
+        "status": "Monitor Only"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1285",
         "summary": "BE - Staff Leave: Block approvals for Failed and Submitted Leave Requests",
         "parent_key": "PUL-1239",
-        "developers": "",
+        "developers": "Christopher Buenafe",
         "story_point_estimate": 2,
         "original_estimate": 5.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1200",
+        "summary": "Leave balance are not reflected properly after application",
+        "parent_key": "PUL-1310",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
         "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1237",
+        "summary": "Enhancement: Review options for the delayed API updated leave request status",
+        "parent_key": "PUL-1310",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1303",
+        "summary": "BE - Client comment to be required when declining leave requests, not required for approvals",
+        "parent_key": "PUL-1311",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 5,
+        "original_estimate": 6.5,
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 2,
         "status": "QA In-Progress"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1304",
+        "summary": "FE - Client > Leave > Pending Approval: Comments field validation",
+        "parent_key": "PUL-1311",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 3,
+        "original_estimate": 4,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1310",
+        "summary": "Phase 3.1 - Staff leave & calendar: bugs / enhancements",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p01.pul.45",
+        "work_item_key": "PUL-1311",
+        "summary": "Phase 3.1 - Staff leave & calendar: Leaves approval",
+        "parent_key": "",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
     },
     {
         "fix_version": "rc.p07.pul.52",
