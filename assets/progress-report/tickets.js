@@ -11,7 +11,6 @@ window.ticketsData = [
   { parent: "PLS-2015", idea:"", desc: "Enhancements and fixes identified during the Sprout Integration beta test phase." },
 
   // rc.pls.52
-  { parent: "PLS-890", idea:"", desc: "Adds a support ticket view page and conversation feature to Pulse, enabling staff to view ticket details and communicate through a threaded conversation interface." },
   { parent: "PLS-1995", idea:"", desc: "Tracks bugs identified during the rc.52 release cycle." },
   { parent: "PLS-2121", idea:"", desc: "Umbrella epic for rc.52 tech debt cleanup, performance optimizations, and general housekeeping tasks." },
   
@@ -34,11 +33,12 @@ window.ticketsData = [
   { parent: "PUL-1138", idea:"", desc: "Builds a Staff Performance Review module in Pulse, allowing clients to conduct structured evaluations for their staff via My Team > Reviews. The dashboard shows upcoming reviews (within 2 months) and completed ones, with status transitions from Being Self Assessed to Needs Your Assessment to Overdue. Staff can optionally complete a self-assessment and view the client's completed assessment of them." },
 
   // rc.pul-dev
-  { parent: "PUL-1112", idea:"", desc: "Introduces a \"Personal\" top-nav section and tailors the navigation experience based on whether the logged-in staff member is an Employee or Contractor. Employees get Time Off, Timesheets, and Payslips sub-sections; Contractors get Availability, Invoice, and Invoice History — with terminology adjusted throughout to reflect independent contractor status." },
-  { parent: "PUL-1192", idea:"", desc: "Discovery and preparation work for the contractor service logs, time-tracking, and invoicing feature in Pulse. Covers workshops with HR and regional process owners to document current workflows (Fixed and Pay-as-you-go contractor types), and consolidates decisions and open items to inform the Pulse design." },
-  { parent: "PUL-1224", idea:"", desc: "Updates leave and time-off request text across the platform to comply with New Markets legal and compliance requirements." },  
+  //{ parent: "PUL-1112", idea:"", desc: "Introduces a \"Personal\" top-nav section and tailors the navigation experience based on whether the logged-in staff member is an Employee or Contractor. Employees get Time Off, Timesheets, and Payslips sub-sections; Contractors get Availability, Invoice, and Invoice History — with terminology adjusted throughout to reflect independent contractor status." },
+  //{ parent: "PUL-1192", idea:"", desc: "Discovery and preparation work for the contractor service logs, time-tracking, and invoicing feature in Pulse. Covers workshops with HR and regional process owners to document current workflows (Fixed and Pay-as-you-go contractor types), and consolidates decisions and open items to inform the Pulse design." },
+  //{ parent: "PUL-1224", idea:"", desc: "Updates leave and time-off request text across the platform to comply with New Markets legal and compliance requirements." },  
 
   // moved
+  //{ parent: "PLS-890", idea:"", desc: "Adds a support ticket view page and conversation feature to Pulse, enabling staff to view ticket details and communicate through a threaded conversation interface." },
   //{ parent: "PUL-1227", idea:"", desc: "Renames all instances of \"CS/CX\" and \"CSO/CXO\" labels across the site to \"CS\"." },
   //{ parent: "PUL-1286", idea:"", desc: "Adds a Termination Reason field to staff records with a structured set of reason options, and a new Termination Reason report with two views: high-level by Key Driver and detailed by Reason Detail, each showing this month and last 12 months." },  
 ];

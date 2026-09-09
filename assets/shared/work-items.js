@@ -1521,7 +1521,7 @@ window.workItems = [
         "original_estimate": 6.0,
         "qa_testers": "Jazel Hanne Cornillez",
         "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "status": "To Do"
     },
     {
         "fix_version": "rc.p03.pul-dev.04",
@@ -1544,8 +1544,8 @@ window.workItems = [
         "story_point_estimate": 5,
         "original_estimate": 0.0,
         "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 3,
+        "status": "QA In-Progress"
     },
     {
         "fix_version": "rc.p03.pul-dev.04",
@@ -1579,6 +1579,30 @@ window.workItems = [
         "developers": "Ryan Puriran",
         "story_point_estimate": 5,
         "original_estimate": 5.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 3,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p03.pul-dev.04",
+        "work_item_key": "PUL-1307",
+        "summary": "BE - salary history sync fix, and close + link reviews on a salary adjustment",
+        "parent_key": "PUL-1143",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 13,
+        "original_estimate": 13.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 3,
+        "status": "For Code Review"
+    },
+    {
+        "fix_version": "rc.p03.pul-dev.04",
+        "work_item_key": "PUL-1308",
+        "summary": "BE - hide closed reviews from the tracker and the status list",
+        "parent_key": "PUL-1143",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 8,
+        "original_estimate": 8.0,
         "qa_testers": "Jazel Hanne Cornillez",
         "qa_estimate_hours": 3,
         "status": "To Do"
@@ -1836,7 +1860,7 @@ window.workItems = [
         "status": "PM Review"
     },
     {
-        "fix_version": "rc.p06.pls.52",
+        "fix_version": "rc.p08.pls.53",
         "work_item_key": "PLS-761",
         "summary": "FE - Implement Ticket View Page UI in Pulse",
         "parent_key": "PLS-890",
@@ -2587,7 +2611,7 @@ window.workItems = [
         "developers": "Ryan Puriran",
         "story_point_estimate": 8,
         "original_estimate": 8.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -2623,7 +2647,7 @@ window.workItems = [
         "developers": "Ryan Puriran",
         "story_point_estimate": 8,
         "original_estimate": 8.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -2768,8 +2792,8 @@ window.workItems = [
         "story_point_estimate": 3,
         "original_estimate": 4,
         "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
@@ -2777,8 +2801,8 @@ window.workItems = [
         "summary": "Phase 3.1 - Staff leave & calendar: bugs / enhancements",
         "parent_key": "",
         "developers": "",
-        "story_point_estimate": 58,
-        "original_estimate": 67.0,
+        "story_point_estimate": 59,
+        "original_estimate": 70.5,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
@@ -3007,15 +3031,15 @@ window.workItems = [
         "developers": "",
         "story_point_estimate": 19,
         "original_estimate": 20.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
     },
     {
-        "fix_version": "rc.p07.pul.52",
+        "fix_version": "rc.p09.pul.53",
         "work_item_key": "PUL-1227",
         "summary": "Change all labels CS/CX to CS",
-        "parent_key": "PUL-1257",
+        "parent_key": "PUL-1411",
         "developers": "",
         "story_point_estimate": 3,
         "original_estimate": 2.0,
@@ -3055,9 +3079,9 @@ window.workItems = [
         "developers": "John Perri Cruz",
         "story_point_estimate": 3,
         "original_estimate": 4.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "To Do"
+        "status": "For QA Review"
     },
     {
         "fix_version": "rc.p07.pul.52",
@@ -3077,8 +3101,8 @@ window.workItems = [
         "summary": "rc.pul.52 bugs",
         "parent_key": "",
         "developers": "",
-        "story_point_estimate": 11,
-        "original_estimate": 9.0,
+        "story_point_estimate": 16,
+        "original_estimate": 13.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
@@ -3091,9 +3115,9 @@ window.workItems = [
         "developers": "Armin Almuete",
         "story_point_estimate": 5,
         "original_estimate": 4.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "For QA Review"
     },
     {
         "fix_version": "rc.p07.pul.52",
@@ -3120,7 +3144,7 @@ window.workItems = [
         "status": "Monitor Only"
     },
     {
-        "fix_version": "rc.p07.pul.52",
+        "fix_version": "rc.p09.pul.53",
         "work_item_key": "PUL-1286",
         "summary": "Phase 3.1 - Staff > People: new staff field [Termination Reason]",
         "parent_key": "",
@@ -3240,7 +3264,7 @@ window.workItems = [
         "status": "For QA Review"
     },
     {
-        "fix_version": "rc.p06.pls.52",
+        "fix_version": "rc.p08.pls.53",
         "work_item_key": "PLS-741",
         "summary": "BE - support ticket conversation list",
         "parent_key": "PLS-890",
@@ -3249,16 +3273,16 @@ window.workItems = [
         "original_estimate": 0.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "For PM Review"
     },
     {
-        "fix_version": "rc.p06.pls.52",
+        "fix_version": "rc.p08.pls.53",
         "work_item_key": "PLS-890",
         "summary": "Support ticket view page and conversation",
         "parent_key": "",
         "developers": "",
-        "story_point_estimate": 45,
-        "original_estimate": 12.0,
+        "story_point_estimate": 48,
+        "original_estimate": 16.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor only"
@@ -3312,7 +3336,7 @@ window.workItems = [
         "status": "Monitor only"
     },
     {
-        "fix_version": "rc.p06.pls.52",
+        "fix_version": "rc.p08.pls.53",
         "work_item_key": "PLS-2123",
         "summary": "BE - create new support ticket conversation",
         "parent_key": "PLS-890",
@@ -3324,7 +3348,7 @@ window.workItems = [
         "status": "For Grooming"
     },
     {
-        "fix_version": "rc.p06.pls.52",
+        "fix_version": "rc.p08.pls.53",
         "work_item_key": "PLS-2124",
         "summary": "BE - support ticket details",
         "parent_key": "PLS-890",
@@ -3342,7 +3366,7 @@ window.workItems = [
         "parent_key": "PLS-2121",
         "developers": "",
         "story_point_estimate": 15,
-        "original_estimate": 8.0,
+        "original_estimate": 12.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor only"
@@ -3364,7 +3388,7 @@ window.workItems = [
         "work_item_key": "PLS-2141",
         "summary": "BE - GDPR related changes",
         "parent_key": "PLS-2139",
-        "developers": "",
+        "developers": "Christopher Buenafe",
         "story_point_estimate": 5,
         "original_estimate": 0.0,
         "qa_testers": "",
@@ -3440,20 +3464,20 @@ window.workItems = [
         "story_point_estimate": 5,
         "original_estimate": 6.5,
         "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 4,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p01.pul.45",
         "work_item_key": "PUL-1406",
         "summary": "FE - New Leave Request modal: \"Reason for leave\" character counter shows stale count after reopening",
         "parent_key": "PUL-1310",
-        "developers": "",
-        "story_point_estimate": "",
-        "original_estimate": 0.0,
-        "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 1,
+        "original_estimate": 1.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 1,
+        "status": "QA In-Progress"
     },
     {
         "fix_version": "rc.p07.pul.52",
@@ -3475,7 +3499,7 @@ window.workItems = [
         "developers": "",
         "story_point_estimate": 5,
         "original_estimate": 0.0,
-        "qa_testers": "",
+        "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 0,
         "status": "To Do"
     },
@@ -3487,7 +3511,7 @@ window.workItems = [
         "developers": "Christopher Buenafe",
         "story_point_estimate": 3,
         "original_estimate": 5.0,
-        "qa_testers": "",
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -3499,7 +3523,7 @@ window.workItems = [
         "developers": "Armin Almuete",
         "story_point_estimate": 3,
         "original_estimate": 4.0,
-        "qa_testers": "",
+        "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -3520,12 +3544,12 @@ window.workItems = [
         "work_item_key": "PUL-1404",
         "summary": "FE - upload option for individual staff",
         "parent_key": "PUL-1326",
-        "developers": "Armin Almuete",
+        "developers": "John Perri Cruz",
         "story_point_estimate": 5,
         "original_estimate": 4.0,
         "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 0,
-        "status": "To Do"
+        "status": "In Progress"
     },
     {
         "fix_version": "rc.p07.pul.52",
@@ -3546,7 +3570,7 @@ window.workItems = [
         "parent_key": "PUL-1257",
         "developers": "",
         "story_point_estimate": 30,
-        "original_estimate": 18.0,
+        "original_estimate": 26.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
@@ -3568,7 +3592,7 @@ window.workItems = [
         "work_item_key": "PUL-1416",
         "summary": "BE - Staff > People > details: soft-required fields",
         "parent_key": "PUL-1414",
-        "developers": "",
+        "developers": "Jay Sobredilla",
         "story_point_estimate": 8,
         "original_estimate": 0.0,
         "qa_testers": "",
@@ -3586,5 +3610,17 @@ window.workItems = [
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "For PM Review"
+    },
+    {
+        "fix_version": "rc.p07.pul.52",
+        "work_item_key": "PUL-1432",
+        "summary": "FE - unhandled pulsechat error",
+        "parent_key": "PUL-1258",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
     },
 ];

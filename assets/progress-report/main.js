@@ -103,8 +103,8 @@
   // Status sets for the computed parent-level totals, matched by slug so
   // casing/punctuation in the source data doesn't matter.
   const TOTAL_EXCLUDED_SLUGS = new Set(["monitor-only", "cancelled"].map(slug));
-  const DEV_DONE_SLUGS = new Set(["qa-in-progress", "for-qa-review", "release-ready", "done", "closed"].map(slug));
-  const QA_DONE_SLUGS = new Set(["release-ready", "done", "closed"].map(slug));
+  const DEV_DONE_SLUGS = new Set(["qa-in-progress", "for-qa-review", "release-ready", "done", "closed", "on-hold"].map(slug));
+  const QA_DONE_SLUGS = new Set(["release-ready", "done", "closed", "on-hold"].map(slug));
 
   function computeParentStats(parentRows) {
     const total = parentRows.filter(r => !TOTAL_EXCLUDED_SLUGS.has(slug(r.status))).length;
