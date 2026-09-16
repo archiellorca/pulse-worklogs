@@ -21,7 +21,6 @@ window.ticketsData = [
   { parent: "PUL-1287", idea:"", desc: "Adds an \"Excluding upgrades\" dropdown to the Staff Margin report (default) that deducts work-setup upgrade costs from gross margin: Home = $0, Hybrid = -AU$200, Office = -AU$300. Column headings update accordingly when the option is selected." },
   { parent: "PUL-1326", idea:"", desc: "Adds an \"Upload Contacts\" recipient option to Newsfeed, letting admins upload a spreadsheet of email addresses (e.g. from an RSVP survey) that gets matched to staff profiles and populates the recipient list — replacing the workaround of sending targeted event messages via Gmail." },
   { parent: "PUL-1263", idea:"", desc: "Splits the combined salary-and-currency column in the staff export into two separate columns — Gross Salary and Currency — to support multi-country staff across six regions." },
-  { parent: "PUL-1414", idea:"", desc: "Converts previously hard-mandatory staff fields to soft-required: the asterisk and label remain, but saving is not blocked — a warning-styled validation message is shown instead of an error, allowing data entry to proceed even when not all information is available." },
   { parent: "PUL-1316", idea:"", desc: "Updates the Key Updates report to include non-employee staff types in the staff count figures." },  
   { parent: "PUL-1389", idea:"", desc: "UI update for the Key Updates report: removes the light blue background, adds a bold Total row, shows only totals by default, and expands to show a breakdown (Employees, Consultants, Trainees, No Type) on click." },
   { parent: "PUL-1401", idea:"", desc: "Reduces the one-time reward points for a successful profile photo upload from 20 points to 10 points." },
@@ -41,4 +40,5 @@ window.ticketsData = [
   //{ parent: "PLS-890", idea:"", desc: "Adds a support ticket view page and conversation feature to Pulse, enabling staff to view ticket details and communicate through a threaded conversation interface." },
   //{ parent: "PUL-1227", idea:"", desc: "Renames all instances of \"CS/CX\" and \"CSO/CXO\" labels across the site to \"CS\"." },
   //{ parent: "PUL-1286", idea:"", desc: "Adds a Termination Reason field to staff records with a structured set of reason options, and a new Termination Reason report with two views: high-level by Key Driver and detailed by Reason Detail, each showing this month and last 12 months." },  
+  //{ parent: "PUL-1414", idea:"", desc: "Converts previously hard-mandatory staff fields to soft-required: the asterisk and label remain, but saving is not blocked — a warning-styled validation message is shown instead of an error, allowing data entry to proceed even when not all information is available." },
 ];
