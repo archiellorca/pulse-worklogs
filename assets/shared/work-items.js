@@ -2904,33 +2904,33 @@ window.workItems = [
         "status": "For QA Review"
     },
     {
-        "fix_version": "rc.p12.pul-dev.perf-review",
+        "fix_version": "rc.p02.pul-dev.perf-review",
         "work_item_key": "PUL-1138",
         "summary": "Phase 3.1 - Staff Performance Review",
         "parent_key": "",
         "developers": "",
-        "story_point_estimate": 14,
-        "original_estimate": 16.0,
+        "story_point_estimate": 61,
+        "original_estimate": 38.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
     },
     {
-        "fix_version": "rc.p12.pul-dev.perf-review",
+        "fix_version": "rc.p02.pul-dev.perf-review",
         "work_item_key": "PUL-1149",
-        "summary": "FE - Performance Review — Client view grids",
+        "summary": "FE - CLIENT :  Performance Review — Client view grids",
         "parent_key": "PUL-1138",
         "developers": "John Perri Cruz",
         "story_point_estimate": 3,
         "original_estimate": 4.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Code Review"
+        "status": "For PM Review"
     },
     {
-        "fix_version": "rc.p12.pul-dev.perf-review",
+        "fix_version": "rc.p02.pul-dev.perf-review",
         "work_item_key": "PUL-1150",
-        "summary": "FE - Performance Review — Staff self-assessment form",
+        "summary": "FE - STAFF : Performance Review — Staff self-assessment form",
         "parent_key": "PUL-1138",
         "developers": "John Perri Cruz",
         "story_point_estimate": 5,
@@ -2940,52 +2940,100 @@ window.workItems = [
         "status": "For Code Review"
     },
     {
-        "fix_version": "rc.p12.pul-dev.perf-review",
+        "fix_version": "rc.p02.pul-dev.perf-review",
         "work_item_key": "PUL-1151",
-        "summary": "[BE] Performance Review Data Model & Core API Endpoints",
+        "summary": "[BE] Performance Review Data Model & Permissions",
         "parent_key": "PUL-1138",
-        "developers": "",
-        "story_point_estimate": "",
-        "original_estimate": 0.0,
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 8,
+        "original_estimate": 6.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
         "status": "For Grooming"
     },
     {
-        "fix_version": "rc.p12.pul-dev.perf-review",
+        "fix_version": "rc.p02.pul-dev.perf-review",
         "work_item_key": "PUL-1152",
-        "summary": "[BE] Review Status Transition Logic & Notification System",
+        "summary": "[BE] Performance Review Cycle Opening",
         "parent_key": "PUL-1138",
-        "developers": "",
-        "story_point_estimate": "",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 8,
+        "original_estimate": 8.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p02.pul-dev.perf-review",
+        "work_item_key": "PUL-1396",
+        "summary": "FE - STAFF : Performance Review — Staff view grid",
+        "parent_key": "PUL-1138",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 3,
+        "original_estimate": 4.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For PM Review"
+    },
+    {
+        "fix_version": "rc.p02.pul-dev.perf-review",
+        "work_item_key": "PUL-1403",
+        "summary": "FE - CLIENT : Performance Review — Client assessment page",
+        "parent_key": "PUL-1138",
+        "developers": "John Perri Cruz",
+        "story_point_estimate": 3,
+        "original_estimate": 4.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For Code Review"
+    },
+    {
+        "fix_version": "rc.p02.pul-dev.perf-review",
+        "work_item_key": "PUL-1479",
+        "summary": "[BE] Performance Review Client Grids & Assessment API",
+        "parent_key": "PUL-1138",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 13,
+        "original_estimate": 8.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For Code Review"
+    },
+    {
+        "fix_version": "rc.p02.pul-dev.perf-review",
+        "work_item_key": "PUL-1480",
+        "summary": "[BE] Performance Review Reviewer Assignment API",
+        "parent_key": "PUL-1138",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 5,
         "original_estimate": 0.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "To Do"
     },
     {
-        "fix_version": "rc.p12.pul-dev.perf-review",
-        "work_item_key": "PUL-1396",
-        "summary": "FE - Performance Review — Staff view grid",
+        "fix_version": "rc.p02.pul-dev.perf-review",
+        "work_item_key": "PUL-1481",
+        "summary": "[BE] Performance Review Staff Page API",
         "parent_key": "PUL-1138",
-        "developers": "John Perri Cruz",
-        "story_point_estimate": 3,
-        "original_estimate": 4.0,
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 5,
+        "original_estimate": 0.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Code Review"
+        "status": "To Do"
     },
     {
-        "fix_version": "rc.p12.pul-dev.perf-review",
-        "work_item_key": "PUL-1403",
-        "summary": "FE - Performance Review — Client assessment page",
+        "fix_version": "rc.p02.pul-dev.perf-review",
+        "work_item_key": "PUL-1500",
+        "summary": "[BE] Performance Review Notifications & Digest",
         "parent_key": "PUL-1138",
-        "developers": "John Perri Cruz",
-        "story_point_estimate": 3,
-        "original_estimate": 4.0,
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 8,
+        "original_estimate": 0.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Code Review"
+        "status": "To Do"
     },
     {
         "fix_version": "rc.p08.pul-dev.03",
@@ -3103,7 +3151,7 @@ window.workItems = [
         "developers": "Ian Ulita",
         "story_point_estimate": 13,
         "original_estimate": 12.0,
-        "qa_testers": "",
+        "qa_testers": "Jazel Hanne Cornillez",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -3134,14 +3182,14 @@ window.workItems = [
     {
         "fix_version": "rc.p06.pul.53",
         "work_item_key": "PUL-1230",
-        "summary": "Phase 3.1 - Shoutout rules update",
-        "parent_key": "",
+        "summary": "Shoutout rules update for CS",
+        "parent_key": "PUL-1410",
         "developers": "",
-        "story_point_estimate": "",
-        "original_estimate": 0.0,
+        "story_point_estimate": 3,
+        "original_estimate": 5.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "Monitor Only"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3278,19 +3326,19 @@ window.workItems = [
     {
         "fix_version": "rc.p06.pul.53",
         "work_item_key": "PUL-1286",
-        "summary": "Phase 3.1 - Staff > People: new staff field [Termination Reason]",
+        "summary": "Phase 3.1 - Staff > People: new staff field [Separation Reason]",
         "parent_key": "",
         "developers": "",
         "story_point_estimate": "",
         "original_estimate": 0.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "Monitor Only"
     },
     {
         "fix_version": "rc.p06.pul.53",
         "work_item_key": "PUL-1302",
-        "summary": "Newsfeed > Email important messages ",
+        "summary": "Dashboard > Newsfeed: Email important messages ",
         "parent_key": "PUL-1410",
         "developers": "",
         "story_point_estimate": 19,
@@ -3357,7 +3405,7 @@ window.workItems = [
         "original_estimate": 5.0,
         "qa_testers": "Jazel Hanne Cornillez",
         "qa_estimate_hours": 5,
-        "status": "For Code Review"
+        "status": "For QA Review"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3380,8 +3428,8 @@ window.workItems = [
         "story_point_estimate": 2,
         "original_estimate": 2.0,
         "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 1,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3403,7 +3451,7 @@ window.workItems = [
         "developers": "",
         "story_point_estimate": "",
         "original_estimate": 0.0,
-        "qa_testers": "",
+        "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 0,
         "status": "For Grooming"
     },
@@ -3425,8 +3473,8 @@ window.workItems = [
         "summary": "rc.pul.53 bugs",
         "parent_key": "",
         "developers": "",
-        "story_point_estimate": 19,
-        "original_estimate": 23.0,
+        "story_point_estimate": 44,
+        "original_estimate": 48.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
@@ -3438,7 +3486,7 @@ window.workItems = [
         "parent_key": "",
         "developers": "",
         "story_point_estimate": 101,
-        "original_estimate": 115.5,
+        "original_estimate": 114.5,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
@@ -3872,8 +3920,8 @@ window.workItems = [
         "story_point_estimate": 3,
         "original_estimate": 4.0,
         "qa_testers": "Kate Antonette Carpina",
-        "qa_estimate_hours": 0,
-        "status": "For PM Review"
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3884,8 +3932,8 @@ window.workItems = [
         "story_point_estimate": 5,
         "original_estimate": 5.0,
         "qa_testers": "Kate Antonette Carpina",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3895,9 +3943,9 @@ window.workItems = [
         "developers": "Christopher Buenafe",
         "story_point_estimate": 13,
         "original_estimate": 24.0,
-        "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 4,
+        "status": "QA In-Progress"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3907,9 +3955,9 @@ window.workItems = [
         "developers": "Armin Almuete",
         "story_point_estimate": 3,
         "original_estimate": 4.0,
-        "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3931,9 +3979,9 @@ window.workItems = [
         "developers": "Christopher Buenafe",
         "story_point_estimate": 3,
         "original_estimate": 5.0,
-        "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3944,8 +3992,8 @@ window.workItems = [
         "story_point_estimate": 3,
         "original_estimate": 6.0,
         "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 3,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -3953,8 +4001,8 @@ window.workItems = [
         "summary": "FE - Pulsechat > full-text name search",
         "parent_key": "PUL-1410",
         "developers": "",
-        "story_point_estimate": 6,
-        "original_estimate": 11.5,
+        "story_point_estimate": 8,
+        "original_estimate": 15.5,
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "Monitor Only"
@@ -4160,8 +4208,8 @@ window.workItems = [
         "story_point_estimate": 5,
         "original_estimate": 5.0,
         "qa_testers": "Kate Antonette Carpina",
-        "qa_estimate_hours": 0,
-        "status": "For PM Review"
+        "qa_estimate_hours": 2,
+        "status": "QA In-Progress"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4207,9 +4255,9 @@ window.workItems = [
         "developers": "John Perri Cruz, Armin Almuete",
         "story_point_estimate": 3,
         "original_estimate": 4.0,
-        "qa_testers": "Kristine Simon",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 1.5,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4257,7 +4305,7 @@ window.workItems = [
         "original_estimate": 8.0,
         "qa_testers": "Kate Antonette Carpina",
         "qa_estimate_hours": 3,
-        "status": "QA In-Progress"
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4267,9 +4315,9 @@ window.workItems = [
         "developers": "Armin Almuete",
         "story_point_estimate": 3,
         "original_estimate": 4.0,
-        "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4279,9 +4327,9 @@ window.workItems = [
         "developers": "Christopher Buenafe",
         "story_point_estimate": 3,
         "original_estimate": 5.0,
-        "qa_testers": "",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4317,17 +4365,17 @@ window.workItems = [
         "original_estimate": 0.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
-        "status": "For PM Review"
+        "status": "Done"
     },
     {
         "fix_version": "rc.p06.pul.53",
         "work_item_key": "PUL-1505",
         "summary": "update XE currency account for staging",
-        "parent_key": "PUL-1256",
+        "parent_key": "PUL-1411",
         "developers": "Christopher Buenafe, Ian Ulita",
         "story_point_estimate": 2,
         "original_estimate": 0.5,
-        "qa_testers": "",
+        "qa_testers": "Jazel Hanne Cornillez",
         "qa_estimate_hours": 0,
         "status": "For QA Review"
     },
@@ -4336,12 +4384,12 @@ window.workItems = [
         "work_item_key": "PUL-1506",
         "summary": "BE - A rate limit permanently fails a leave request, which is then re-sent forever",
         "parent_key": "PUL-1409",
-        "developers": "",
+        "developers": "Ryan Puriran",
         "story_point_estimate": 5,
-        "original_estimate": 0.0,
+        "original_estimate": 5.0,
         "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "For QA Review"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4352,8 +4400,8 @@ window.workItems = [
         "story_point_estimate": "",
         "original_estimate": 0.0,
         "qa_testers": "Kate Antonette Carpina",
-        "qa_estimate_hours": 0,
-        "status": "For QA Review"
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4376,8 +4424,8 @@ window.workItems = [
         "story_point_estimate": 5,
         "original_estimate": 4.0,
         "qa_testers": "Jazel Hanne Cornillez",
-        "qa_estimate_hours": 0,
-        "status": "In Progress"
+        "qa_estimate_hours": 1,
+        "status": "QA In-Progress"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4389,7 +4437,7 @@ window.workItems = [
         "original_estimate": 0.0,
         "qa_testers": "",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "Monitor Only"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4408,12 +4456,12 @@ window.workItems = [
         "work_item_key": "PUL-1514",
         "summary": "BE - Attendance summary, incorrect late hours computation",
         "parent_key": "PUL-1409",
-        "developers": "",
-        "story_point_estimate": "",
-        "original_estimate": 0.0,
-        "qa_testers": "",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 2,
+        "original_estimate": 3.0,
+        "qa_testers": "Kristine Simon",
         "qa_estimate_hours": 0,
-        "status": "For Grooming"
+        "status": "For QA Review"
     },
     {
         "fix_version": "rc.p06.pul.53",
@@ -4426,6 +4474,246 @@ window.workItems = [
         "qa_testers": "",
         "qa_estimate_hours": 0,
         "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1439",
+        "summary": "Reports > CS Allocation: CSV Export",
+        "parent_key": "PUL-1410",
+        "developers": "",
+        "story_point_estimate": 10,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1488",
+        "summary": "FE - add CSV export for CS allocation report",
+        "parent_key": "PUL-1439",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1489",
+        "summary": "BE - provide data for CS allocation report",
+        "parent_key": "PUL-1439",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 5,
+        "original_estimate": 0.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 0,
+        "status": "To Do"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1516",
+        "summary": "Queue > Timesheet reminder not sending emails",
+        "parent_key": "PUL-1409",
+        "developers": "",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1517",
+        "summary": "BE - investigate reason why emails are not sending",
+        "parent_key": "PUL-1516",
+        "developers": "Ian Ulita",
+        "story_point_estimate": 2,
+        "original_estimate": 0.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Done"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1518",
+        "summary": "BE - update shoutout points rules and value",
+        "parent_key": "PUL-1230",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 3,
+        "original_estimate": 5.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1519",
+        "summary": "BE - Fix timesheet reminder crash on renamed helper and surface future failures",
+        "parent_key": "PUL-1516",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 3,
+        "original_estimate": 4.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 2.5,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1521",
+        "summary": "BE - Pulsechat > full-text nickname search",
+        "parent_key": "PUL-1462",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 2,
+        "original_estimate": 4.0,
+        "qa_testers": "Kate Antonette Carpina",
+        "qa_estimate_hours": 2,
+        "status": "Release Ready"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1522",
+        "summary": "Reports > Salary Reviews: Enable grid column selector",
+        "parent_key": "PUL-1410",
+        "developers": "",
+        "story_point_estimate": 6,
+        "original_estimate": 8.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1523",
+        "summary": "FE - Reports > Salary Reviews: Enable grid column selector",
+        "parent_key": "PUL-1522",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 3,
+        "original_estimate": 4.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1524",
+        "summary": "BE - Reports > Salary Reviews: Enable grid column selector",
+        "parent_key": "PUL-1522",
+        "developers": "Christopher Buenafe",
+        "story_point_estimate": 3,
+        "original_estimate": 4.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 2,
+        "status": "QA In-Progress"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1525",
+        "summary": "Staff > People: staff edit causes sections to disappear",
+        "parent_key": "PUL-1409",
+        "developers": "",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "Monitor Only"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1526",
+        "summary": "FE - Staff > People: staff edit causes sections to disappear",
+        "parent_key": "PUL-1525",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1527",
+        "summary": "FE - Pulsechat > loading infinitely",
+        "parent_key": "PUL-1409",
+        "developers": "Armin Almuete",
+        "story_point_estimate": 5,
+        "original_estimate": 4.0,
+        "qa_testers": "Kristine Simon",
+        "qa_estimate_hours": 0,
+        "status": "For QA Review"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1541",
+        "summary": "BE - add field \"termination_reason\" to database",
+        "parent_key": "PUL-1286",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1542",
+        "summary": "FE - Staff > People > Staff edit: add field termination reason",
+        "parent_key": "PUL-1286",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1543",
+        "summary": "BE - add termination in staff view/edit endpoint",
+        "parent_key": "PUL-1286",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1544",
+        "summary": "FE - New Report > Termination Reason",
+        "parent_key": "PUL-1286",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1545",
+        "summary": "BE - provide endpoint for new report \"Termination Reason\"",
+        "parent_key": "PUL-1286",
+        "developers": "",
+        "story_point_estimate": "",
+        "original_estimate": 0.0,
+        "qa_testers": "Jazel Hanne Cornillez",
+        "qa_estimate_hours": 0,
+        "status": "For Grooming"
+    },
+    {
+        "fix_version": "rc.p06.pul.53",
+        "work_item_key": "PUL-1553",
+        "summary": "Cron > Sprout staff sync: saved work schedules are wiped nightly, so timesheet reminders list rest days",
+        "parent_key": "PUL-1409",
+        "developers": "Ryan Puriran",
+        "story_point_estimate": 3,
+        "original_estimate": 5.0,
+        "qa_testers": "",
+        "qa_estimate_hours": 0,
+        "status": "In Progress"
     },
     {
         "fix_version": "rc.p03.pul-dev.sso",
